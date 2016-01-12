@@ -1,76 +1,705 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-            </div>
-
-            <div id="status">
-                <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
-
-                    Your application is ready to start working on it at:
-                    <code>{{ base_dir }}/</code>
-                </p>
-            </div>
-
-            <div id="next">
-                <h2>What's next?</h2>
-                <p>
-                    <svg id="icon-book" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-12.5 9 64 64" enable-background="new -12.5 9 64 64" xml:space="preserve">
-                        <path fill="#AAA" d="M6.8,40.8c2.4,0.8,4.5-0.7,4.9-2.5c0.2-1.2-0.3-2.1-1.3-3.2l-0.8-0.8c-0.4-0.5-0.6-1.3-0.2-1.9
-                            c0.4-0.5,0.9-0.8,1.8-0.5c1.3,0.4,1.9,1.3,2.9,2.2c-0.4,1.4-0.7,2.9-0.9,4.2l-0.2,1c-0.7,4-1.3,6.2-2.7,7.5
-                            c-0.3,0.3-0.7,0.5-1.3,0.6c-0.3,0-0.4-0.3-0.4-0.3c0-0.3,0.2-0.3,0.3-0.4c0.2-0.1,0.5-0.3,0.4-0.8c0-0.7-0.6-1.3-1.3-1.3
-                            c-0.6,0-1.4,0.6-1.4,1.7s1,1.9,2.4,1.8c0.8,0,2.5-0.3,4.2-2.5c2-2.5,2.5-5.4,2.9-7.4l0.5-2.8c0.3,0,0.5,0.1,0.8,0.1
-                            c2.4,0.1,3.7-1.3,3.7-2.3c0-0.6-0.3-1.2-0.9-1.2c-0.4,0-0.8,0.3-1,0.8c-0.1,0.6,0.8,1.1,0.1,1.5c-0.5,0.3-1.4,0.6-2.7,0.4l0.3-1.3
-                            c0.5-2.6,1-5.7,3.2-5.8c0.2,0,0.8,0,0.8,0.4c0,0.2,0,0.2-0.2,0.5c-0.2,0.3-0.3,0.4-0.2,0.7c0,0.7,0.5,1.1,1.2,1.1
-                            c0.9,0,1.2-1,1.2-1.4c0-1.2-1.2-1.8-2.6-1.8c-1.5,0.1-2.8,0.9-3.7,2.1c-1.1,1.3-1.8,2.9-2.3,4.5c-0.9-0.8-1.6-1.8-3.1-2.3
-                            c-1.1-0.7-2.3-0.5-3.4,0.3c-0.5,0.4-0.8,1-1,1.6c-0.4,1.5,0.4,2.9,0.8,3.4l0.9,1c0.2,0.2,0.6,0.8,0.4,1.5c-0.3,0.8-1.2,1.3-2.1,1
-                            c-0.4-0.2-1-0.5-0.9-0.9c0.1-0.2,0.2-0.3,0.3-0.5s0.1-0.3,0.1-0.3c0.2-0.6-0.1-1.4-0.7-1.6c-0.6-0.2-1.2,0-1.3,0.8
-                            C4.3,38.4,4.7,40,6.8,40.8z M46.1,20.9c0-4.2-3.2-7.5-7.1-7.5h-3.8C34.8,10.8,32.7,9,30.2,9L-2.3,9.1c-2.8,0.1-4.9,2.4-4.9,5.4
-                            L-7,58.6c0,4.8,8.1,13.9,11.6,14.1l34.7-0.1c3.9,0,7-3.4,7-7.6L46.1,20.9z M-0.3,36.4c0-8.6,6.5-15.6,14.5-15.6
-                            c8,0,14.5,7,14.5,15.6S22.1,52,14.2,52C6.1,52-0.3,45-0.3,36.4z M42.1,65.1c0,1.8-1.5,3.1-3.1,3.1H4.6c-0.7,0-3-1.8-4.5-4.4h30.4
-                            c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
-                    </svg>
-
-                    Read Symfony documentation to learn
-                    <a href="http://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/book/page_creation.html">
-                        How to create your first page in Symfony
-                    </a>
-                </p>
-            </div>
-
-        </div>
-    </div>
-{% endblock %}
 
 {% block stylesheets %}
-<style>
-    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
-    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 21px; margin-bottom: 1em; }
-    p { margin: 0 0 1em 0; }
-    a { color: #0000F0; }
-    a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
-    #container { padding: 2em; }
-    #welcome, #status { margin-bottom: 2em; }
-    #welcome h1 span { display: block; font-size: 75%; }
-    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
-    #icon-book { display: none; }
 
-    @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; }
+{% endblock %}
 
-        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
-    }
-</style>
+{% block content %}
+
+    <div id="information" class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439042455804"><div class='container'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="featuresTitle ">
+                        <h3><span>H</span>House Features <span class="hr"></span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie mi in venenatis convallis.<br />
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas duis.</p>
+                    </div><!-- end features title --><div class="vc_row wpb_row vc_inner vc_row-fluid boxFeature"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h2.png" alt="Bedrooms 2"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h2.png" alt="Bedrooms 2"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Bedrooms 2</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h1.png" alt="Square feet 467"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h1.png" alt="Square feet 467"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Square feet 467</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h8.png" alt="Constrution Wood"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h8.png" alt="Constrution Wood"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Constrution Wood</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h7.png" alt="Bathrooms 2"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h7.png" alt="Bathrooms 2"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Bathrooms 2</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h3.png" alt="Interior fee 212"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h3.png" alt="Interior fee 212"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Interior fee 212</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h4.png" alt="Kitchens 3"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h4.png" alt="Kitchens 3"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Kitchens 3</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="wpb_wrapper"><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h5.png" alt="Car parking 2"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h5.png" alt="Car parking 2"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Car parking 2</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article><article class="featureBox">
+                                    <div class="img">
+                                        <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h6.png" alt="Year built 2015"><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/h6.png" alt="Year built 2015"></a>
+                                    </div><!-- end img -->
+                                    <a href=""><img src="http://demo.newskythemes.com/myhouse/wp-content/themes/myhouse/assets/img/content/ic.png" alt=""></a>
+                                    <h4>Year built 2015</h4>
+                                    <p>Lorem ipsum dolor nibb consectetur adipiscing elit vitaeipsum nibh elites..</p>
+                                </article></div></div></div></div></div></div></div><div id="description" class="vc_row wpb_row vc_row-fluid sectionPadding sectionProperty bgk bgk1 vc_custom_1439041781178"><div class='container'><div class="wpb_column vc_column_container vc_col-sm-5"><div class="wpb_wrapper"><div
+                        class="wpb_images_carousel wpb_content_element vc_clearfix">
+                    <div class="wpb_wrapper">
+                        <div id="vc_images-carousel-1-1452621251" data-ride="vc_carousel"
+                             data-wrap="false" style="width: 458px;"
+                             data-interval="0"
+                             data-mode="horizontal" data-partial="false"
+                             data-per-view="1"
+                             data-hide-on-end="true" class="vc_slide vc_images_carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carouselPresentation row">
+                                <div class="vc_item">
+                                    <div class="vc_inner">
+                                        <a class="prettyphoto"
+                                           href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/s2-1024x1024.jpg"  rel=&quot;prettyPhoto[rel-11-1727968927]&quot;>
+                                            <img class="img-responsive " src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/s2-458x534.jpg" width="458" height="534" alt="s2" title="s2" />									</a>
+                                    </div>
+                                </div>
+                                <div class="vc_item">
+                                    <div class="vc_inner">
+                                        <a class="prettyphoto"
+                                           href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/s1-1024x1024.jpg"  rel=&quot;prettyPhoto[rel-11-1727968927]&quot;>
+                                            <img class="img-responsive " src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/s1-458x534.jpg" width="458" height="534" alt="s1" title="s1" />									</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <a class="vc_left vc_carousel-control" href="#vc_images-carousel-1-1452621251" data-slide="prev">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a class="vc_right vc_carousel-control" href="#vc_images-carousel-1-1452621251" data-slide="next">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>	</div></div></div><div class="descriptions wpb_column vc_column_container vc_col-sm-7"><div class="wpb_wrapper">
+                <div class="wpb_text_column wpb_content_element  property">
+                    <div class="wpb_wrapper">
+                        <h3>Property <span style="color: #f0542d;">Descriptions</span></h3>
+                        <p>This spectacular contemporary home features incredible downtown and canyon views, amazing outdoor entertainment space and a streamlined open floor layout. The oversized master bedroom boasts two walk in closets, a large bathroom, fireplace and balcony. 3 more bedrooms make up the rest of the upstairs floorpan. Formal dining room, breakfast nook, 2 car garage, open kitchen, bar and open living room complete the downstairs layout.</p>
+
+                    </div>
+                </div> <div class="panel-group"  id="accordion" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa  fa-check"></i>
+                                <a href="#content-1"  data-toggle="collapse" data-parent="#accordion">Interior Features</a>
+                            </h4>
+                        </div><!--end panel heading -->
+                        <div class="panel-collapse collapse in" id="content-1">
+                            <div class="panel-body">
+                                <div class="dimensions items">
+
+                                    <ul class="clearfix">
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Dishwasher</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Dryer</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Cable TV</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Refrigerator</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Dishwasher</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Dryer</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Cable TV</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Feature: <span> Refrigerator</span></p></li>
+                                    </ul>
+                                </div><!-- end items -->
+                            </div>
+                        </div><!--end panel -collapse -->
+                    </div><!--end panel -->	<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa  fa-check"></i>
+                                <a href="#content-2"  data-toggle="collapse" data-parent="#accordion">Interior Features</a>
+                            </h4>
+                        </div><!--end panel heading -->
+                        <div class="panel-collapse collapse" id="content-2">
+                            <div class="panel-body">
+                                <div class="room items">
+
+                                    <ul class="clearfix">
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Living Room: <span> 29&#215;18</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Dining Room: <span> 12&#215;11</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Kitchen: <span> 15&#215;14</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Master Bedroom: <span> 23&#215;14</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Bedroom: <span> 34&#215;14</span></p></li>
+                                        <li class='col-sm-6' ><i class='fa fa fa-arrow-circle-o-right'></i> <p>Garage: <span> 21&#215;20</span></p></li>
+                                    </ul>
+                                </div><!-- end items -->
+                            </div>
+                        </div><!--end panel -collapse -->
+                    </div><!--end panel -->	<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <i class="fa  fa-check"></i>
+                                <a href="#content-3"  data-toggle="collapse" data-parent="#accordion">Interior Features</a>
+                            </h4>
+                        </div><!--end panel heading -->
+                        <div class="panel-collapse collapse" id="content-3">
+                            <div class="panel-body">
+                                <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitaemer pretium enim, et ultrices est. Vivamus blandit molestie justo, ut mollis lect aliquam sodales. Vestibulum sed posuere leo, sed vestibulum velitpiscing pretium enim, et ultrices est vivamus blandit molestie justo.</p>
+                                </p>
+                            </div>
+                        </div><!--end panel -collapse -->
+                    </div><!--end panel -->	</div></div></div></div></div><div id="gallery" class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439047308292"><div class='container'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="featuresTitle ">
+                    <h3><span>G</span>Gallery Images <span class="hr"></span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie mi in venenatis convallis.<br />
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas duis.</p>
+                </div><!-- end features title --><div class="vc_row wpb_row vc_inner vc_row-fluid categories vc_custom_1439049794772"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><ul class="clearfix" data-option-key="filter">
+                                <li><a href="#" class="selected" data-option-value="*"><small>All</a></small></li>
+                                <li><a href="#" data-option-value=".basement"><small>Basement</a></small></li>
+                                <li><a href="#" data-option-value=".bedroom"><small>Bedroom</a></small></li>
+                                <li><a href="#" data-option-value=".driveway"><small>Driveway</a></small></li>
+                                <li><a href="#" data-option-value=".garage"><small>Garage</a></small></li>
+                                <li><a href="#" data-option-value=".living"><small>Living</a></small></li>
+                            </ul></div></div></div> <div class="contentGallery row">
+                    <ul class="clearfix">
+                        <li class="bedroom col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/8.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/8-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 8">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="driveway living col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/6.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/6-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 6">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="garage living col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/5.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/5-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 5">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="basement driveway col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/3.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/3-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img3">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="driveway col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/9.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/9-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 9">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="driveway col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/8.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/8-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 8">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="driveway living col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/7.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/7-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 7">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="basement driveway col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/6.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/6-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 6">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                        <li class="driveway col-sm-4 " >
+                            <div class="wrapper-article galleryPopup1">
+                                <a href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/5.jpg">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/bfi_thumb/5-2znlj454qxqqj5s7uchg5c.jpg" class="img-responsive" alt="img 5">
+                                    <h3><img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/effect.png" alt=""></h3>
+                                </a>
+                            </div><!--end wrapper-article -->
+                        </li>
+                    </ul>
+                    <div class="allButton">
+                        <a href="http://demo.newskythemes.com/myhouse/?page_id=192">
+                            <p> view all photos</p>
+                        </a>
+                    </div><!-- end allButton -->
+                </div><!-- end ContetnGallery -->
+            </div></div></div></div><div id="location" class="vc_row wpb_row vc_row-fluid sectionPadding bgk bgk1 vc_custom_1439019849577"><div class='container'><div class="location wpb_column vc_column_container vc_col-sm-7"><div class="wpb_wrapper">
+                <div class="wpb_text_column wpb_content_element  infoBox">
+                    <div class="wpb_wrapper">
+                        <h3>Location <span class="mh-sp">&amp; Neighboring</span></h3>
+                        <p>Our broker centers are located throughout the entire country ensuring you get helped<br />
+                            almost in every place. Our professional real estate team made sure you get the highest level<br />
+                            of help with your property issues, my house it‘s the best wordpress theme.</p>
+
+                    </div>
+                </div> <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="box wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper">
+                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                <div class="wpb_wrapper">
+                                    <i class="fa  fa-graduation-cap"></i>
+                                    <div class="infoContent">
+                                        <h4>Schools &amp; University</h4>
+                                        <p>Lorem ipsum dolor sit amet,<br>
+                                            consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div> </div></div><div class="box top0 wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper">
+                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                <div class="wpb_wrapper">
+                                    <i class="fa  fa-shopping-cart"></i>
+                                    <div class="infoContent">
+
+                                        <h4>Airport &amp; Travel</h4>
+                                        <p>Lorem ipsum dolor sit amet,<br>
+                                            consectetur adipiscing elit.</p></div>
+                                </div>
+                            </div> </div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="box top1 wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper">
+                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                <div class="wpb_wrapper">
+                                    <i class="fa  fa-car"></i>
+                                    <div class="infoContent">
+
+                                        <h4>Station Taxi Cab</h4>
+                                        <p>Lorem ipsum dolor sit amet,<br>
+                                            consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div> </div></div><div class="box top2 wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper">
+                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                <div class="wpb_wrapper">
+                                    <i class="fa  fa-rocket"></i>
+                                    <div class="infoContent">
+                                        <h4>SuperMarket &amp; Shop</h4>
+                                        <p>Lorem ipsum dolor sit amet,<br>
+                                            consectetur adipiscing elit.</p></div>
+                                </div>
+                            </div> </div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-5"><div class="wpb_wrapper"><div id="map-canvas" class="google-map" data-lat="51.5044248" data-long="-0.1070434" data-img="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/marker.png"></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439047983365"><div class='container'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="featuresTitle ">
+                    <h3><span>O</span>Our Agency <span class="hr"></span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie mi in venenatis convallis.<br />
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas duis.</p>
+                </div><!-- end features title --><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-5"><div class="wpb_wrapper"><div class="agencyBox ">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/battery.png" alt="agency img">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/batteryv.png" alt="agency img2">
+                                </p>
+                                <h4>Strategy and Execution</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales</p>
+                            </div><!-- end agencyBox --><div class="agencyBox ">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/thing.png" alt="agency img">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/thingv.png" alt="agency img2">
+                                </p>
+                                <h4>Focused Offerings</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales</p>
+                            </div><!-- end agencyBox --><div class="agencyBox ">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/rocket.png" alt="agency img">
+                                <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/rocketv.png" alt="agency img2">
+                                </p>
+                                <h4>Performance Improvement</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales</p>
+                            </div><!-- end agencyBox --></div></div><div class="skillBarAgency wpb_column vc_column_container vc_col-sm-7"><div class="wpb_wrapper">
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <h4>Let&#8217;s get technical</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus nibh, vulputate eu dia<br />
+                                        non, sodales tincidunt ligula. Pellentesque molestie nisl in dolor gravida commodo. Lorem<br />
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nisi id felis fringilla etos<br />
+                                        lobortis augue lobortis.</p>
+
+                                </div>
+                            </div> <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="left">Branding</span>
+                                    <span class="right font">72%</span>
+                                </div><!-- end progress-bar -->
+                            </div><!-- end progress -->		<div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="left">Mobile Applications</span>
+                                    <span class="right font">90%</span>
+                                </div><!-- end progress-bar -->
+                            </div><!-- end progress -->		<div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="left">Website Development</span>
+                                    <span class="right font">76%</span>
+                                </div><!-- end progress-bar -->
+                            </div><!-- end progress -->		<div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="left">Photopshop</span>
+                                    <span class="right font">52%</span>
+                                </div><!-- end progress-bar -->
+                            </div><!-- end progress -->		</div></div></div></div></div></div></div><div id="about" class="vc_row wpb_row vc_row-fluid sectionPadding sectionAb bgk bgk1 vc_custom_1439047394529"><div class='container'><div class="wpb_column vc_column_container vc_col-sm-5"><div class="wpb_wrapper"><div
+                        class="wpb_images_carousel wpb_content_element vc_clearfix">
+                    <div class="wpb_wrapper">
+                        <div id="vc_images-carousel-2-1452621251" data-ride="vc_carousel"
+                             data-wrap="false" style="width: 458px;"
+                             data-interval="0"
+                             data-mode="horizontal" data-partial="false"
+                             data-per-view="1"
+                             data-hide-on-end="true" class="vc_slide vc_images_carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carouselPresentation row">
+                                <div class="vc_item">
+                                    <div class="vc_inner">
+                                        <a class="prettyphoto"
+                                           href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/agent-1024x1024.jpg"  rel=&quot;prettyPhoto[rel-94-250167434]&quot;>
+                                            <img class="img-responsive " src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/agent.jpg" width="444" height="428" alt="agent" title="agent" />									</a>
+                                    </div>
+                                </div>
+                                <div class="vc_item">
+                                    <div class="vc_inner">
+                                        <a class="prettyphoto"
+                                           href="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/agent2-1024x1024.jpg"  rel=&quot;prettyPhoto[rel-94-250167434]&quot;>
+                                            <img class="img-responsive " src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/agent2.jpg" width="444" height="428" alt="agent2" title="agent2" />									</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <a class="vc_left vc_carousel-control" href="#vc_images-carousel-2-1452621251" data-slide="prev">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a class="vc_right vc_carousel-control" href="#vc_images-carousel-2-1452621251" data-slide="next">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>	</div></div></div><div class="descriptions wpb_column vc_column_container vc_col-sm-7"><div class="wpb_wrapper">
+                <div class="wpb_text_column wpb_content_element  aboutAgent">
+                    <div class="wpb_wrapper">
+                        <h3>About <span style="color: #f0542d;">agent</span></h3>
+                        <p>Markus is a Certified Residential Specialist with over 10 years experience of helping local residents sell homes. He achieved success due to his  ommitment to the enhancement of the real estate profession, client service, and the community.</p>
+
+                    </div>
+                </div> <div class="vc_row wpb_row vc_inner vc_row-fluid aboutAgent"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="agent-info clearfix">
+	<span class="envelope">
+		<img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/envelope.png" alt="agency about">
+		<img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/envelopehover.png" alt="agency about2">
+		<a href="#">contact@myagent.com</a>
+
+	</span>
+                                <ul>
+                                    <li class="col-sm-7" >
+                                        <p>You will be receive answer in only 24 hours, love you friends</p>
+                                    </li>
+                                </ul>
+                            </div><div class="agent-info clearfix">
+	<span class="envelope">
+		<img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/mobile.png" alt="agency about">
+		<img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/07/mobilehover.png" alt="agency about2">
+		<a href="#">+ 07 43 466 757</a>
+
+	</span>
+                                <ul>
+                                    <li class="col-sm-7" >
+                                        <p>You will be receive answer in only 24 hours, love you friends</p>
+                                    </li>
+                                </ul>
+                            </div><div class="">
+                                <ul class="clearfix socialIcons">
+                                    <li class="col-sm-5">
+                                        <a href=""><i class="fa fa-twitter"></i>
+                                            <h4> Follow me on Twitter</h4>
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-5">
+                                        <a href="">
+                                            <i class="fa fa-facebook"></i>
+                                            <h4> Follow me on Facebook</h4>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439047687559"><div class='container'><div class="blogContent wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="featuresTitle ">
+                                <h3><span>B</span>Blog Section <span class="hr"></span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie mi in venenatis convallis.<br />
+                                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas duis.</p>
+                            </div><!-- end features title -->  <div class="row blogBox ">
+                                <div class="col-sm-4">
+                                    <div class="blogPost ">
+                                        <div class="image">
+                                            <img width="360" height="360" src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/41-1024x1024.jpg" class="attachment-360x414x1 wp-post-image" alt="4" />        <div class="imgHover"><a href="http://demo.newskythemes.com/myhouse/?p=146"> Read more</a><hr></div>
+                                        </div>
+                                        <div class="blogContent">
+                                            <h3><a href="http://demo.newskythemes.com/myhouse/?p=146">5 steps to buy a home</a></h3>
+                                            <ul class="clearfix" >
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-user"></i>admin</a></li>
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-calendar-o"></i> </a></li>
+                                                <li><i class="fa fa-book"></i> <a href="http://demo.newskythemes.com/myhouse/?cat=2" rel="category">Music</a></li>
+                                            </ul>
+                                            <p><p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales lorem site dolor sit amet, consectetur elit donec lacus nibheu consectetur elit donec dia non sodales amet</p>
+                                            </p>
+                                            <div class="bottomContent">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa fa-comments"></i>
+                                                        <span class="comments">1 Comment</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-comments" style="color:#8c8c8c;"></i>
+                                                        <span class="likes">192 likes</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!--end blogContent -->
+                                    </div><!--end blogPost -->
+                                </div><!-- end col-sm-4 -->
+                                <div class="col-sm-4">
+                                    <div class="blogPost ">
+                                        <div class="image">
+                                            <img width="360" height="360" src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/51-1024x1024.jpg" class="attachment-360x414x1 wp-post-image" alt="5" />        <div class="imgHover"><a href="http://demo.newskythemes.com/myhouse/?p=143"> Read more</a><hr></div>
+                                        </div>
+                                        <div class="blogContent">
+                                            <h3><a href="http://demo.newskythemes.com/myhouse/?p=143">Know your team</a></h3>
+                                            <ul class="clearfix" >
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-user"></i>admin</a></li>
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-calendar-o"></i> </a></li>
+                                                <li><i class="fa fa-book"></i> <a href="http://demo.newskythemes.com/myhouse/?cat=2" rel="category">Music</a></li>
+                                            </ul>
+                                            <p><p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales lorem site dolor sit amet, consectetur elit donec lacus nibheu consectetur elit donec dia non sodales amet.</p>
+                                            </p>
+                                            <div class="bottomContent">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa fa-comments"></i>
+                                                        <span class="comments">No Comment</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-comments" style="color:#8c8c8c;"></i>
+                                                        <span class="likes">147 likes</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!--end blogContent -->
+                                    </div><!--end blogPost -->
+                                </div><!-- end col-sm-4 -->
+                                <div class="col-sm-4">
+                                    <div class="blogPost ">
+                                        <div class="image">
+                                            <img width="360" height="360" src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/32-1024x1024.jpg" class="attachment-360x414x1 wp-post-image" alt="3" />        <div class="imgHover"><a href="http://demo.newskythemes.com/myhouse/?p=138"> Read more</a><hr></div>
+                                        </div>
+                                        <div class="blogContent">
+                                            <h3><a href="http://demo.newskythemes.com/myhouse/?p=138">How to sell your house</a></h3>
+                                            <ul class="clearfix" >
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-user"></i>admin</a></li>
+                                                <li><a href="javascript:void(0);?>"><i class="fa fa-calendar-o"></i> </a></li>
+                                                <li><i class="fa fa-book"></i> <a href="http://demo.newskythemes.com/myhouse/?cat=2" rel="category">Music</a></li>
+                                            </ul>
+                                            <p><p>Lorem ipsum dolor sit amet, consectetur elit donec lacus nibh, vulputate eu dia non sodales lorem site dolor sit amet, consectetur elit donec lacus nibheu consectetur elit donec dia non sodales amet.</p>
+                                            </p>
+                                            <div class="bottomContent">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa fa-comments"></i>
+                                                        <span class="comments">No Comment</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-comments" style="color:#8c8c8c;"></i>
+                                                        <span class="likes">87 likes</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!--end blogContent -->
+                                    </div><!--end blogPost -->
+                                </div><!-- end col-sm-4 -->
+                            </div>
+                        </div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439048272206"><div class='container'><div class="testimonialContent wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="carousel-caption">
+                                <div class="sectionTitle">
+                                    <h2><span>Client</span> Testimonial</h2>
+                                    <div class="underline">
+                                        <span class="line" ></span>
+                                    </div><!--end underline -->
+                                </div><!--end sectionTitle -->
+
+                                <div class="testimonialPane">
+                                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula. <br /> Pellentesque molestie nisl in dolor gravida commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula ellentesque molestie nisl in dolor gravida commodo.</p>
+                                    </p>
+                                </div><!-- end testimonialPane -->
+                                <div class="author">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/t2.png" alt="avatar Tilvar Claudiu">
+                                    <p>Tilvar Claudiu</p>
+                                    <h5>CEO <span>Elephant Themes</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="carousel-caption">
+                                <div class="sectionTitle">
+                                    <h2><span>Client</span> Testimonial</h2>
+                                    <div class="underline">
+                                        <span class="line" ></span>
+                                    </div><!--end underline -->
+                                </div><!--end sectionTitle -->
+
+                                <div class="testimonialPane">
+                                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula. <br /> Pellentesque molestie nisl in dolor gravida commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula ellentesque molestie nisl in dolor gravida commodo.</p>
+                                    </p>
+                                </div><!-- end testimonialPane -->
+                                <div class="author">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/t1.png" alt="avatar Tilvar Claudiu">
+                                    <p>Tilvar Claudiu</p>
+                                    <h5>CEO <span>Elephant Themes</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="carousel-caption">
+                                <div class="sectionTitle">
+                                    <h2><span>Client</span> Testimonial</h2>
+                                    <div class="underline">
+                                        <span class="line" ></span>
+                                    </div><!--end underline -->
+                                </div><!--end sectionTitle -->
+
+                                <div class="testimonialPane">
+                                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula. <br /> Pellentesque molestie nisl in dolor gravida commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Donec lacus nibh, vulputate eu diam non, sodales tincidunt ligula ellentesque molestie nisl in dolor gravida commodo.</p>
+                                    </p>
+                                </div><!-- end testimonialPane -->
+                                <div class="author">
+                                    <img src="http://demo.newskythemes.com/myhouse/wp-content/uploads/2015/08/author.png" alt="avatar Tilvar Claudiu">
+                                    <p>Tilvar Claudiu</p>
+                                    <h5>CEO <span>Elephant Themes</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div></div></div>
+
+
+    <div id="contact" class="vc_row wpb_row vc_row-fluid sectionPadding vc_custom_1439047887634">
+        <div class='container'>
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="wpb_wrapper">
+                    <div class="featuresTitle ">
+                        <h3><span>C</span>Contact Us <span class="hr"></span></h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie mi in venenatis
+                            convallis.<br/>
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas duis.</p>
+                    </div>
+                    <!-- end features title -->
+                    <div class="vc_row wpb_row vc_inner vc_row-fluid comment-form-themeIndex">
+                        <div class="comment-respondIndex wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div role="form" class="wpcf7" id="wpcf7-f161-p11-o1" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    <form name="" action="/myhouse/#wpcf7-f161-p11-o1" method="post" class="wpcf7-form"
+                                          novalidate="novalidate">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" value="161"/>
+                                            <input type="hidden" name="_wpcf7_version" value="4.2.1"/>
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US"/>
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f161-p11-o1"/>
+                                            <input type="hidden" name="_wpnonce" value="a385b265d2"/>
+                                        </div>
+                                        <ul class="comment-form-inputs">
+                                            <li class="one">
+                                            <span class="wpcf7-form-control-wrap author"><input type="text"
+                                                                                                name="author"
+                                                                                                value="Your name..."
+                                                                                                size="40"
+                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                aria-required="true"
+                                                                                                aria-invalid="false"/></span>
+                                            </li>
+                                            <li class="two">
+                                            <span class="wpcf7-form-control-wrap email"><input type="email" name="email"
+                                                                                               value="Your email..."
+                                                                                               size="40"
+                                                                                               class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                               aria-required="true"
+                                                                                               aria-invalid="false"/></span>
+                                            </li>
+                                            <li class="three">
+                                            <span class="wpcf7-form-control-wrap subject"><input type="text"
+                                                                                                 name="subject"
+                                                                                                 value="Subject message"
+                                                                                                 size="40"
+                                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                 aria-required="true"
+                                                                                                 aria-invalid="false"/></span>
+                                            </li>
+                                        </ul>
+                                        <p><span class="wpcf7-form-control-wrap comment"><textarea name="comment" cols="40"
+                                                                                                   rows="10"
+                                                                                                   class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"></textarea></span>
+                                        </p>
+
+                                        <p class="form-submitIndex">
+                                            <input type="submit" value="SEND MESSAGE"
+                                                   class="wpcf7-form-control wpcf7-submit"/></p>
+
+                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_row wpb_row vc_inner vc_row-fluid contact-details">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div class="wrapper">
+                                    <div class="hexagon1"></div>
+                                    <p>Email Adress: : <br><span>contact@mywebsite.com</span></p>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="hexagon2"></div>
+                                    <p>Street Location:: <br><span>My City, CA 94043</span></p>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="hexagon3"></div>
+                                    <p>Telephone:: <br><span>+0721 427 010</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

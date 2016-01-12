@@ -1,0 +1,11 @@
+/**
+ * Global stylesheet
+ */
+
+body {
+    margin-top: 60px;
+}
+
+.second-color {
+    color: #F0542D;
+}
