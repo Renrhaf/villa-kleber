@@ -23,3 +23,10 @@ Concurrents
 - http://www.lavilla1901.fr/fr/pieces-a-vivre.html
 - http://www.du-cote-de-chez-anne.com
 
+Fonts
+-----
+
+- http://www.dafont.com/fr/imperator.font
+- http://www.dafont.com/fr/sanford.font
+- http://www.dafont.com/fr/oranienbaum.font
+- ...
