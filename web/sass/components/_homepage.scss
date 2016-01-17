@@ -1,0 +1,80 @@
+/**
+ * Homepage styles.
+ */
+
+/* Room preview section */
+.room-preview {
+  .room-preview-title {
+    margin-bottom: 10px;
+
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+
+      span, i {
+        font-weight: $font-weight-light;
+      }
+
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .room-preview-image {
+    border-bottom: 4px solid $secondary-color;
+    transition: border-color 0.2s linear;
+  }
+
+  .room-preview-desc {
+    margin-top: 10px;
+
+    &:first-letter {
+      font-weight: $font-weight-bolder;
+      font-size: 20px;
+    }
+  }
+
+  .room-preview-link {
+    margin-top: 10px;
+
+    a {
+      color: inherit;
+    }
+  }
+
+
+  /* Room color specifics */
+  &.room-preview-red {
+    .room-preview-link,
+    .room-preview-title {
+      color: $red;
+    }
+
+    .room-preview-image {
+      border-bottom-color: $red;
+    }
+  }
+
+  &.room-preview-green {
+    .room-preview-link,
+    .room-preview-title {
+      color: $green;
+    }
+
+    .room-preview-image {
+      border-bottom-color: $green;
+    }
+  }
+
+  &.room-preview-blue {
+    .room-preview-link,
+    .room-preview-title {
+      color: $blue;
+    }
+
+    .room-preview-image {
+      border-bottom-color: $blue;
+    }
+  }
+}

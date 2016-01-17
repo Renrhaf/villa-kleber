@@ -7,7 +7,7 @@
         // Go to top button
         $(window).load(function () {
             $(window).scroll(function () {
-                if ($(document).scrollTop() > 300) {
+                if ($(document).scrollTop() > 0) {
                     $('#back-to-top').css({bottom: "50px"});
                 }
                 else {

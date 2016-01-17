@@ -1,0 +1,28 @@
+/**
+ * WYSIWYG related styles.
+ */
+
+.text-image {
+  margin-bottom: 20px;
+  transition: border-color 0.2s linear;
+
+  &.text-image-right {
+    float: right;
+    margin-left: 20px;
+    border-left: 4px solid $secondary-color;
+
+    &:hover {
+      border-left-color: $secondary-color-hover;
+    }
+  }
+
+  &.text-image-left {
+    float: left;
+    margin-right: 20px;
+    border-right: 4px solid $secondary-color;
+
+    &:hover {
+      border-right-color: $secondary-color-hover;
+    }
+  }
+}

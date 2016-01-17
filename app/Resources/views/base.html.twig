@@ -10,17 +10,13 @@
         <title>{% block title %}Villa Kleber{% endblock %}</title>
 
         {% block all_stylesheets %}
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/reset.css') }}" />
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/font-awesome/css/font-awesome.min.css') }}" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/styles.css') }}" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/header.css') }}" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/footer.css') }}" />
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}" />
             {% block stylesheets %}{% endblock %}
         {% endblock %}
 
-        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans:400|News+Cycle:400,700|Arapey:400,400italic|Advent+Pro:400,100,200,300,600,500,700|Playfair+Display:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
         {% block favicon %}<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />{% endblock %}
 
         <script>
@@ -48,7 +44,7 @@
                     <div class="container clearfix">
                         <h1 id="logo">
                             <a href="{{ path('homepage') }}">
-                                Villa <span class="second-color">Kleber</span>
+                                Villa <span class="secondary-color">Kleber</span>
                             </a>
                         </h1>
 
@@ -60,11 +56,10 @@
 
                         <nav id="main-menu" class="nav">
                             <ul class="clearfix">
-                                <li class="first active leaf"><a href="#home" class="active scroll-to-link">Home</a></li>
-                                <li class="leaf"><a href="#gallery" class="active scroll-to-link">Gallerie</a></li>
-                                <li class="leaf"><a href="#rooms" class="active scroll-to-link">Chambre</a></li>
-                                <li class="leaf"><a href="#strasbourg" class="active scroll-to-link">Strasbourg</a></li>
-                                <li class="last leaf"><a href="#contact" class="active scroll-to-link">Contact</a></li>
+                                <li class="first active leaf"><a href="#presentation" class="active scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
+                                <li class="leaf"><a href="#rooms" class="active scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
+                                <li class="leaf"><a href="#reservation" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
+                                <li class="last leaf"><a href="#information" class="active scroll-to-link">{{ 'menu.information'|trans }}</a></li>
                             </ul>
                         </nav>
                     </div>
