@@ -16,6 +16,7 @@ Thèmes à utiliser
 - http://createdbycocoon.com/drupal-themes/nrgtravel/preview
 - http://demo.newskythemes.com/myhouse/
 - http://createdbycocoon.com/drupal-themes/nrgtravel/preview
+- http://www.westinpalacemadrid.com/en
 
 Concurrents
 -----------
