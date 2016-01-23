@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('libs/royalslider/royalslider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('libs/royalslider/skins/default/rs-default.css') }}" />
+{% endblock %}
+
+{% block menu %}
+    <header id="page-header">
+        <div class="container clearfix">
+            <h1 id="logo">
+                <a href="{{ path('homepage') }}">
+                    <i class="fa fa-angle-left"></i> Retour <span class="secondary-color">à l'accueil</span>
+                </a>
+            </h1>
+
+            <div id="menu-responsive">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="main-menu" class="nav">
+                <ul class="clearfix">
+                    <li class="first active leaf"><a href="#presentation" class="active scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
+                    <li class="leaf"><a href="#rooms" class="active scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
+                    <li class="leaf"><a href="#reservation" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
+                    <li class="last leaf"><a href="#information" class="active scroll-to-link">{{ 'menu.information'|trans }}</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('libs/royalslider/jquery.royalslider.min.js') }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // Main slideshow.
+            $("#room-slideshow .royalSlider").royalSlider({
+                keyboardNavEnabled: true,
+                imageScaleMode: 'fill',
+                autoScaleSlider: false,
+                loopRewind: true,
+                randomizeSlides: true,
+                transitionType: 'fade',
+                autoPlay: {
+                    enabled: true
+                },
+                controlNavigation: 'thumbnails',
+                fullscreen: {
+                    enabled: true,
+                    nativeFS: false
+                }
+            });
+        });
+    </script>
+{% endblock %}

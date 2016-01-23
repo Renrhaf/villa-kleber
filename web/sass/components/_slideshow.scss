@@ -1,0 +1,47 @@
+/**
+ * Slideshow styles.
+ */
+
+.royalSlider {
+  width: 100% !important;
+}
+
+.rsDefault .rsFullscreenBtn {
+  top: 60px;
+}
+
+.rsFullscreen .rsFullscreenBtn {
+  top: 0;
+}
+
+#home-slideshow {
+  .royalSlider {
+    max-height: 600px;
+  }
+}
+
+#room-slideshow {
+  .royalSlider {
+    height: 100vh;
+  }
+
+  .rsDefault .rsFullscreenBtn {
+    top: 60px;
+  }
+
+  .rsFullscreen .rsFullscreenBtn {
+    top: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .royalSlider {
+      height: 70vh;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .royalSlider {
+      height: 50vh;
+    }
+  }
+}

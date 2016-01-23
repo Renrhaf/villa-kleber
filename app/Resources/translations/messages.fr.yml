@@ -3,3 +3,15 @@ menu:
   rooms: Nos Chambres
   reservation: Réservation & tarifs
   information: Informations pratiques
+booking:
+  fname.label: Prénom
+  lname.label: Nom
+  email.label: Email
+  phone.label: Téléphone
+  fromDate.label: De
+  toDate.label: à
+  room:
+    label: Chambre
+    red: Rubis
+    green: Jade
+    blue: Saphir

@@ -64,7 +64,7 @@
       }
 
       &:hover {
-        background: none repeat scroll 0 0 $secondary-color-hover;
+        background: none repeat scroll 0 0 lighten($secondary-color, $hover-lighten);
       }
     }
   }
@@ -102,6 +102,6 @@
   }
 
   &:hover {
-    background: $secondary-color-hover;
+    background: lighten($secondary-color, $hover-lighten);
   }
 }

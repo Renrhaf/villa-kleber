@@ -12,7 +12,7 @@
     border-left: 4px solid $secondary-color;
 
     &:hover {
-      border-left-color: $secondary-color-hover;
+      border-left-color: lighten($secondary-color, $hover-lighten);
     }
   }
 
@@ -22,7 +22,7 @@
     border-right: 4px solid $secondary-color;
 
     &:hover {
-      border-right-color: $secondary-color-hover;
+      border-right-color: lighten($secondary-color, $hover-lighten);
     }
   }
 }

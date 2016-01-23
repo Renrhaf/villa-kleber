@@ -19,7 +19,7 @@ a {
   transition: color 0.2s linear;
 
   &:hover {
-    color: $secondary-color-hover;
+    color: lighten($secondary-color, $hover-lighten);
     text-decoration: none;
   }
 }

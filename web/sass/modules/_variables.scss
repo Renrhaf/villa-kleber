@@ -60,14 +60,14 @@ $font-title: $adventPro;
 $font-monospace: $courier;
 
 // Colors, etc.
-$black: #02080D;
+$black: #000000;
 $blue: #025D8C;
-$blue-light: #038fd7;
 $red: #A40802;
 $green: #04AC6B;
 $white: #FEF9F0;
 
 $primary-color: $black;
 $secondary-color: $blue;
-$secondary-color-hover: $blue-light;
 $third-color: $white;
+
+$hover-lighten: 20%;

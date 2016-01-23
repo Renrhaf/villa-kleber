@@ -49,10 +49,18 @@
     .room-preview-link,
     .room-preview-title {
       color: $red;
+
+      &:hover {
+        color: lighten($red, $hover-lighten);
+      }
     }
 
     .room-preview-image {
       border-bottom-color: $red;
+
+      &:hover {
+        border-bottom-color: lighten($red, $hover-lighten);
+      }
     }
   }
 
@@ -60,10 +68,18 @@
     .room-preview-link,
     .room-preview-title {
       color: $green;
+
+      &:hover {
+        color: lighten($green, $hover-lighten);
+      }
     }
 
     .room-preview-image {
       border-bottom-color: $green;
+
+      &:hover {
+        border-bottom-color: lighten($green, $hover-lighten);
+      }
     }
   }
 
@@ -71,10 +87,18 @@
     .room-preview-link,
     .room-preview-title {
       color: $blue;
+
+      &:hover {
+        color: lighten($blue, $hover-lighten);
+      }
     }
 
     .room-preview-image {
       border-bottom-color: $blue;
+
+      &:hover {
+        border-bottom-color: lighten($blue, $hover-lighten);
+      }
     }
   }
 }
