@@ -33,7 +33,17 @@ class BookingType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $date_format = 'dd/MM/yyyy';
+
         $builder
+            ->add('room', ChoiceType::class, array(
+                'choices' => array(
+                    $this->translator->trans('booking.room.red') => 'red',
+                    $this->translator->trans('booking.room.green') => 'green',
+                    $this->translator->trans('booking.room.blue') => 'blue',
+                ),
+                'label' => $this->translator->trans('booking.room.label'),
+            ))
             ->add('fname', TextType::class, array(
                 'label' => $this->translator->trans('booking.fname.label'),
             ))
@@ -48,19 +58,23 @@ class BookingType extends AbstractType
             ))
             ->add('fromDate', DateType::class, array(
                 'widget' => 'single_text',
+                'format' => $date_format,
+                'attr' => array(
+                    'class' => 'room-datepicker room-datepicker-from',
+                    'data-provide' => 'datepicker',
+                    'data-date-format' => strtolower($date_format)
+                ),
                 'label' => $this->translator->trans('booking.fromDate.label'),
             ))
             ->add('toDate', DateType::class, array(
                 'widget' => 'single_text',
-                'label' => $this->translator->trans('booking.toDate.label'),
-            ))
-            ->add('room', ChoiceType::class, array(
-                'choices' => array(
-                    $this->translator->trans('booking.room.red') => 'red',
-                    $this->translator->trans('booking.room.green') => 'green',
-                    $this->translator->trans('booking.room.blue') => 'blue',
+                'format' => $date_format,
+                'attr' => array(
+                    'class' => 'room-datepicker room-datepicker-to',
+                    'data-provide' => 'datepicker',
+                    'data-date-format' => strtolower($date_format)
                 ),
-                'label' => $this->translator->trans('booking.room.label'),
+                'label' => $this->translator->trans('booking.toDate.label'),
             ))
             ->add('save', SubmitType::class)
         ;

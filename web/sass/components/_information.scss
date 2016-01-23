@@ -1,0 +1,32 @@
+/**
+ * Information elements.
+ */
+.info-element {
+  margin-bottom: 40px;
+
+  .info-element-icon {
+    float: left;
+    margin-right: 20px;
+    background: $secondary-color;
+    border-radius: 20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: all 0.2s linear;
+
+    i {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    &:hover {
+      background: lighten($secondary-color, $hover-lighten);
+    }
+  }
+
+  .info-element-text {
+    padding-top: 5px;
+    font-family: $font-title;
+  }
+}

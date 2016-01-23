@@ -8,8 +8,8 @@ booking:
   lname.label: Nom
   email.label: Email
   phone.label: Téléphone
-  fromDate.label: De
-  toDate.label: à
+  fromDate.label: Date d'arrivée
+  toDate.label: Date de départ
   room:
     label: Chambre
     red: Rubis

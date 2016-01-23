@@ -1,5 +1,6 @@
+{% set language = app.request.locale|split('_')[0] %}
 <!DOCTYPE html>
-<html {% block html_attributes %}lang="{{ app.request.locale|split('_')[0] }}"{% endblock %}>
+<html {% block html_attributes %}lang="{{ language }}"{% endblock %}>
     <head>
         {% block meta_tags %}
             <meta charset="UTF-8" />
@@ -11,6 +12,7 @@
 
         {% block all_stylesheets %}
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/font-awesome/css/font-awesome.min.css') }}" />
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}" />
             {% block stylesheets %}{% endblock %}
@@ -99,7 +101,24 @@
         {% block all_javascripts %}
             <script type="text/javascript" src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+            <script>
+                jQuery(document).ready(function($) {
+                    // Room datepickers.
+                    $(".room-datepicker").datepicker({
+                        language: '{{ language }}',
+                        autoclose: true,
+                        startDate: 'now'
+                    });
+
+                    // Ensure "to" date is greater than "from" date.
+                    $(".room-datepicker-from").on('changeDate', function(e) {
+                        $(".room-datepicker-to").datepicker('clearDates').datepicker('setStartDate', e.date);
+                    });
+                });
+            </script>
             {% block javascripts %}{% endblock %}
         {% endblock %}
     </body>

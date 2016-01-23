@@ -139,13 +139,24 @@ img {
 
 /* line 17, ../sass/partials/_global.scss */
 a {
-  color: #025d8c;
+  color: #80313e;
   transition: color 0.2s linear;
 }
 /* line 21, ../sass/partials/_global.scss */
 a:hover {
-  color: #03a0f1;
+  color: #bf5869;
   text-decoration: none;
+}
+
+/* line 27, ../sass/partials/_global.scss */
+sup {
+  font-size: 0.7em;
+}
+
+/* Helper row with margin bottom */
+/* line 32, ../sass/partials/_global.scss */
+.row-with-margin-bottom {
+  margin-bottom: 50px;
 }
 
 /**
@@ -189,14 +200,14 @@ h6 {
 /* Helper classes */
 /* line 35, ../sass/partials/_typography.scss */
 .secondary-color {
-  color: #025d8c;
+  color: #80313e;
 }
 
 /* line 39, ../sass/partials/_typography.scss */
 .section-title {
   text-align: center;
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  color: #025d8c;
+  color: #80313e;
 }
 /* line 44, ../sass/partials/_typography.scss */
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
@@ -213,7 +224,7 @@ h6 {
   position: absolute;
   font-size: 9rem;
   font-weight: 700;
-  color: rgba(2, 93, 140, 0.2);
+  color: rgba(128, 49, 62, 0.2);
   left: 50%;
   top: 40%;
   -moz-transform: translate(-50%, -50%);
@@ -230,7 +241,7 @@ h6 {
   display: block;
   position: absolute;
   height: 0.1rem;
-  background: rgba(2, 93, 140, 0.2);
+  background: rgba(128, 49, 62, 0.2);
   left: 50%;
   top: 50%;
   z-index: -1;
@@ -250,21 +261,21 @@ h6 {
 .text-image.text-image-right {
   float: right;
   margin-left: 20px;
-  border-left: 4px solid #025d8c;
+  border-left: 4px solid #80313e;
 }
 /* line 14, ../sass/partials/_wysiwyg.scss */
 .text-image.text-image-right:hover {
-  border-left-color: #03a0f1;
+  border-left-color: #bf5869;
 }
 /* line 19, ../sass/partials/_wysiwyg.scss */
 .text-image.text-image-left {
   float: left;
   margin-right: 20px;
-  border-right: 4px solid #025d8c;
+  border-right: 4px solid #80313e;
 }
 /* line 24, ../sass/partials/_wysiwyg.scss */
 .text-image.text-image-left:hover {
-  border-right-color: #03a0f1;
+  border-right-color: #bf5869;
 }
 
 /**
@@ -333,7 +344,7 @@ h6 {
 }
 /* line 62, ../sass/partials/_header.scss */
 #main-menu ul li.active a, #main-menu ul li a:hover {
-  color: #025d8c;
+  color: #80313e;
 }
 /* line 66, ../sass/partials/_header.scss */
 #main-menu ul li:last-of-type {
@@ -382,7 +393,7 @@ h6 {
 #menu-responsive span {
   height: 2px;
   margin-top: 10px;
-  background: #025d8c;
+  background: #80313e;
   display: block;
   position: relative;
   top: 0;
@@ -425,13 +436,14 @@ h6 {
 #page-footer {
   position: relative;
   text-align: center;
+  margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   background: url("../img/footer.jpg");
   background-size: cover;
-  border-top: rgba(2, 93, 140, 0.5) 2px solid;
+  border-top: rgba(128, 49, 62, 0.5) 2px solid;
 }
-/* line 14, ../sass/partials/_footer.scss */
+/* line 15, ../sass/partials/_footer.scss */
 #page-footer h2 {
   cursor: pointer;
   font-size: 2.2rem;
@@ -439,15 +451,15 @@ h6 {
   text-transform: uppercase;
   color: #fef9f0;
 }
-/* line 21, ../sass/partials/_footer.scss */
+/* line 22, ../sass/partials/_footer.scss */
 #page-footer h2 span {
   cursor: pointer;
   font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #025d8c;
+  color: #80313e;
 }
-/* line 29, ../sass/partials/_footer.scss */
+/* line 30, ../sass/partials/_footer.scss */
 #page-footer h2:after {
   content: '';
   display: block;
@@ -455,20 +467,20 @@ h6 {
   width: 4.5rem;
   height: 0.2rem;
   left: 50%;
-  background: #025d8c;
+  background: #80313e;
   margin-left: -2.25rem;
   margin-top: 20px;
 }
-/* line 42, ../sass/partials/_footer.scss */
+/* line 43, ../sass/partials/_footer.scss */
 #page-footer p {
   margin-top: 40px;
 }
-/* line 46, ../sass/partials/_footer.scss */
+/* line 47, ../sass/partials/_footer.scss */
 #page-footer .social {
   margin-top: 20px;
   text-align: center;
 }
-/* line 50, ../sass/partials/_footer.scss */
+/* line 51, ../sass/partials/_footer.scss */
 #page-footer .social a {
   text-decoration: none;
   display: inline-block;
@@ -476,29 +488,29 @@ h6 {
   height: 30px;
   margin: 2px;
   border-radius: 50%;
-  background: none repeat scroll 0 0 #025d8c;
+  background: none repeat scroll 0 0 #80313e;
   transition: all 0.2s linear 0s;
 }
-/* line 60, ../sass/partials/_footer.scss */
+/* line 61, ../sass/partials/_footer.scss */
 #page-footer .social a i {
   font-size: 1rem;
   line-height: 2rem;
   color: #fef9f0;
 }
-/* line 66, ../sass/partials/_footer.scss */
+/* line 67, ../sass/partials/_footer.scss */
 #page-footer .social a:hover {
-  background: none repeat scroll 0 0 #03a0f1;
+  background: none repeat scroll 0 0 #bf5869;
 }
 
 /* BACK TO TOP */
-/* line 74, ../sass/partials/_footer.scss */
+/* line 75, ../sass/partials/_footer.scss */
 #back-to-top {
   display: block;
   position: fixed;
   height: 30px;
   bottom: -80px;
   right: 50px;
-  background: #025d8c;
+  background: #80313e;
   text-decoration: none;
   border-radius: 3px;
   z-index: 9999;
@@ -510,7 +522,7 @@ h6 {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-/* line 92, ../sass/partials/_footer.scss */
+/* line 93, ../sass/partials/_footer.scss */
 #back-to-top:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -522,109 +534,114 @@ h6 {
   line-height: 1em;
   content: "\f077";
 }
-/* line 104, ../sass/partials/_footer.scss */
+/* line 105, ../sass/partials/_footer.scss */
 #back-to-top:hover {
-  background: #03a0f1;
+  background: #bf5869;
 }
 
 /**
- * Homepage styles.
+ * Room preview styles.
  */
-/* Room preview section */
-/* line 6, ../sass/components/_homepage.scss */
+/* line 4, ../sass/components/_room_preview.scss */
 .room-preview {
   /* Room color specifics */
 }
-/* line 7, ../sass/components/_homepage.scss */
+/* line 5, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-title {
   margin-bottom: 10px;
 }
-/* line 10, ../sass/components/_homepage.scss */
+/* line 8, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-title h3 {
   font-size: 2rem;
   text-align: center;
 }
-/* line 14, ../sass/components/_homepage.scss */
+/* line 12, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-title h3 span, .room-preview .room-preview-title h3 i {
   font-weight: 300;
 }
-/* line 18, ../sass/components/_homepage.scss */
+/* line 16, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-title h3 i {
   padding-right: 10px;
 }
-/* line 24, ../sass/components/_homepage.scss */
+/* line 24, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-image {
-  border-bottom: 4px solid #025d8c;
+  border-bottom: 4px solid #80313e;
   transition: border-color 0.2s linear;
 }
-/* line 29, ../sass/components/_homepage.scss */
+/* line 29, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-desc {
   margin-top: 10px;
 }
-/* line 32, ../sass/components/_homepage.scss */
+/* line 32, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-desc:first-letter {
   font-weight: 800;
   font-size: 20px;
 }
-/* line 38, ../sass/components/_homepage.scss */
+/* line 38, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-link {
   margin-top: 10px;
 }
-/* line 41, ../sass/components/_homepage.scss */
+/* line 41, ../sass/components/_room_preview.scss */
 .room-preview .room-preview-link a {
   color: inherit;
 }
-/* line 50, ../sass/components/_homepage.scss */
+/* line 50, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-red .room-preview-link,
 .room-preview.room-preview-red .room-preview-title {
   color: #a40802;
+  text-shadow: 0px 0px 10px #feaaa7;
+  transition: color 0.2s linear;
 }
-/* line 53, ../sass/components/_homepage.scss */
+/* line 55, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-red .room-preview-link:hover,
 .room-preview.room-preview-red .room-preview-title:hover {
   color: #fc1910;
 }
-/* line 58, ../sass/components/_homepage.scss */
+/* line 60, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-red .room-preview-image {
   border-bottom-color: #a40802;
 }
-/* line 61, ../sass/components/_homepage.scss */
+/* line 63, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-red .room-preview-image:hover {
   border-bottom-color: #fc1910;
 }
-/* line 69, ../sass/components/_homepage.scss */
+/* line 71, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-green .room-preview-link,
 .room-preview.room-preview-green .room-preview-title {
   color: #04ac6b;
+  text-shadow: 0px 0px 10px #b2fde0;
+  transition: color 0.2s linear;
 }
-/* line 72, ../sass/components/_homepage.scss */
+/* line 76, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-green .room-preview-link:hover,
 .room-preview.room-preview-green .room-preview-title:hover {
   color: #1cfaa4;
 }
-/* line 77, ../sass/components/_homepage.scss */
+/* line 81, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-green .room-preview-image {
   border-bottom-color: #04ac6b;
 }
-/* line 80, ../sass/components/_homepage.scss */
+/* line 84, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-green .room-preview-image:hover {
   border-bottom-color: #1cfaa4;
 }
-/* line 88, ../sass/components/_homepage.scss */
+/* line 92, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-blue .room-preview-link,
 .room-preview.room-preview-blue .room-preview-title {
   color: #025d8c;
+  text-shadow: 0px 0px 10px #90d8fd;
+  transition: color 0.2s linear;
 }
-/* line 91, ../sass/components/_homepage.scss */
+/* line 97, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-blue .room-preview-link:hover,
 .room-preview.room-preview-blue .room-preview-title:hover {
   color: #03a0f1;
 }
-/* line 96, ../sass/components/_homepage.scss */
+/* line 102, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-blue .room-preview-image {
   border-bottom-color: #025d8c;
 }
-/* line 99, ../sass/components/_homepage.scss */
+/* line 105, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-blue .room-preview-image:hover {
   border-bottom-color: #03a0f1;
 }
@@ -675,4 +692,43 @@ h6 {
   #room-slideshow .royalSlider {
     height: 50vh;
   }
+}
+
+/* line 1, ../sass/components/_datepicker.scss */
+.datepicker {
+  color: black;
+}
+
+/**
+ * Information elements.
+ */
+/* line 4, ../sass/components/_information.scss */
+.info-element {
+  margin-bottom: 40px;
+}
+/* line 7, ../sass/components/_information.scss */
+.info-element .info-element-icon {
+  float: left;
+  margin-right: 20px;
+  background: #80313e;
+  border-radius: 20px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s linear;
+}
+/* line 17, ../sass/components/_information.scss */
+.info-element .info-element-icon i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+/* line 23, ../sass/components/_information.scss */
+.info-element .info-element-icon:hover {
+  background: #bf5869;
+}
+/* line 28, ../sass/components/_information.scss */
+.info-element .info-element-text {
+  padding-top: 5px;
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }

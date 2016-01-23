@@ -152,10 +152,18 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h2><span>R</span>Réservation<span class="hr"></span></h2>
+                </div>
 
-                    {{ form_start(form) }}
-                    {{ form_widget(form) }}
-                    {{ form_end(form) }}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ include('booking/form.html.twig', { 'form': form }) }}
+                        </div>
+
+                        <div class="col-md-6">
+                            <h2>TODO Calendrier</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,6 +172,124 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h2><span>I</span>Informations<span class="hr"></span></h2>
+                </div>
+
+                <div class="container">
+                    <div class="row row-with-margin-bottom">
+                        <div class="col-md-12">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id cursus enim, a
+                                pharetra sem. Etiam malesuada, augue sed iaculis tincidunt, nisi odio mollis sapien, in
+                                semper diam elit ut sem. Fusce nisl sapien, euismod et purus non, dictum blandit dolor.
+                                <br/><br/>
+                                Curabitur iaculis vehicula eleifend. Donec quis sollicitudin risus. Nam porta at mauris
+                                ut facilisis. Donec vitae felis enim. Morbi id quam eget turpis finibus sollicitudin.
+                                Duis gravida lectus a felis ultricies mollis. Sed nec libero varius, pellentesque quam
+                                a, sollicitudin dui. Proin cursus varius libero, ut congue nisl tempus quis. Nulla non
+                                posuere sapien. Proin luctus consequat risus nec aliquet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Immeuble de standing
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-bed"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Literie MyBed™
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-shopping-bag"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Magasins divers proches
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-subway"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Tram à 150m
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    120m<sup>2</sup> d'espace
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-child"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Lit pour enfant disponible
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-glass"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Bars à proximité
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="info-element clearfix">
+                                <div class="info-element-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+
+                                <div class="info-element-text">
+                                    Service d'excellence
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

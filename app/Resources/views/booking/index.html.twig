@@ -1,8 +1,31 @@
 {% extends 'base.html.twig' %}
 
+{% block menu %}
+    <header id="page-header">
+        <div class="container clearfix">
+            <h1 id="logo">
+                <a href="{{ path('homepage') }}">
+                    <i class="fa fa-angle-left"></i> Retour <span class="secondary-color">à l'accueil</span>
+                </a>
+            </h1>
+
+            <div id="menu-responsive">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="main-menu" class="nav">
+                <ul class="clearfix">
+                    <li class="first active leaf"><a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li></ul>
+            </nav>
+        </div>
+    </header>
+{% endblock %}
+
 {% block content %}
     <div class="container">
-        <div class="row" id="book">
+        <div class="row" id="booking">
             <div class="col-md-12">
                 <div class="section-title">
                     <h2><span>R</span>Réservation<span class="hr"></span></h2>
