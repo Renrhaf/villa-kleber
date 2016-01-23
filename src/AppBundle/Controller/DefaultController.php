@@ -15,9 +15,13 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        // Prepare the booking form.
         $booking = new Booking();
 
-        $form = $this->createForm(BookingType::class, $booking);
+        $form = $this->createForm(BookingType::class, $booking, array(
+            'action' => $this->generateUrl('booking'),
+            'method' => 'POST',
+        ));
 
         return $this->render('default/index.html.twig', array(
             'form' => $form->createView(),
