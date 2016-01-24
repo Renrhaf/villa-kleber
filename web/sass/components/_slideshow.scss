@@ -6,42 +6,36 @@
   width: 100% !important;
 }
 
-.rsDefault .rsFullscreenBtn {
-  top: 60px;
-}
-
-.rsFullscreen .rsFullscreenBtn {
-  top: 0;
-}
-
-#home-slideshow {
+/* Slideshow on homepage and on room pages */
+#home-slideshow, #room-slideshow {
   .royalSlider {
-    max-height: 600px;
+    height: 100vh;
+    min-height: 300px;
+  }
+
+  @media screen and (max-width: 992px) {
+
   }
 }
 
-#room-slideshow {
-  .royalSlider {
-    height: 100vh;
+/* For non-desktop screen, set margin top. */
+@media screen and (max-width: 992px) {
+  body {
+    margin-top: 60px;
+  }
+}
+
+/* For desktop screen, let slideshow hovered by navbar. */
+@media screen and (min-width: 992px) {
+  body {
+    margin-top: 0px;
   }
 
   .rsDefault .rsFullscreenBtn {
-    top: 60px;
+    top: 60px !important;
   }
 
   .rsFullscreen .rsFullscreenBtn {
-    top: 0;
-  }
-
-  @media screen and (max-width: 800px) {
-    .royalSlider {
-      height: 70vh;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .royalSlider {
-      height: 50vh;
-    }
+    top: 0 !important;
   }
 }

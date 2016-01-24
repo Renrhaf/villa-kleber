@@ -13,3 +13,7 @@ services:
         arguments: ["@translator"]
         tags:
             - { name: form.type }
+
+    app.booking.manager:
+        class: AppBundle\Services\BookingManager
+        arguments: ["@doctrine.orm.entity_manager", "@translator", "@mailer", "@templating"]

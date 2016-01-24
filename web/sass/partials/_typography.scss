@@ -42,6 +42,7 @@ h6 {
   color: $secondary-color;
 
   h1, h2, h3, h4, h5, h6 {
+    word-break: break-all;
     font-size: 3rem;
     font-weight: $font-weight-light;
     text-transform: uppercase;
@@ -77,6 +78,13 @@ h6 {
       z-index: -1;
       transform: translateX(-50%) translateY(-50%) rotate(-45deg);
       -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 400px) {
+      font-size: 2rem;
+      span {  font-size: 6rem;  }
+      span.hr {  width: 10rem;  }
     }
   }
 }

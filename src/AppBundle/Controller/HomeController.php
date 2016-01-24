@@ -8,16 +8,21 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+/**
+ * Default controller.
+ * Deals with main site pages.
+ */
+class HomeController extends Controller
 {
     /**
+     * Homepage.
+     *
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         // Prepare the booking form.
         $booking = new Booking();
-
         $form = $this->createForm(BookingType::class, $booking, array(
             'action' => $this->generateUrl('booking'),
             'method' => 'POST',
@@ -26,29 +31,5 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig', array(
             'form' => $form->createView(),
         ));
-    }
-
-    /**
-     * @Route("/chambre/rubis", name="room_red")
-     */
-    public function redRoomAction(Request $request)
-    {
-        return $this->render('rooms/red.html.twig');
-    }
-
-    /**
-     * @Route("/chambre/jade", name="room_green")
-     */
-    public function greenRoomAction(Request $request)
-    {
-        return $this->render('rooms/green.html.twig');
-    }
-
-    /**
-     * @Route("/chambre/saphir", name="room_blue")
-     */
-    public function blueRoomAction(Request $request)
-    {
-        return $this->render('rooms/blue.html.twig');
     }
 }

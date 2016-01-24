@@ -32,6 +32,24 @@
     font-weight: $font-weight-bolder;
     text-decoration: none;
   }
+
+  // Back to home for rooms.
+  &.back-to-home {
+    i, .secondary-color {
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      i {
+        position: relative;
+        left: -5px;
+      }
+
+      .secondary-color {
+        color: lighten($secondary-color, $hover-lighten);
+      }
+    }
+  }
 }
 
 /* Menu */

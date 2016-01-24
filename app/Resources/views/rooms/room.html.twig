@@ -8,7 +8,7 @@
 {% block menu %}
     <header id="page-header">
         <div class="container clearfix">
-            <h1 id="logo">
+            <h1 id="logo" class="back-to-home">
                 <a href="{{ path('homepage') }}">
                     <i class="fa fa-angle-left"></i> Retour <span class="secondary-color">à l'accueil</span>
                 </a>
@@ -21,10 +21,11 @@
             </div>
 
             <nav id="main-menu" class="nav">
+                {% block room_title %}<h2>Chambre <span>Xxxxxx</span></h2>{% endblock %}
                 <ul class="clearfix">
                     <li class="first active leaf"><a href="#presentation" class="active scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
                     <li class="leaf"><a href="#rooms" class="active scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
-                    <li class="leaf"><a href="#reservation" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
+                    <li class="leaf"><a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
                     <li class="last leaf"><a href="#information" class="active scroll-to-link">{{ 'menu.information'|trans }}</a></li>
                 </ul>
             </nav>
