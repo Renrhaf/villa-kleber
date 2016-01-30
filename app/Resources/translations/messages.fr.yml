@@ -3,6 +3,15 @@ menu:
   rooms: Nos Chambres
   reservation: Réservation & tarifs
   information: Informations pratiques
+title:
+  presentation: Présentation
+  presentation_letter: P
+  rooms: Nos Chambres
+  rooms_letter: N
+  reservation: Réservation & tarifs
+  reservation_letter: R
+  information: Informations pratiques
+  information_letter: I
 booking:
   fname.label: Prénom
   lname.label: Nom
@@ -15,3 +24,26 @@ booking:
     red: Rubis
     green: Jade
     blue: Saphir
+copyright:
+  reserved: Tous droits réservés.
+  authors: Design & développement par Quentin Fahrner & Sathya Bin.
+metatags:
+  keywords: "Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
+  description: TODO
+back: Retour
+information.shopping: Les centres commerciaux
+information.strasbourg: Visiter Strasbourg
+information.transport: Les transports
+information.parking: Les parkings
+information.transport.description: "Arrêt : Ancienne Synagogue les Halles : lignes A , C et D.<br/>Arrêt Homme de Fer : Ligne A,B,C,D et F<br/><a href=\"http://www.cts-strasbourg.eu/fr/\">Plus d'informations</a>"
+information.strasbourg.description: "A vélo ou à pied, promenez vous dans ces différents quartiers : autour de la cathédrale, à Grand Rue ou encore à la Petite France."
+information.shopping.description: "Centre commercial des Halles<br/>Centre commercial Rive Etoile : Ligne A ou D arrêt Etoile Bourse"
+information.parking.description: "Parking Kléber/Homme de Fer<br/>Parking des Halles<br/>P1: Marais Vert : Ouvert du lundi au samedi de 7h à 21h<br/>P2: Sébastopol : Ouvert 7 j /7, 24h/24, jours fériés inclus<br/>P3: Wilson : Ouvert du lundi au samedi de 7h à 21h"
+to_homepage: à l'accueil
+reservation.description: Réservez l'une de nos luxueuses chambres en quelques clics.
+room: Chambre
+room.visit: Visiter la chambre
+room.description:
+  blue: "Véritable appartement, la chambre Saphir peut accueillir jusqu'à 2 personnes.<br/>Dans un style élégant et luxueux, ses tons vous invitent au repos et au calme."
+  green: "Spacieuse et lumineuse, la chambre Jade dispose de 2 couchages.<br/>Entre amoureux, amis ou encore famille profitez de son cadre chaleureux."
+  red: "Pour un week end romantique ou une escapade citadine, la chambre Rubis peut accueillir jusqu'à 2 personnes.<br/>Son atmosphère lounge et son univers brut sauront vous séduire et faire de votre séjour, une expérience de qualité."

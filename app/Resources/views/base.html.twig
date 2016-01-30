@@ -6,6 +6,8 @@
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+            <meta name="keywords" content="{{ 'metatags.keywords'|trans }}" />
+            <meta name="description" content="{{ 'metatags.description'|trans }}" />
         {% endblock %}
 
         <title>{% block title %}Villa Kleber{% endblock %}</title>
@@ -14,6 +16,8 @@
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/font-awesome/css/font-awesome.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('libs/royalslider/royalslider.css') }}" />
+            <link rel="stylesheet" href="{{ asset('libs/royalslider/skins/default/rs-default.css') }}" />
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}" />
             {% block stylesheets %}{% endblock %}
         {% endblock %}
@@ -56,12 +60,12 @@
                             <span></span>
                         </div>
 
-                        <nav id="main-menu" class="nav">
-                            <ul class="clearfix">
-                                <li class="first leaf"><a href="#presentation" class="scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
-                                <li class="leaf"><a href="#rooms" class="scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
-                                <li class="leaf"><a href="#book" class="scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
-                                <li class="last leaf"><a href="#information" class="scroll-to-link">{{ 'menu.information'|trans }}</a></li>
+                        <nav id="main-menu">
+                            <ul class="nav clearfix">
+                                <li class="first leaf"><a href="#presentation">{{ 'menu.presentation'|trans }}</a></li>
+                                <li class="leaf"><a href="#rooms">{{ 'menu.rooms'|trans }}</a></li>
+                                <li class="leaf"><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
+                                <li class="last leaf"><a href="#information">{{ 'menu.information'|trans }}</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -81,8 +85,8 @@
                             </h2>
 
                             <p>
-                                Design & développement par Quentin Fahrner & Sathya Bin.<br />
-                                Copyright {{ 'now'|date('Y') }}. Tous droits réservés.
+                                {{ 'copyright.authors'|trans }}<br />
+                                Copyright {{ 'now'|date('Y') }}. {{ 'copyright.reserved'|trans }}
                             </p>
 
                             <div class="social">
@@ -103,22 +107,8 @@
             <script type="text/javascript" src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('libs/royalslider/jquery.royalslider.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-            <script>
-                jQuery(document).ready(function($) {
-                    // Room datepickers.
-                    $(".room-datepicker").datepicker({
-                        language: '{{ language }}',
-                        autoclose: true,
-                        startDate: 'now'
-                    });
-
-                    // Ensure "to" date is greater than "from" date.
-                    $(".room-datepicker-from").on('changeDate', function(e) {
-                        $(".room-datepicker-to").datepicker('clearDates').datepicker('setStartDate', e.date);
-                    });
-                });
-            </script>
             {% block javascripts %}{% endblock %}
         {% endblock %}
     </body>

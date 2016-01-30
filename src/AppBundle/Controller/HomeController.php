@@ -4,9 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Booking;
 use AppBundle\Form\Type\BookingType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Default controller.
@@ -16,8 +14,6 @@ class HomeController extends Controller
 {
     /**
      * Homepage.
-     *
-     * @Route("/", name="homepage")
      */
     public function indexAction()
     {

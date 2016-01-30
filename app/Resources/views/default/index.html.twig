@@ -1,13 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('libs/royalslider/royalslider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('libs/royalslider/skins/default/rs-default.css') }}" />
-{% endblock %}
-
 {% block content %}
     <div class="container-fluid">
-        <div class="row" id="home-slideshow" class="slideshow">
+        <div class="row slideshow" id="home-slideshow">
             <div class="col-md-12">
                 <div class="royalSlider rsDefault">
                     <img class="rsImg" src="{{ asset('img/photos/photo1.jpg') }}" />
@@ -20,26 +15,39 @@
         <div class="row" id="presentation">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2><span>P</span>Présentation <span class="hr"></span></h2>
+                    <h2><span>{{ 'title.presentation_letter'|trans }}</span>{{ 'title.presentation'|trans }} <span class="hr"></span></h2>
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>
-                                <img src="{{ asset('img/photos/photo5.jpg') }}" width="500px" class="text-image text-image-right" />
+                            <p class="clearfix">
+                                <img src="{{ asset('img/photos/strasbourg1.jpeg') }}" width="500px" class="text-image text-image-full" />
+                                Située au coeur de Strasbourg , la Villa Kléber vous offre un séjour de rêve tradition et confort.<br/>
+                                <br/>
+                                Parmi ces trois chambres de caractères vous trouverez celle qui vous correspond.<br/>
+                                Se sentir à la fois chez soi et en même temps ailleurs...telle est la promesse de la Villa Kléber.<br/>
+                                <br/>
+                                Posez vos bagages ... vous êtes chez vous.
 
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis <b>tellus eget</b> hendrerit tincidunt. Pellentesque lacinia lectus id tellus pellentesque euismod. Sed ultrices, neque sed vehicula dignissim, ligula justo rhoncus nunc, sit amet vulputate metus urna in dolor. Maecenas ac lobortis sem. Sed eget nisi et arcu cursus maximus sed at nunc. Nam quis posuere nibh. Nunc ullamcorper ullamcorper ex sed consectetur. Phasellus et molestie turpis.
-                                <br/><br/>
-                                Maecenas nec odio eget nunc dictum posuere. <i>Nam maximus</i>, orci at efficitur scelerisque, orci enim malesuada enim, et pharetra est nisl et arcu. Praesent ac metus nulla. Nam faucibus neque id erat dapibus pellentesque. Curabitur laoreet ipsum et urna interdum gravida. Sed nec mattis nunc. Integer vel justo leo. Mauris dapibus id ligula ac pulvinar. Nulla facilisi. Suspendisse potenti. Donec a mauris vitae velit ornare eleifend.
-                                <br/><br/>
-                                Suspendisse rhoncus <a href="#">mauris sed</a> convallis porttitor. Nullam porttitor pulvinar vehicula. Fusce augue diam, elementum fermentum leo luctus, gravida iaculis quam. Nullam pharetra massa ex, elementum elementum mi semper eget. Quisque tristique ante sit amet accumsan vehicula. Donec ac nunc quis ligula tincidunt condimentum. In tempor pellentesque lacinia. Morbi ullamcorper elit quis massa aliquet lobortis.
-                                <br/><br/>
+                                <blockquote class="text-citation" cite="https://fr.wikipedia.org/wiki/Strasbourg">
+                                    <p>
+                                        Son histoire, riche et tourmentée, a laissé un patrimoine architectural remarquable.
+                                        Son centre-ville, situé sur la Grande Île, est entièrement inscrit au patrimoine mondial
+                                        de l'humanité par l’Unesco depuis 1988 et comprend notamment la cathédrale Notre-Dame
+                                        de Strasbourg et le quartier de la Petite France.
+                                    </p>
+                                </div>
+                            </p>
 
-                                <img src="{{ asset('img/photos/photo6.jpg') }}" width="500px" class="text-image text-image-left" />
-                                Ut suscipit, magna id rutrum placerat, tellus enim pellentesque est, consectetur feugiat mauris urna et mauris. Morbi rhoncus turpis vitae erat porttitor, a eleifend augue lobortis. Morbi sagittis et mi in imperdiet. Nunc sodales luctus mi nec imperdiet. Maecenas luctus, justo et fermentum gravida, dui ipsum posuere nisl, ac pellentesque neque est non nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pellentesque nec magna vel molestie. Pellentesque pretium nibh sed accumsan pretium. Nulla vulputate, leo sed imperdiet vestibulum, lectus erat bibendum risus, et volutpat sapien ligula at nulla. Cras rutrum sapien odio, et tempus lorem rutrum non. Nullam vestibulum auctor nunc, et vulputate sem. Maecenas lorem eros, gravida sit amet tellus vel, ultricies finibus augue. Maecenas malesuada erat non nulla sagittis, sed vestibulum erat mollis. In facilisis vel libero eu feugiat.
-                                <br/><br/>
-                                Donec ac dictum justo. Praesent iaculis odio quis felis dignissim lobortis. Phasellus tristique id mi et placerat. Integer neque felis, scelerisque quis finibus a, vulputate at ex. Aenean a dui volutpat, tristique dolor a, bibendum dolor. Duis ultrices sapien quis mauris viverra, id consectetur nibh consequat. Suspendisse id sagittis orci, a vehicula orci. Proin sed dictum massa, laoreet molestie mauris. Fusce eget dictum augue. Aenean rhoncus leo ut orci maximus viverra. Praesent vitae tellus euismod, iaculis orci bibendum, imperdiet quam. Donec diam velit, placerat a nunc eget, porta molestie nunc. Cras faucibus dictum imperdiet. Pellentesque consectetur libero et purus posuere, vitae vestibulum neque feugiat. Mauris varius blandit tristique.
+                            <p class="clearfix">
+                                <img src="{{ asset('img/photos/photo5.jpg') }}" width="300px" class="text-image text-image-left" />
+                                In the heart of the city of Strtasbourg, the Villa Kléber offers you a dream stay between tradition and comfort.<br/>
+                                <br/>
+                                With its three characterful rooms, you will find yours.<br/>
+                                To feel at home and elsewhere at the same time, that is the promise of the Villa Kléber.<br/>
+                                <br/>
+                                Leave your luggages here, you are at home.<br/>
                             </p>
                         </div>
                     </div>
@@ -50,7 +58,7 @@
         <div class="row" id="rooms">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2><span>N</span>Nos Chambres<span class="hr"></span></h2>
+                    <h2><span>{{ 'title.rooms_letter'|trans }}</span>{{ 'title.rooms'|trans }}<span class="hr"></span></h2>
                 </div>
 
                 <div class="container">
@@ -58,7 +66,7 @@
                         <div class="col-md-4">
                             <div class="room-preview room-preview-red">
                                 <div class="room-preview-title">
-                                    <h3>Chambre <span>Rubis</span></h3>
+                                    <h3><a href="{{ path('room_red') }}">{{ 'room'|trans }} <span>{{ 'booking.room.red'|trans }}</span></a></h3>
                                 </div>
 
                                 <div class="room-preview-image">
@@ -72,13 +80,11 @@
                                 </div>
 
                                 <div class="room-preview-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
-                                    Nulla facilisis tellus eget hendrerit tincidunt.<br/>
-                                    Pellentesque lacinia lectus id tellus pellentesque euismod.
+                                    {{ 'room.description.red'|trans|raw }}
                                 </div>
 
                                 <div class="room-preview-link">
-                                    <a href="{{ path('room_red') }}"><i class="fa fa-angle-double-right"></i> Visiter la chambre</a>
+                                    <a href="{{ path('room_red') }}"><i class="fa fa-angle-double-right"></i> {{ 'room.visit'|trans }}</a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +92,7 @@
                         <div class="col-md-4">
                             <div class="room-preview room-preview-green">
                                 <div class="room-preview-title">
-                                    <h3>Chambre <span>Jade</span></h3>
+                                    <h3><a href="{{ path('room_green') }}">{{ 'room'|trans }} <span>{{ 'booking.room.green'|trans }}</span></a></h3>
                                 </div>
 
                                 <div class="room-preview-image">
@@ -100,13 +106,11 @@
                                 </div>
 
                                 <div class="room-preview-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
-                                    Nulla facilisis tellus eget hendrerit tincidunt.<br/>
-                                    Pellentesque lacinia lectus id tellus pellentesque euismod.
+                                    {{ 'room.description.green'|trans|raw }}
                                 </div>
 
                                 <div class="room-preview-link">
-                                    <a href="{{ path('room_green') }}"><i class="fa fa-angle-double-right"></i> Visiter la chambre</a>
+                                    <a href="{{ path('room_green') }}"><i class="fa fa-angle-double-right"></i> {{ 'room.visit'|trans }}</a>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +118,7 @@
                         <div class="col-md-4">
                             <div class="room-preview room-preview-blue">
                                 <div class="room-preview-title">
-                                    <h3>Chambre <span>Saphir</span></h3>
+                                    <h3><a href="{{ path('room_blue') }}">{{ 'room'|trans }} <span>{{ 'booking.room.blue'|trans }}</span></a></h3>
                                 </div>
 
                                 <div class="room-preview-image">
@@ -128,13 +132,11 @@
                                 </div>
 
                                 <div class="room-preview-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
-                                    Nulla facilisis tellus eget hendrerit tincidunt.<br/>
-                                    Pellentesque lacinia lectus id tellus pellentesque euismod.
+                                    {{ 'room.description.blue'|trans|raw }}
                                 </div>
 
                                 <div class="room-preview-link">
-                                    <a href="{{ path('room_blue') }}"><i class="fa fa-angle-double-right"></i> Visiter la chambre</a>
+                                    <a href="{{ path('room_blue') }}"><i class="fa fa-angle-double-right"></i> {{ 'room.visit'|trans }}</a>
                                 </div>
                             </div>
                         </div>
@@ -146,11 +148,19 @@
         <div class="row" id="book">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2><span>R</span>Réservation<span class="hr"></span></h2>
+                    <h2><span>{{ 'title.reservation_letter'|trans }}</span>{{ 'title.reservation'|trans }}<span class="hr"></span></h2>
                 </div>
 
                 <div class="container">
                     <div class="row">
+                        <div class="col-md-12">
+                            <p class="clearfix align-center">
+                                {{ 'reservation.description'|trans }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row row-with-margin-top">
                         <div class="col-md-6">
                             {{ include('booking/form.html.twig', { 'form': form }) }}
                         </div>
@@ -166,121 +176,61 @@
         <div class="row" id="information">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2><span>I</span>Informations<span class="hr"></span></h2>
+                    <h2><span>{{ 'title.information_letter'|trans }}</span>{{ 'title.information'|trans }}<span class="hr"></span></h2>
                 </div>
 
                 <div class="container">
-                    <div class="row row-with-margin-bottom">
-                        <div class="col-md-12">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id cursus enim, a
-                                pharetra sem. Etiam malesuada, augue sed iaculis tincidunt, nisi odio mollis sapien, in
-                                semper diam elit ut sem. Fusce nisl sapien, euismod et purus non, dictum blandit dolor.
-                                <br/><br/>
-                                Curabitur iaculis vehicula eleifend. Donec quis sollicitudin risus. Nam porta at mauris
-                                ut facilisis. Donec vitae felis enim. Morbi id quam eget turpis finibus sollicitudin.
-                                Duis gravida lectus a felis ultricies mollis. Sed nec libero varius, pellentesque quam
-                                a, sollicitudin dui. Proin cursus varius libero, ut congue nisl tempus quis. Nulla non
-                                posuere sapien. Proin luctus consequat risus nec aliquet.
-                            </p>
-                        </div>
-                    </div>
-
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-building"></i>
+                        <div class="col-md-6">
+                            <div class="info-element">
+                                <div class="info-element-title">
+                                    <div class="info-element-icon"><i class="fa fa-car"></i></div>
+                                    {{ 'information.parking'|trans }}
                                 </div>
 
-                                <div class="info-element-text">
-                                    Immeuble de standing
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-bed"></i>
-                                </div>
-
-                                <div class="info-element-text">
-                                    Literie MyBed™
+                                <div class="info-element-desc">
+                                    {{ 'information.parking.description'|trans|raw }}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-shopping-bag"></i>
+                        <div class="col-md-6">
+                            <div class="info-element">
+                                <div class="info-element-title">
+                                    <div class="info-element-icon"><i class="fa fa-subway"></i></div>
+                                    {{ 'information.transport'|trans }}
                                 </div>
 
-                                <div class="info-element-text">
-                                    Magasins divers proches
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-subway"></i>
-                                </div>
-
-                                <div class="info-element-text">
-                                    Tram à 150m
+                                <div class="info-element-desc">
+                                    {{ 'information.transport.description'|trans|raw }}
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-home"></i>
+                        <div class="col-md-6">
+                            <div class="info-element">
+                                <div class="info-element-title">
+                                    <div class="info-element-icon"><i class="fa fa-heart-o"></i></div>
+                                    {{ 'information.strasbourg'|trans }}
                                 </div>
 
-                                <div class="info-element-text">
-                                    120m<sup>2</sup> d'espace
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-child"></i>
-                                </div>
-
-                                <div class="info-element-text">
-                                    Lit pour enfant disponible
+                                <div class="info-element-desc">
+                                    {{ 'information.strasbourg.description'|trans|raw }}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-glass"></i>
+                        <div class="col-md-6">
+                            <div class="info-element">
+                                <div class="info-element-title">
+                                    <div class="info-element-icon"><i class="fa fa-shopping-bag"></i></div>
+                                    {{ 'information.shopping'|trans }}
                                 </div>
 
-                                <div class="info-element-text">
-                                    Bars à proximité
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="info-element clearfix">
-                                <div class="info-element-icon">
-                                    <i class="fa fa-star"></i>
-                                </div>
-
-                                <div class="info-element-text">
-                                    Service d'excellence
+                                <div class="info-element-desc">
+                                    {{ 'information.shopping.description'|trans|raw }}
                                 </div>
                             </div>
                         </div>
@@ -289,42 +239,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block javascripts %}
-    <script type="text/javascript" src="{{ asset('libs/royalslider/jquery.royalslider.min.js') }}"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            // Main slideshow.
-            $("#home-slideshow .royalSlider").royalSlider({
-                keyboardNavEnabled: true,
-                imageScaleMode: 'fill',
-                autoScaleSlider: true,
-                loopRewind: true,
-                randomizeSlides: true,
-                transitionType: 'fade',
-                autoPlay: {
-                    enabled: true,
-                    pauseOnHover: true
-                },
-                controlNavigation: 'none',
-                fullscreen: {
-                    enabled: true,
-                    nativeFS: false
-                }
-            });
-
-            // Rooms preview slideshows.
-            $("#rooms .royalSlider").royalSlider({
-                imageScaleMode: 'fill',
-                autoScaleSlider: true,
-                loopRewind: true,
-                controlNavigation: 'none',
-                autoPlay: {
-                    enabled: true,
-                    pauseOnHover: true
-                }
-            });
-        });
-    </script>
 {% endblock %}

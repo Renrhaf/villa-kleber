@@ -9,6 +9,10 @@
       font-size: 2rem;
       text-align: center;
 
+      a {
+        color: inherit;
+      }
+
       span, i {
         font-weight: $font-weight-light;
       }

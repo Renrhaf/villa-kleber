@@ -4,7 +4,6 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Booking;
 use AppBundle\Form\Type\BookingType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -16,8 +15,6 @@ class RoomController extends Controller
 {
     /**
      * Rubis room page.
-     *
-     * @Route("/chambre/rubis", name="room_red")
      */
     public function redRoomAction()
     {
@@ -37,8 +34,6 @@ class RoomController extends Controller
 
     /**
      * Jade room page.
-     *
-     * @Route("/chambre/jade", name="room_green")
      */
     public function greenRoomAction()
     {
@@ -58,8 +53,6 @@ class RoomController extends Controller
 
     /**
      * Saphir room page.
-     *
-     * @Route("/chambre/saphir", name="room_blue")
      */
     public function blueRoomAction(Request $request)
     {

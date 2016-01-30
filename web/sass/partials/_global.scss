@@ -8,6 +8,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  position: relative;
 }
 
 img {
@@ -31,4 +32,14 @@ sup {
 /* Helper row with margin bottom */
 .row-with-margin-bottom {
   margin-bottom: 50px;
+}
+
+/* Helper row with margin top */
+.row-with-margin-top {
+  margin-top: 50px;
+}
+
+/* Align center helper */
+.align-center {
+  text-align: center;
 }

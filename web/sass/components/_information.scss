@@ -16,8 +16,8 @@
 
     i {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 10px;
+      left: 10px;
     }
 
     &:hover {
@@ -25,8 +25,16 @@
     }
   }
 
+  .info-element-title,
   .info-element-text {
-    padding-top: 5px;
+    position: relative;
+    top: 7px;
     font-family: $font-title;
+    font-size: 20px;
+  }
+
+  .info-element-desc {
+    margin-top: 20px;
+    margin-left: 60px;
   }
 }

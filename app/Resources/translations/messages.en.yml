@@ -3,3 +3,47 @@ menu:
   rooms: Our Rooms
   reservation: Book & Fees
   information: Information
+title:
+  presentation: Presentation
+  presentation_letter: P
+  rooms: Our Rooms
+  rooms_letter: O
+  reservation: Book & Fees
+  reservation_letter: B
+  information: Information
+  information_letter: I
+booking:
+  fname.label: First name
+  lname.label: Last name
+  email.label: Email
+  phone.label: Phone
+  fromDate.label: Date of arrival
+  toDate.label: Date of leave
+  room:
+    label: Room
+    red: Rubis
+    green: Jade
+    blue: Saphir
+copyright:
+  reserved: All rights reserved.
+  authors: Design & development by Quentin Fahrner & Sathya Bin.
+metatags:
+  keywords: "TODO: Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
+  description: TODO
+back: Back
+information.shopping: Shopping Center
+information.strasbourg: Strasbourg
+information.transport: Transports
+information.parking: Car parks
+information.transport.description: "Tram Station Ancienne Synagogue les Halles : line A, C and D<br/>Tram station Homme de Fer : Line A,B,C,D and F<br/><a href=\"http://www.cts-strasbourg.eu/en/\">More information</a>"
+information.strasbourg.description: "On foot or on a bike, discover its neiborghoo : The Cathedrale, Grand Rue or La Petite France."
+information.shopping.description: "Centre commercial des Halles<br/>Centre commercial Rive Etoile : Line A or D , tram station Etoile Bourse"
+information.parking.description: "Parking Kléber/Homme de Fer<br/>Parking des Halles<br/>P1: Marais Vert : Open from Monday to Saturday from 7am to 9pm<br/>P2: Sébastopol : Open daily , 24h/24, bank holidays included<br/>P3: Wilson : Open from Monday to Saturday from 7am to 9pm"
+to_homepage: to homepage
+reservation.description: Book one of our luxurious rooms in just a few clicks.
+room: Room
+room.visit: Visit the room
+room.description:
+  blue: "Real apartment, the Sapphir Room can accommodate 2 people.<br/>In an elegant and luxurious style, this room provides you a moment of rest and calm."
+  green: "Spacious and luminous, the Jade room has one large and soft bed. <br/>With lovers, friends or family, enjoy its warm environment."
+  red: "To enjoy a romantic week end or a city break, the Ruby Room can accommodate 2 guests.<br/>Its lounge atomosphere and authentic character will seduce you et make your journey ... unforgettable."

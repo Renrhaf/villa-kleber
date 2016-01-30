@@ -8,11 +8,11 @@
   top: 0;
   width: 100%;
   z-index: 99;
-  background: #fff;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   transition: background 0.3s linear;
   background: rgba($primary-color, 0.9);
+  border-bottom: 5px solid $black;
 
   .container {
     position: relative;
@@ -33,21 +33,28 @@
     text-decoration: none;
   }
 
+  .secondary-color {
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    .secondary-color {
+      color: lighten($secondary-color, $hover-lighten);
+    }
+  }
+
   // Back to home for rooms.
   &.back-to-home {
-    i, .secondary-color {
+    i {
+      position: relative;
+      animation-name: back-to-home-animation;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
       transition: all 0.2s linear;
     }
 
-    &:hover {
-      i {
-        position: relative;
-        left: -5px;
-      }
-
-      .secondary-color {
-        color: lighten($secondary-color, $hover-lighten);
-      }
+    &:hover i {
+      animation-play-state: paused;
     }
   }
 }
@@ -77,8 +84,11 @@
       }
 
       &.active a,
-      & a:hover {
+      & a:hover,
+      & a.active,
+      & a:focus {
         color: $secondary-color;
+        background: transparent;
       }
 
       &:last-of-type {

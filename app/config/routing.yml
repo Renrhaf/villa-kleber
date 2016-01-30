@@ -1,3 +1,29 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+homepage:
+    path:     /{_locale}
+    defaults: { _controller: AppBundle:Home:index }
+    requirements:
+        _locale: en|fr
+
+room_red:
+    path:     /{_locale}/chambre/rubis
+    defaults: { _controller: AppBundle:Room:redRoom }
+    requirements:
+        _locale: en|fr
+
+room_green:
+    path:     /{_locale}/chambre/jade
+    defaults: { _controller: AppBundle:Room:greenRoom }
+    requirements:
+        _locale: en|fr
+
+room_blue:
+    path:     /{_locale}/chambre/saphir
+    defaults: { _controller: AppBundle:Room:blueRoom }
+    requirements:
+        _locale: en|fr
+
+booking:
+    path:     /{_locale}/reservation
+    defaults: { _controller: AppBundle:Booking:index }
+    requirements:
+        _locale: en|fr

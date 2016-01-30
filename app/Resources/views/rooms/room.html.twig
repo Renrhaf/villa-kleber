@@ -1,16 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('libs/royalslider/royalslider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('libs/royalslider/skins/default/rs-default.css') }}" />
-{% endblock %}
-
 {% block menu %}
     <header id="page-header">
         <div class="container clearfix">
             <h1 id="logo" class="back-to-home">
                 <a href="{{ path('homepage') }}">
-                    <i class="fa fa-angle-left"></i> Retour <span class="secondary-color">à l'accueil</span>
+                    <i class="fa fa-angle-left"></i> {{ 'back'|trans }} <span class="secondary-color">{{ 'to_homepage'|trans }}</span>
                 </a>
             </h1>
 
@@ -20,9 +15,9 @@
                 <span></span>
             </div>
 
-            <nav id="main-menu" class="nav">
-                {% block room_title %}<h2>Chambre <span>Xxxxxx</span></h2>{% endblock %}
-                <ul class="clearfix">
+            <nav id="main-menu">
+                <h2>{{ 'room'|trans }} {% block room_name %}{% endblock %}</h2>
+                <ul class="nav clearfix">
                     <li class="first active leaf"><a href="#presentation" class="active scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
                     <li class="leaf"><a href="#rooms" class="active scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
                     <li class="leaf"><a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
@@ -31,29 +26,4 @@
             </nav>
         </div>
     </header>
-{% endblock %}
-
-{% block javascripts %}
-    <script type="text/javascript" src="{{ asset('libs/royalslider/jquery.royalslider.min.js') }}"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            // Main slideshow.
-            $("#room-slideshow .royalSlider").royalSlider({
-                keyboardNavEnabled: true,
-                imageScaleMode: 'fill',
-                autoScaleSlider: false,
-                loopRewind: true,
-                randomizeSlides: true,
-                transitionType: 'fade',
-                autoPlay: {
-                    enabled: true
-                },
-                controlNavigation: 'thumbnails',
-                fullscreen: {
-                    enabled: true,
-                    nativeFS: false
-                }
-            });
-        });
-    </script>
 {% endblock %}

@@ -77,7 +77,20 @@ h6 {
       top: 50%;
       z-index: -1;
       transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-      -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+
+    /* Hover */
+    &:hover {
+      color: lighten($secondary-color, $hover-lighten);
+
+      span {
+        color: rgba($secondary-color, 0.3);
+      }
+
+      span.hr {
+        background: rgba($secondary-color, 1);
+        transform: translateX(-50%) translateY(25px) rotate(0deg);
+      }
     }
 
     /* Media queries */
