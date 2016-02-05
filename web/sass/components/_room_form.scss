@@ -1,0 +1,150 @@
+/**
+ * Room form styles.
+ */
+
+.booking-room {
+  margin-bottom: 10px;
+
+  h3 {
+    text-align: center;
+  }
+
+  & > .inner {
+    margin-top: 15px;
+  }
+
+  .radio {
+    float: left;
+    width: 33%;
+    margin: 0;
+
+    & > .inner {
+      margin: 20px;
+    }
+
+    .radio-label {
+      padding: 0 0 8px 0;
+      text-align: center;
+      font-family: $font-title;
+      font-size: 25px;
+      font-weight: bolder;
+
+      label {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        transition: color 0.2s linear;
+        opacity: 0.7;
+
+        &.room-red {
+          color: $red;
+          text-shadow: 0px 0px 10px lighten($red, 50%);
+
+          &:hover {
+            color: lighten($red, $hover-lighten);
+          }
+        }
+
+        &.room-green {
+          color: $green;
+          text-shadow: 0px 0px 10px lighten($green, 50%);
+
+          &:hover {
+            color: lighten($green, $hover-lighten);
+          }
+        }
+
+        &.room-blue {
+          color: $blue;
+          text-shadow: 0px 0px 10px lighten($blue, 50%);
+
+          &:hover {
+            color: lighten($blue, $hover-lighten);
+          }
+        }
+      }
+    }
+
+    &.active {
+      .radio-label label {
+        opacity: 1;
+        font-size: 1.2em;
+
+        &.room-red {
+          color: lighten($red, $hover-lighten);
+        }
+
+        &.room-green {
+          color: lighten($green, $hover-lighten);
+        }
+
+        &.room-blue {
+          color: lighten($blue, $hover-lighten);
+        }
+      }
+    }
+
+    .radio-input {
+      text-align: center;
+
+      input {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: none;
+      }
+    }
+  }
+}
+
+.booking-dates,
+.booking-names {
+  clear: both;
+  margin-top: 20px;
+
+  & > div {
+    float: left;
+    width: 50%;
+
+    &.booking-fname > .inner,
+    &.booking-date-from > .inner {
+      margin-right: 10px;
+      margin-left: 60px;
+      position: relative;
+    }
+
+    &.booking-lname > .inner,
+    &.booking-date-to > .inner {
+      margin-right: 60px;
+      margin-left: 10px;
+      position: relative;
+    }
+
+    .icon {
+      position: absolute;
+      top: 28px;
+      right: 10px;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
+
+.booking-regular-field {
+  margin: 20px 60px 0 60px;
+}
+
+.booking-submit {
+  margin: 20px 60px 0 60px;
+
+  button {
+    width: 100%;
+    font-size: 1.5em;
+    background: $secondary-color;
+    border-color: darken($secondary-color, $hover-lighten);
+    font-family: $font-title;
+    font-weight: 800;
+    color: $white;
+  }
+}

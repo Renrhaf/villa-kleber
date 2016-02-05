@@ -44,6 +44,24 @@
             $(".room-datepicker-to").datepicker('clearDates').datepicker('setStartDate', e.date);
         });
 
+        // Show datepicker on icon click.
+        $('.booking-dates .icon').click(function() {
+            $(this).parents('.booking-date').find('input').datepicker('show');
+        });
+
+        // Booking room options.
+        $('.booking-room').find('input:checked').parents('.radio').addClass('active');
+        $('.booking-room input').click(function() {
+            var parent = $(this).parents('.booking-room');
+
+            // Remove previous one.
+            $(parent).find('.active').removeClass('active');
+
+            // Add curently selected.
+            $(parent).find('input:checked').parents('.radio').addClass('active');
+        });
+
+
         // Main site slideshow.
         $("#home-slideshow .royalSlider").royalSlider({
             keyboardNavEnabled: true,

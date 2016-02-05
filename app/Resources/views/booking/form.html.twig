@@ -1,10 +1,74 @@
-
-{% form_theme form "bootstrap_3_layout.html.twig" %}
+{% form_theme form 'Form/room_form.html.twig' %}
 
 {{ form_start(form) }}
+    <div class="booking-room">
+        <h3>{{ 'booking.room.choose'|trans }}</h3>
 
+        <div class="inner clearfix">
+            {{ form_widget(form.room) }}
+            {{ form_errors(form.room) }}
+        </div>
+    </div>
 
-{{ form_widget(form) }}
+    <div class="booking-dates clearfix">
+        <div class="booking-date-from booking-date">
+            <div class="inner">
+                {{ form_label(form.fromDate) }}
+                {{ form_widget(form.fromDate) }}
+                {{ form_errors(form.fromDate) }}
 
+                <div class="icon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
 
+        <div class="booking-date-to booking-date">
+            <div class="inner">
+                {{ form_label(form.toDate) }}
+                {{ form_widget(form.toDate) }}
+                {{ form_errors(form.toDate) }}
+
+                <div class="icon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-names clearfix">
+        <div class="booking-fname booking-name">
+            <div class="inner">
+                {{ form_label(form.fname) }}
+                {{ form_widget(form.fname) }}
+                {{ form_errors(form.fname) }}
+            </div>
+        </div>
+
+        <div class="booking-lname booking-name">
+            <div class="inner">
+                {{ form_label(form.lname) }}
+                {{ form_widget(form.lname) }}
+                {{ form_errors(form.lname) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-email booking-regular-field">
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+        {{ form_errors(form.email) }}
+    </div>
+
+    <div class="booking-phone booking-regular-field">
+        {{ form_label(form.phone) }}
+        {{ form_widget(form.phone) }}
+        {{ form_errors(form.phone) }}
+    </div>
+
+    <div class="booking-submit">
+        {{ form_widget(form.submit) }}
+    </div>
+
+    {{ form_rest(form) }}
 {{ form_end(form) }}

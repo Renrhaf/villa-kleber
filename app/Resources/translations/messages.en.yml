@@ -21,9 +21,11 @@ booking:
   toDate.label: Date of leave
   room:
     label: Room
+    choose: Choose your room
     red: Rubis
     green: Jade
     blue: Saphir
+  submit: Book now
 copyright:
   reserved: All rights reserved.
   authors: Design & development by Quentin Fahrner & Sathya Bin.

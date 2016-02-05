@@ -21,9 +21,11 @@ booking:
   toDate.label: Date de départ
   room:
     label: Chambre
+    choose: Choisissez votre chambre
     red: Rubis
     green: Jade
     blue: Saphir
+  submit: Réserver maintenant
 copyright:
   reserved: Tous droits réservés.
   authors: Design & développement par Quentin Fahrner & Sathya Bin.

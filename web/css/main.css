@@ -797,6 +797,162 @@ h6 {
 }
 
 /**
+ * Room form styles.
+ */
+/* line 5, ../sass/components/_room_form.scss */
+.booking-room {
+  margin-bottom: 10px;
+}
+/* line 8, ../sass/components/_room_form.scss */
+.booking-room h3 {
+  text-align: center;
+}
+/* line 12, ../sass/components/_room_form.scss */
+.booking-room > .inner {
+  margin-top: 15px;
+}
+/* line 16, ../sass/components/_room_form.scss */
+.booking-room .radio {
+  float: left;
+  width: 33%;
+  margin: 0;
+}
+/* line 21, ../sass/components/_room_form.scss */
+.booking-room .radio > .inner {
+  margin: 20px;
+}
+/* line 25, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label {
+  padding: 0 0 8px 0;
+  text-align: center;
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+}
+/* line 32, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  transition: color 0.2s linear;
+  opacity: 0.7;
+}
+/* line 39, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-red {
+  color: #a40802;
+  text-shadow: 0px 0px 10px #feaaa7;
+}
+/* line 43, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-red:hover {
+  color: #fc1910;
+}
+/* line 48, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-green {
+  color: #04ac6b;
+  text-shadow: 0px 0px 10px #b2fde0;
+}
+/* line 52, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-green:hover {
+  color: #1cfaa4;
+}
+/* line 57, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-blue {
+  color: #025d8c;
+  text-shadow: 0px 0px 10px #90d8fd;
+}
+/* line 61, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-label label.room-blue:hover {
+  color: #03a0f1;
+}
+/* line 69, ../sass/components/_room_form.scss */
+.booking-room .radio.active .radio-label label {
+  opacity: 1;
+  font-size: 1.2em;
+}
+/* line 73, ../sass/components/_room_form.scss */
+.booking-room .radio.active .radio-label label.room-red {
+  color: #fc1910;
+}
+/* line 77, ../sass/components/_room_form.scss */
+.booking-room .radio.active .radio-label label.room-green {
+  color: #1cfaa4;
+}
+/* line 81, ../sass/components/_room_form.scss */
+.booking-room .radio.active .radio-label label.room-blue {
+  color: #03a0f1;
+}
+/* line 87, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-input {
+  text-align: center;
+}
+/* line 90, ../sass/components/_room_form.scss */
+.booking-room .radio .radio-input input {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+/* line 102, ../sass/components/_room_form.scss */
+.booking-dates,
+.booking-names {
+  clear: both;
+  margin-top: 20px;
+}
+/* line 106, ../sass/components/_room_form.scss */
+.booking-dates > div,
+.booking-names > div {
+  float: left;
+  width: 50%;
+}
+/* line 111, ../sass/components/_room_form.scss */
+.booking-dates > div.booking-fname > .inner, .booking-dates > div.booking-date-from > .inner,
+.booking-names > div.booking-fname > .inner,
+.booking-names > div.booking-date-from > .inner {
+  margin-right: 10px;
+  margin-left: 60px;
+  position: relative;
+}
+/* line 118, ../sass/components/_room_form.scss */
+.booking-dates > div.booking-lname > .inner, .booking-dates > div.booking-date-to > .inner,
+.booking-names > div.booking-lname > .inner,
+.booking-names > div.booking-date-to > .inner {
+  margin-right: 60px;
+  margin-left: 10px;
+  position: relative;
+}
+/* line 124, ../sass/components/_room_form.scss */
+.booking-dates > div .icon,
+.booking-names > div .icon {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+/* line 134, ../sass/components/_room_form.scss */
+.booking-regular-field {
+  margin: 20px 60px 0 60px;
+}
+
+/* line 138, ../sass/components/_room_form.scss */
+.booking-submit {
+  margin: 20px 60px 0 60px;
+}
+/* line 141, ../sass/components/_room_form.scss */
+.booking-submit button {
+  width: 100%;
+  font-size: 1.5em;
+  background: #80313e;
+  border-color: #36151a;
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-weight: 800;
+  color: #fef9f0;
+}
+
+/**
  * Information elements.
  */
 /* line 4, ../sass/components/_information.scss */
