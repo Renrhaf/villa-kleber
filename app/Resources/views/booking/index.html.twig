@@ -37,11 +37,11 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 booking-form-col">
                 {{ include('booking/form.html.twig', { 'form': form }) }}
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 calendar-col">
                 {{ render(controller('AppBundle:Calendar:render')) }}
             </div>
         </div>

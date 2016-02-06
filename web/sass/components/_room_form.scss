@@ -112,13 +112,11 @@
     &.booking-fname > .inner,
     &.booking-date-from > .inner {
       margin-right: 10px;
-      margin-left: 60px;
       position: relative;
     }
 
     &.booking-lname > .inner,
     &.booking-date-to > .inner {
-      margin-right: 60px;
       margin-left: 10px;
       position: relative;
     }
@@ -134,11 +132,11 @@
 }
 
 .booking-regular-field {
-  margin: 20px 60px 0 60px;
+  margin: 20px 0 0 0;
 }
 
 .booking-submit {
-  margin: 20px 60px 0 60px;
+  margin: 20px 0 0 0;
 
   button {
     width: 100%;

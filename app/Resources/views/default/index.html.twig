@@ -21,26 +21,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="clearfix">
-                                <img src="{{ asset('img/photos/strasbourg1.jpeg') }}" width="500px" class="text-image text-image-full" />
+                            <p>
                                 Située au coeur de Strasbourg , la Villa Kléber vous offre un séjour de rêve tradition et confort.<br/>
                                 <br/>
                                 Parmi ces trois chambres de caractères vous trouverez celle qui vous correspond.<br/>
                                 Se sentir à la fois chez soi et en même temps ailleurs...telle est la promesse de la Villa Kléber.<br/>
                                 <br/>
                                 Posez vos bagages ... vous êtes chez vous.
-
-                                <blockquote class="text-citation" cite="https://fr.wikipedia.org/wiki/Strasbourg">
-                                    <p>
-                                        Son histoire, riche et tourmentée, a laissé un patrimoine architectural remarquable.
-                                        Son centre-ville, situé sur la Grande Île, est entièrement inscrit au patrimoine mondial
-                                        de l'humanité par l’Unesco depuis 1988 et comprend notamment la cathédrale Notre-Dame
-                                        de Strasbourg et le quartier de la Petite France.
-                                    </p>
-                                </div>
                             </p>
 
-                            <p class="clearfix">
+                            <p>
                                 <img src="{{ asset('img/photos/photo5.jpg') }}" width="300px" class="text-image text-image-left" />
                                 In the heart of the city of Strtasbourg, the Villa Kléber offers you a dream stay between tradition and comfort.<br/>
                                 <br/>
@@ -63,7 +53,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 room-preview-col">
                             <div class="room-preview room-preview-red">
                                 <div class="room-preview-title">
                                     <h3><a href="{{ path('room_red') }}">{{ 'room'|trans }} <span>{{ 'booking.room.red'|trans }}</span></a></h3>
@@ -89,7 +79,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 room-preview-col">
                             <div class="room-preview room-preview-green">
                                 <div class="room-preview-title">
                                     <h3><a href="{{ path('room_green') }}">{{ 'room'|trans }} <span>{{ 'booking.room.green'|trans }}</span></a></h3>
@@ -115,7 +105,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 room-preview-col">
                             <div class="room-preview room-preview-blue">
                                 <div class="room-preview-title">
                                     <h3><a href="{{ path('room_blue') }}">{{ 'room'|trans }} <span>{{ 'booking.room.blue'|trans }}</span></a></h3>
@@ -161,12 +151,12 @@
                     </div>
 
                     <div class="row row-with-margin-top">
-                        <div class="col-md-6">
+                        <div class="col-md-6 booking-form-col">
                             {{ include('booking/form.html.twig', { 'form': form }) }}
                         </div>
 
-                        <div class="col-md-6">
-                            <h2>TODO Calendrier</h2>
+                        <div class="col-md-6 calendar-col">
+                            {{ render(controller('AppBundle:Calendar:render')) }}
                         </div>
                     </div>
                 </div>

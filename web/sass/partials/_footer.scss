@@ -105,4 +105,8 @@
   &:hover {
     background: lighten($secondary-color, $hover-lighten);
   }
+
+  @include villa-mobile {
+    right: 10px;
+  }
 }

@@ -1,0 +1,21 @@
+/**
+ * Some custom mixins.
+ */
+
+@mixin villa-mobile {
+  @media (max-width: 767px) {
+    @content
+  }
+}
+
+@mixin villa-tablet {
+  @media (max-width: 991px) {
+    @content
+  }
+}
+
+@mixin villa-desktop {
+  @media (min-width: 992px) {
+    @content
+  }
+}

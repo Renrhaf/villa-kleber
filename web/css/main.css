@@ -4,6 +4,9 @@
 /**
  * Variables
  */
+/**
+ * Some custom mixins.
+ */
 @keyframes back-to-home-animation {
   /* line 2, ../sass/modules/_animations.scss */
   0% {
@@ -245,8 +248,9 @@ h6 {
   text-align: center;
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   color: #80313e;
+  background: black;
 }
-/* line 44, ../sass/partials/_typography.scss */
+/* line 45, ../sass/partials/_typography.scss */
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
   word-break: break-all;
   font-size: 3rem;
@@ -259,7 +263,7 @@ h6 {
   /* Hover */
   /* Media queries */
 }
-/* line 54, ../sass/partials/_typography.scss */
+/* line 55, ../sass/partials/_typography.scss */
 .section-title h1 span, .section-title h2 span, .section-title h3 span, .section-title h4 span, .section-title h5 span, .section-title h6 span {
   position: absolute;
   font-size: 9rem;
@@ -274,7 +278,7 @@ h6 {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-/* line 69, ../sass/partials/_typography.scss */
+/* line 70, ../sass/partials/_typography.scss */
 .section-title h1 span.hr, .section-title h2 span.hr, .section-title h3 span.hr, .section-title h4 span.hr, .section-title h5 span.hr, .section-title h6 span.hr {
   width: 12rem;
   margin: 0;
@@ -287,29 +291,29 @@ h6 {
   z-index: -1;
   transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
-/* line 83, ../sass/partials/_typography.scss */
+/* line 84, ../sass/partials/_typography.scss */
 .section-title h1:hover, .section-title h2:hover, .section-title h3:hover, .section-title h4:hover, .section-title h5:hover, .section-title h6:hover {
   color: #bf5869;
 }
-/* line 86, ../sass/partials/_typography.scss */
+/* line 87, ../sass/partials/_typography.scss */
 .section-title h1:hover span, .section-title h2:hover span, .section-title h3:hover span, .section-title h4:hover span, .section-title h5:hover span, .section-title h6:hover span {
   color: rgba(128, 49, 62, 0.3);
 }
-/* line 90, ../sass/partials/_typography.scss */
+/* line 91, ../sass/partials/_typography.scss */
 .section-title h1:hover span.hr, .section-title h2:hover span.hr, .section-title h3:hover span.hr, .section-title h4:hover span.hr, .section-title h5:hover span.hr, .section-title h6:hover span.hr {
   background: #80313e;
   transform: translateX(-50%) translateY(25px) rotate(0deg);
 }
 @media screen and (max-width: 400px) {
-  /* line 44, ../sass/partials/_typography.scss */
+  /* line 45, ../sass/partials/_typography.scss */
   .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
     font-size: 2rem;
   }
-  /* line 99, ../sass/partials/_typography.scss */
+  /* line 100, ../sass/partials/_typography.scss */
   .section-title h1 span, .section-title h2 span, .section-title h3 span, .section-title h4 span, .section-title h5 span, .section-title h6 span {
     font-size: 6rem;
   }
-  /* line 100, ../sass/partials/_typography.scss */
+  /* line 101, ../sass/partials/_typography.scss */
   .section-title h1 span.hr, .section-title h2 span.hr, .section-title h3 span.hr, .section-title h4 span.hr, .section-title h5 span.hr, .section-title h6 span.hr {
     width: 10rem;
   }
@@ -647,6 +651,12 @@ h6 {
 #back-to-top:hover {
   background: #bf5869;
 }
+@media (max-width: 767px) {
+  /* line 75, ../sass/partials/_footer.scss */
+  #back-to-top {
+    right: 10px;
+  }
+}
 
 /**
  * Room preview styles.
@@ -822,8 +832,9 @@ h6 {
 /* line 16, ../sass/components/_calendar.scss */
 .calendar header {
   position: relative;
+  margin-bottom: 35px;
 }
-/* line 20, ../sass/components/_calendar.scss */
+/* line 21, ../sass/components/_calendar.scss */
 .calendar header .btn-prev,
 .calendar header .btn-next {
   color: #fef9f0;
@@ -837,23 +848,22 @@ h6 {
   border: 1px solid #fef9f0;
   top: -5px;
 }
-/* line 34, ../sass/components/_calendar.scss */
+/* line 35, ../sass/components/_calendar.scss */
 .calendar header .btn-prev:hover,
 .calendar header .btn-next:hover {
   color: #bf5869;
   background: #fef9f0;
 }
-/* line 39, ../sass/components/_calendar.scss */
+/* line 40, ../sass/components/_calendar.scss */
 .calendar header .btn-prev {
   left: 0;
 }
-/* line 43, ../sass/components/_calendar.scss */
+/* line 44, ../sass/components/_calendar.scss */
 .calendar header .btn-next {
   right: 0;
 }
-/* line 48, ../sass/components/_calendar.scss */
+/* line 49, ../sass/components/_calendar.scss */
 .calendar table {
-  margin-top: 20px;
   text-align: center;
   width: 100%;
 }
@@ -1086,18 +1096,16 @@ h6 {
 .booking-names > div.booking-fname > .inner,
 .booking-names > div.booking-date-from > .inner {
   margin-right: 10px;
-  margin-left: 60px;
   position: relative;
 }
-/* line 120, ../sass/components/_room_form.scss */
+/* line 119, ../sass/components/_room_form.scss */
 .booking-dates > div.booking-lname > .inner, .booking-dates > div.booking-date-to > .inner,
 .booking-names > div.booking-lname > .inner,
 .booking-names > div.booking-date-to > .inner {
-  margin-right: 60px;
   margin-left: 10px;
   position: relative;
 }
-/* line 126, ../sass/components/_room_form.scss */
+/* line 124, ../sass/components/_room_form.scss */
 .booking-dates > div .icon,
 .booking-names > div .icon {
   position: absolute;
@@ -1107,16 +1115,16 @@ h6 {
   cursor: pointer;
 }
 
-/* line 136, ../sass/components/_room_form.scss */
+/* line 134, ../sass/components/_room_form.scss */
 .booking-regular-field {
-  margin: 20px 60px 0 60px;
+  margin: 20px 0 0 0;
 }
 
-/* line 140, ../sass/components/_room_form.scss */
+/* line 138, ../sass/components/_room_form.scss */
 .booking-submit {
-  margin: 20px 60px 0 60px;
+  margin: 20px 0 0 0;
 }
-/* line 143, ../sass/components/_room_form.scss */
+/* line 141, ../sass/components/_room_form.scss */
 .booking-submit button {
   width: 100%;
   font-size: 1.5em;
@@ -1168,4 +1176,28 @@ h6 {
 .info-element .info-element-desc {
   margin-top: 20px;
   margin-left: 60px;
+}
+
+/**
+ * Specific to home page.
+ */
+@media (max-width: 991px) {
+  /* line 6, ../sass/pages/_homepage.scss */
+  .calendar-col {
+    margin-top: 50px;
+  }
+
+  /* line 10, ../sass/pages/_homepage.scss */
+  .room-preview-col {
+    margin-top: 50px;
+  }
+}
+/**
+ * Specific to booking page.
+ */
+@media (max-width: 991px) {
+  /* line 6, ../sass/pages/_booking_page.scss */
+  .calendar-col {
+    margin-top: 50px;
+  }
 }
