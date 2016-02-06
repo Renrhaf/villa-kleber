@@ -809,54 +809,70 @@ h6 {
 }
 /* line 11, ../sass/components/_calendar.scss */
 .calendar table {
+  margin-top: 20px;
   display: inline-block;
+  text-align: center;
 }
-/* line 14, ../sass/components/_calendar.scss */
+/* line 16, ../sass/components/_calendar.scss */
 .calendar table thead {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 19, ../sass/components/_calendar.scss */
+/* line 20, ../sass/components/_calendar.scss */
+.calendar table thead th {
+  text-align: inherit;
+  border-right: 1px solid rgba(254, 249, 240, 0.1);
+  border-bottom: 1px solid rgba(254, 249, 240, 0.1);
+}
+/* line 25, ../sass/components/_calendar.scss */
+.calendar table thead th:last-child {
+  border: 0;
+}
+/* line 31, ../sass/components/_calendar.scss */
 .calendar table tbody {
   color: #fef9f0;
 }
-/* line 23, ../sass/components/_calendar.scss */
-.calendar table td, .calendar table th {
-  border: 2px solid transparent;
-  border-radius: 50%;
-  display: inline-block;
-  height: 4em;
-  line-height: 4em;
-  text-align: center;
-  width: 4em;
+/* line 34, ../sass/components/_calendar.scss */
+.calendar table tbody td {
+  border-right: 1px solid rgba(254, 249, 240, 0.1);
+  height: 50px;
+  width: 50px;
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-weight: 300;
 }
-/* line 35, ../sass/components/_calendar.scss */
-.calendar table td.prev-month, .calendar table td.next-month {
+/* line 41, ../sass/components/_calendar.scss */
+.calendar table tbody td:last-child {
+  border: 0;
+}
+/* line 46, ../sass/components/_calendar.scss */
+.calendar table tbody td.prev-month, .calendar table tbody td.next-month {
   color: #36151a;
   opacity: 0.7;
 }
-/* line 40, ../sass/components/_calendar.scss */
-.calendar table td.current-day {
-  background: #80313e;
-  color: #fef9f0;
+/* line 52, ../sass/components/_calendar.scss */
+.calendar table tbody td.booking, .calendar table tbody td.current-day {
+  font-weight: 800;
 }
-/* line 45, ../sass/components/_calendar.scss */
-.calendar table td.booking {
+/* line 56, ../sass/components/_calendar.scss */
+.calendar table tbody td.current-day .day-label {
+  color: #80313e;
+}
+/* line 60, ../sass/components/_calendar.scss */
+.calendar table tbody td.booking {
   cursor: pointer;
   position: relative;
 }
-/* line 50, ../sass/components/_calendar.scss */
-.calendar table td span.day-bookings {
+/* line 65, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings {
   display: block;
   height: 20px;
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   right: 0;
-  background: black;
 }
-/* line 59, ../sass/components/_calendar.scss */
-.calendar table td span.day-bookings span.booking {
+/* line 73, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking {
   z-index: 2;
   border-radius: 50%;
   bottom: 8px;
@@ -868,22 +884,22 @@ h6 {
   position: absolute;
   width: .5em;
 }
-/* line 71, ../sass/components/_calendar.scss */
-.calendar table td span.day-bookings span.booking.booking-green {
+/* line 85, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-green {
   background: #04ac6b;
   left: 30%;
 }
-/* line 76, ../sass/components/_calendar.scss */
-.calendar table td span.day-bookings span.booking.booking-red {
+/* line 90, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-red {
   background: #a40802;
   left: 50%;
 }
-/* line 81, ../sass/components/_calendar.scss */
-.calendar table td span.day-bookings span.booking.booking-blue {
+/* line 95, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-blue {
   background: #025d8c;
   left: 70%;
 }
-/* line 93, ../sass/components/_calendar.scss */
+/* line 108, ../sass/components/_calendar.scss */
 .calendar .btn-prev,
 .calendar .btn-next {
   border: 2px solid #cbd1d2;
@@ -897,17 +913,17 @@ h6 {
   top: 50%;
   width: 2em;
 }
-/* line 107, ../sass/components/_calendar.scss */
+/* line 122, ../sass/components/_calendar.scss */
 .calendar .btn-prev:hover,
 .calendar .btn-next:hover {
   background: #cbd1d2;
   color: #f9f9f9;
 }
-/* line 112, ../sass/components/_calendar.scss */
+/* line 127, ../sass/components/_calendar.scss */
 .calendar .btn-prev {
   left: 6em;
 }
-/* line 116, ../sass/components/_calendar.scss */
+/* line 131, ../sass/components/_calendar.scss */
 .calendar .btn-next {
   right: 6em;
 }

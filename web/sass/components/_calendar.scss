@@ -9,78 +9,93 @@
   }
 
   table {
+    margin-top: 20px;
     display: inline-block;
+    text-align: center;
 
     thead {
       font-weight: 600;
       text-transform: uppercase;
+
+      th {
+        text-align: inherit;
+        border-right: 1px solid transparentize($white, 0.9);
+        border-bottom: 1px solid transparentize($white, 0.9);
+
+        &:last-child {
+          border: 0;
+        }
+      }
     }
 
     tbody {
       color: $white;
-    }
 
-    td, th {
-      border: 2px solid transparent;
-      border-radius: 50%;
-      display: inline-block;
-      height: 4em;
-      line-height: 4em;
-      text-align: center;
-      width: 4em;
-    }
+      td {
+        border-right: 1px solid transparentize($white, 0.9);
+        height: 50px;
+        width: 50px;
+        font-family: $font-title;
+        font-weight: 300;
 
-    td {
-      &.prev-month,
-      &.next-month {
-        color: darken($secondary-color, 20%);
-        opacity: 0.7;
-      }
+        &:last-child {
+          border: 0;
+        }
 
-      &.current-day {
-        background: $secondary-color;
-        color: $white;
-      }
+        &.prev-month,
+        &.next-month {
+          color: darken($secondary-color, 20%);
+          opacity: 0.7;
+        }
 
-      &.booking {
-        cursor: pointer;
-        position: relative;
-      }
+        &.booking,
+        &.current-day{
+          font-weight: 800;
+        }
 
-      & span.day-bookings {
-        display: block;
-        height: 20px;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        right: 0;
-        background: $primary-color;
+        &.current-day .day-label {
+          color: $secondary-color;
+        }
 
-        span.booking {
-          z-index: 2;
-          border-radius: 50%;
-          bottom: 8px;
+        &.booking {
+          cursor: pointer;
+          position: relative;
+        }
+
+        & span.day-bookings {
           display: block;
-          content: '';
-          height: .5em;
-          left: 50%;
-          margin: -.25em 0 0 -.25em;
+          height: 20px;
           position: absolute;
-          width: .5em;
+          bottom: 0;
+          left: 0;
+          right: 0;
 
-          &.booking-green {
-            background: $green;
-            left: 30%;
-          }
-
-          &.booking-red {
-            background: $red;
+          span.booking {
+            z-index: 2;
+            border-radius: 50%;
+            bottom: 8px;
+            display: block;
+            content: '';
+            height: .5em;
             left: 50%;
-          }
+            margin: -.25em 0 0 -.25em;
+            position: absolute;
+            width: .5em;
 
-          &.booking-blue {
-            background: $blue;
-            left: 70%;
+            &.booking-green {
+              background: $green;
+              left: 30%;
+            }
+
+            &.booking-red {
+              background: $red;
+              left: 50%;
+            }
+
+            &.booking-blue {
+              background: $blue;
+              left: 70%;
+            }
           }
         }
       }

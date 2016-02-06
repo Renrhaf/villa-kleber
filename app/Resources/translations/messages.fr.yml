@@ -1,3 +1,13 @@
+day.monday.short: Lu
+day.tuesday.short: Ma
+day.wednesday.short: Me
+day.thirsday.short: Je
+day.friday.short: Ve
+day.saturday.short: Sa
+day.sunday.short: Di
+booking.red.confirmed: Chambre Rubis réservée
+booking.green.confirmed: Chambre Opale réservée
+booking.blue.confirmed: Chambre Saphir réservée
 menu:
   presentation: Présentation
   rooms: Nos Chambres

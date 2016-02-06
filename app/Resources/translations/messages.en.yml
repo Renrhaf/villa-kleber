@@ -1,3 +1,10 @@
+day.monday.short: Mo
+day.tuesday.short: Tu
+day.wednesday.short: We
+day.thirsday.short: Th
+day.friday.short: Fr
+day.saturday.short: Sa
+day.sunday.short: Su
 menu:
   presentation: Presentation
   rooms: Our Rooms

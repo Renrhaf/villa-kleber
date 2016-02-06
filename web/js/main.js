@@ -64,6 +64,22 @@
         // Calendar navigation.
         init_calendar_ajax();
 
+        // Calendar tooltips.
+        $('.calendar .day-bookings .booking').tooltip({
+            trigger: 'click hover focus',
+            placement: 'bottom',
+            container: 'body',
+            title: function() {
+                if ($(this).hasClass('booking-red')) {
+                    return Translator.trans('booking.red.confirmed')
+                } else if ($(this).hasClass('booking-green')) {
+                    return Translator.trans('booking.green.confirmed')
+                } else {
+                    return Translator.trans('booking.blue.confirmed')
+                }
+            }
+        });
+
         // Main site slideshow.
         $("#home-slideshow .royalSlider").royalSlider({
             keyboardNavEnabled: true,
