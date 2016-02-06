@@ -1,0 +1,66 @@
+<div class="calendar{% if room != null %}room-{{ room }}{% endif %}">
+    <header>
+        <h3>{{ 'bookings'|trans }} - {{ start|date('M Y') }}</h3>
+        <a class="btn-prev fa fa-angle-left" href="{{ path('calendar_render_ajax', {'date': startCalendar|date('m/Y')}) }}"></a>
+        <a class="btn-next fa fa-angle-right" href="{{ path('calendar_render_ajax', {'date': endCalendar|date('m/Y')}) }}"></a>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+                <th>Su</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+            {% for day in period %}
+                {% set dayBookings = bookingManager.getBookingForThisDay(day, bookings) %}
+                {% set classes = 'day day-col-' ~ loop.index %}
+
+                {% if day < start %}
+                    {% set classes = classes ~ ' prev-month' %}
+                {% endif %}
+
+                {% if day > end %}
+                    {% set classes = classes ~ ' next-month' %}
+                {% endif %}
+
+                {% if day|date('d/m/Y') == 'now'|date('d/m/Y') %}
+                    {% set classes = classes ~ ' current-day' %}
+                {% endif %}
+
+                {% if dayBookings|length > 0 %}
+                    {% set classes = classes ~ ' booking' %}
+                {% endif %}
+
+                {% for booking in dayBookings %}
+                    {% set classes = classes ~ ' booking-' ~ booking.room %}
+
+                    {% if booking.validated %}
+                        {% set classes = classes ~ ' booking-validated' %}
+                    {% endif %}
+                {% endfor %}
+
+                <td class="{{ classes }}">
+                    <span class="day-label">{{ day|date('d') }}</span>
+                    <span class="day-bookings">
+                        {% for booking in dayBookings %}
+                            <span class="booking booking-{{ booking.room }} {% if booking.validated %}validated{% else %}not-validated{% endif %}"></span>
+                        {% endfor %}
+                    </span>
+                </td>
+
+                {% if loop.index % 7 == 0 %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

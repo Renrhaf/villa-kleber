@@ -8,73 +8,86 @@
     position: relative;
   }
 
-  h2 {
-    text-transform: uppercase;
-  }
-
   table {
     display: inline-block;
+
+    thead {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    tbody {
+      color: $white;
+    }
+
+    td, th {
+      border: 2px solid transparent;
+      border-radius: 50%;
+      display: inline-block;
+      height: 4em;
+      line-height: 4em;
+      text-align: center;
+      width: 4em;
+    }
+
+    td {
+      &.prev-month,
+      &.next-month {
+        color: darken($secondary-color, 20%);
+        opacity: 0.7;
+      }
+
+      &.current-day {
+        background: $secondary-color;
+        color: $white;
+      }
+
+      &.booking {
+        cursor: pointer;
+        position: relative;
+      }
+
+      & span.day-bookings {
+        display: block;
+        height: 20px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        background: $primary-color;
+
+        span.booking {
+          z-index: 2;
+          border-radius: 50%;
+          bottom: 8px;
+          display: block;
+          content: '';
+          height: .5em;
+          left: 50%;
+          margin: -.25em 0 0 -.25em;
+          position: absolute;
+          width: .5em;
+
+          &.booking-green {
+            background: $green;
+            left: 30%;
+          }
+
+          &.booking-red {
+            background: $red;
+            left: 50%;
+          }
+
+          &.booking-blue {
+            background: $blue;
+            left: 70%;
+          }
+        }
+      }
+    }
   }
 
-  thead {
-    font-weight: 600;
-    text-transform: uppercase;
-  }
 
-  tbody {
-    color: #7c8a95;
-  }
-
-  tbody td:hover {
-    border: 2px solid #00addf;
-  }
-
-  td {
-    border: 2px solid transparent;
-    border-radius: 50%;
-    display: inline-block;
-    height: 4em;
-    line-height: 4em;
-    text-align: center;
-    width: 4em;
-  }
-
-  .prev-month,
-  .next-month {
-    color: #cbd1d2;
-  }
-
-  .prev-month:hover,
-  .next-month:hover {
-    border: 2px solid #cbd1d2;
-  }
-
-  .current-day {
-    background: #00addf;
-    color: #f9f9f9;
-  }
-
-  .event {
-    cursor: pointer;
-    position: relative;
-  }
-
-  .event:after {
-    background: #00addf;
-    border-radius: 50%;
-    bottom: .5em;
-    display: block;
-    content: '';
-    height: .5em;
-    left: 50%;
-    margin: -.25em 0 0 -.25em;
-    position: absolute;
-    width: .5em;
-  }
-
-  .event.current-day:after {
-    background: #f9f9f9;
-  }
 
   .btn-prev,
   .btn-next {

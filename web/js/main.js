@@ -61,6 +61,8 @@
             $(parent).find('input:checked').parents('.radio').addClass('active');
         });
 
+        // Calendar navigation.
+        init_calendar_ajax();
 
         // Main site slideshow.
         $("#home-slideshow .royalSlider").royalSlider({
@@ -111,4 +113,31 @@
             }
         });
     });
+
+    /**
+     * Initialize buttons to load calendar in AJAX.
+     */
+    function init_calendar_ajax()
+    {
+        $('.calendar header a').on('click', function(e) {
+            var url = $(this).attr('href');
+            var calendar = $(this).parents('.calendar');
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                dataType: 'html',
+                success: function (html) {
+                    $(calendar).replaceWith(html);
+                    init_calendar_ajax();
+                },
+                beforeSend: function() {
+                    $(calendar).html('LOL');
+                }
+            });
+
+            e.preventDefault();
+            return false;
+        });
+    }
 })(jQuery);

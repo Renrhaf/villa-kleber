@@ -86,13 +86,15 @@
 
     .radio-input {
       text-align: center;
+      height: 1px;
+      overflow: hidden;
 
       input {
         display: inline-block;
         position: relative;
         margin: 0;
         padding: 0;
-        display: none;
+        visibility: hidden;
       }
     }
   }

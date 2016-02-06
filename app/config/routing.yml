@@ -27,3 +27,9 @@ booking:
     defaults: { _controller: AppBundle:Booking:index }
     requirements:
         _locale: en|fr
+
+calendar_render_ajax:
+    path:     /{_locale}/calendar/render/ajax
+    defaults: { _controller: AppBundle:Calendar:render }
+    requirements:
+        _locale: en|fr

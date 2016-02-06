@@ -50,10 +50,7 @@ class Booking
      * @ORM\Column(name="email", type="string", length=255)
      *
      * @Assert\NotBlank()
-     * @Assert\Email(
-     *     checkHost = true,
-     *     checkMX = true
-     * )
+     * @Assert\Email()
      */
     private $email;
 
@@ -236,7 +233,10 @@ class Booking
      */
     public function setFromDate(\DateTime $fromDate)
     {
-        $this->fromDate = $fromDate;
+        $date = clone $fromDate;
+        $date->setTime(0, 0, 0);
+
+        $this->fromDate = $date;
 
         return $this;
     }
@@ -260,6 +260,9 @@ class Booking
      */
     public function setToDate(\DateTime $toDate)
     {
+        $date = clone $toDate;
+        $date->setTime(23, 59, 59);
+
         $this->toDate = $toDate;
 
         return $this;

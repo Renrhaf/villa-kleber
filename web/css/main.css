@@ -808,28 +808,20 @@ h6 {
   position: relative;
 }
 /* line 11, ../sass/components/_calendar.scss */
-.calendar h2 {
-  text-transform: uppercase;
-}
-/* line 15, ../sass/components/_calendar.scss */
 .calendar table {
   display: inline-block;
 }
-/* line 19, ../sass/components/_calendar.scss */
-.calendar thead {
+/* line 14, ../sass/components/_calendar.scss */
+.calendar table thead {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 24, ../sass/components/_calendar.scss */
-.calendar tbody {
-  color: #7c8a95;
+/* line 19, ../sass/components/_calendar.scss */
+.calendar table tbody {
+  color: #fef9f0;
 }
-/* line 28, ../sass/components/_calendar.scss */
-.calendar tbody td:hover {
-  border: 2px solid #00addf;
-}
-/* line 32, ../sass/components/_calendar.scss */
-.calendar td {
+/* line 23, ../sass/components/_calendar.scss */
+.calendar table td, .calendar table th {
   border: 2px solid transparent;
   border-radius: 50%;
   display: inline-block;
@@ -838,31 +830,36 @@ h6 {
   text-align: center;
   width: 4em;
 }
-/* line 43, ../sass/components/_calendar.scss */
-.calendar .prev-month,
-.calendar .next-month {
-  color: #cbd1d2;
+/* line 35, ../sass/components/_calendar.scss */
+.calendar table td.prev-month, .calendar table td.next-month {
+  color: #36151a;
+  opacity: 0.7;
 }
-/* line 48, ../sass/components/_calendar.scss */
-.calendar .prev-month:hover,
-.calendar .next-month:hover {
-  border: 2px solid #cbd1d2;
+/* line 40, ../sass/components/_calendar.scss */
+.calendar table td.current-day {
+  background: #80313e;
+  color: #fef9f0;
 }
-/* line 52, ../sass/components/_calendar.scss */
-.calendar .current-day {
-  background: #00addf;
-  color: #f9f9f9;
-}
-/* line 57, ../sass/components/_calendar.scss */
-.calendar .event {
+/* line 45, ../sass/components/_calendar.scss */
+.calendar table td.booking {
   cursor: pointer;
   position: relative;
 }
-/* line 62, ../sass/components/_calendar.scss */
-.calendar .event:after {
-  background: #00addf;
+/* line 50, ../sass/components/_calendar.scss */
+.calendar table td span.day-bookings {
+  display: block;
+  height: 20px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  background: black;
+}
+/* line 59, ../sass/components/_calendar.scss */
+.calendar table td span.day-bookings span.booking {
+  z-index: 2;
   border-radius: 50%;
-  bottom: .5em;
+  bottom: 8px;
   display: block;
   content: '';
   height: .5em;
@@ -871,11 +868,22 @@ h6 {
   position: absolute;
   width: .5em;
 }
-/* line 75, ../sass/components/_calendar.scss */
-.calendar .event.current-day:after {
-  background: #f9f9f9;
+/* line 71, ../sass/components/_calendar.scss */
+.calendar table td span.day-bookings span.booking.booking-green {
+  background: #04ac6b;
+  left: 30%;
 }
-/* line 80, ../sass/components/_calendar.scss */
+/* line 76, ../sass/components/_calendar.scss */
+.calendar table td span.day-bookings span.booking.booking-red {
+  background: #a40802;
+  left: 50%;
+}
+/* line 81, ../sass/components/_calendar.scss */
+.calendar table td span.day-bookings span.booking.booking-blue {
+  background: #025d8c;
+  left: 70%;
+}
+/* line 93, ../sass/components/_calendar.scss */
 .calendar .btn-prev,
 .calendar .btn-next {
   border: 2px solid #cbd1d2;
@@ -889,17 +897,17 @@ h6 {
   top: 50%;
   width: 2em;
 }
-/* line 94, ../sass/components/_calendar.scss */
+/* line 107, ../sass/components/_calendar.scss */
 .calendar .btn-prev:hover,
 .calendar .btn-next:hover {
   background: #cbd1d2;
   color: #f9f9f9;
 }
-/* line 99, ../sass/components/_calendar.scss */
+/* line 112, ../sass/components/_calendar.scss */
 .calendar .btn-prev {
   left: 6em;
 }
-/* line 103, ../sass/components/_calendar.scss */
+/* line 116, ../sass/components/_calendar.scss */
 .calendar .btn-next {
   right: 6em;
 }
@@ -992,29 +1000,31 @@ h6 {
 /* line 87, ../sass/components/_room_form.scss */
 .booking-room .radio .radio-input {
   text-align: center;
+  height: 1px;
+  overflow: hidden;
 }
-/* line 90, ../sass/components/_room_form.scss */
+/* line 92, ../sass/components/_room_form.scss */
 .booking-room .radio .radio-input input {
   display: inline-block;
   position: relative;
   margin: 0;
   padding: 0;
-  display: none;
+  visibility: hidden;
 }
 
-/* line 102, ../sass/components/_room_form.scss */
+/* line 104, ../sass/components/_room_form.scss */
 .booking-dates,
 .booking-names {
   clear: both;
   margin-top: 20px;
 }
-/* line 106, ../sass/components/_room_form.scss */
+/* line 108, ../sass/components/_room_form.scss */
 .booking-dates > div,
 .booking-names > div {
   float: left;
   width: 50%;
 }
-/* line 111, ../sass/components/_room_form.scss */
+/* line 113, ../sass/components/_room_form.scss */
 .booking-dates > div.booking-fname > .inner, .booking-dates > div.booking-date-from > .inner,
 .booking-names > div.booking-fname > .inner,
 .booking-names > div.booking-date-from > .inner {
@@ -1022,7 +1032,7 @@ h6 {
   margin-left: 60px;
   position: relative;
 }
-/* line 118, ../sass/components/_room_form.scss */
+/* line 120, ../sass/components/_room_form.scss */
 .booking-dates > div.booking-lname > .inner, .booking-dates > div.booking-date-to > .inner,
 .booking-names > div.booking-lname > .inner,
 .booking-names > div.booking-date-to > .inner {
@@ -1030,7 +1040,7 @@ h6 {
   margin-left: 10px;
   position: relative;
 }
-/* line 124, ../sass/components/_room_form.scss */
+/* line 126, ../sass/components/_room_form.scss */
 .booking-dates > div .icon,
 .booking-names > div .icon {
   position: absolute;
@@ -1040,16 +1050,16 @@ h6 {
   cursor: pointer;
 }
 
-/* line 134, ../sass/components/_room_form.scss */
+/* line 136, ../sass/components/_room_form.scss */
 .booking-regular-field {
   margin: 20px 60px 0 60px;
 }
 
-/* line 138, ../sass/components/_room_form.scss */
+/* line 140, ../sass/components/_room_form.scss */
 .booking-submit {
   margin: 20px 60px 0 60px;
 }
-/* line 141, ../sass/components/_room_form.scss */
+/* line 143, ../sass/components/_room_form.scss */
 .booking-submit button {
   width: 100%;
   font-size: 1.5em;

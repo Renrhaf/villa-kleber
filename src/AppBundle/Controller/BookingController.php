@@ -29,13 +29,13 @@ class BookingController extends Controller
         $form->handleRequest($request);
 
         // Check if form is valid.
-        // @TODO custom validation constraint : check that no other validated reservation exists at this time.
         if ($form->isSubmitted() && $form->isValid()) {
             // Save the booking in the database.
             $bookingManager = $this->get('app.booking.manager');
             $bookingManager->save($booking);
 
             // Redirect to the selected room page.
+            // @TODO add a confirmation page
             return $this->redirectToRoute('room_' . $booking->getRoom());
         }
 

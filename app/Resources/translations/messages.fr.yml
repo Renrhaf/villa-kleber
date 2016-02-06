@@ -12,6 +12,7 @@ title:
   reservation_letter: R
   information: Informations pratiques
   information_letter: I
+bookings: Réservations
 booking:
   fname.label: Prénom
   lname.label: Nom

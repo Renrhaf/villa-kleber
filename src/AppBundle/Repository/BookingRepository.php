@@ -27,12 +27,13 @@ class BookingRepository extends EntityRepository
     public function findExisting(Booking $booking, $validated = true)
     {
         $qb = $this->createQueryBuilder('booking')
-            ->addSelect('booking')
             ->andWhere('booking.room = :room')
-            ->andWhere('booking.fromDate >= :start AND booking.fromDate <= :end')   // start overlaps
-            ->orWhere('booking.toDate >= :start AND booking.toDate <= :end')        // end overlaps
-            ->orWhere('booking.fromDate <= :start AND booking.toDate >= :end')      // large booking over asked dates
-            ->orWhere('booking.fromDate >= :start AND booking.toDate <= :end')      // booking inside asked dates
+            ->andWhere('
+                (booking.fromDate >= :start AND booking.fromDate <= :end)
+                OR (booking.toDate >= :start AND booking.toDate <= :end)
+                OR (booking.fromDate <= :start AND booking.toDate >= :end)
+                OR (booking.fromDate >= :start AND booking.toDate <= :end)
+            ')
             ->setParameter('room', $booking->getRoom())
             ->setParameter('start', $booking->getFromDate())
             ->setParameter('end', $booking->getToDate());
@@ -41,6 +42,38 @@ class BookingRepository extends EntityRepository
             $qb
                 ->andWhere('booking.validated = :validated')
                 ->setParameter('validated', true);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * Find bookings to display the calendar.
+     *
+     * @param \DateTime $start
+     * @param \DateTime $end
+     * @param string $room
+     *   The room to filter with, can be null.
+     *
+     * @return array
+     *   The bookings to display the calendar.
+     */
+    public function findForCalendar(\DateTime $start, \DateTime $end, $room = null)
+    {
+        $qb = $this->createQueryBuilder('booking')
+            ->andWhere('
+                (booking.fromDate >= :start AND booking.fromDate <= :end)
+                OR (booking.toDate >= :start AND booking.toDate <= :end)
+                OR (booking.fromDate <= :start AND booking.toDate >= :end)
+                OR (booking.fromDate >= :start AND booking.toDate <= :end)
+            ')
+            ->setParameter('start', $start)
+            ->setParameter('end', $end);
+
+        if (!is_null($room)) {
+            $qb
+                ->andWhere('booking.room = :room')
+                ->setParameter('room', $room);
         }
 
         return $qb->getQuery()->getResult();

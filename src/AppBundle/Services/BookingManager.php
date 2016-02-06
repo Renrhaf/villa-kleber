@@ -55,4 +55,30 @@ class BookingManager
 
         $this->mailer->send($message);
     }
+
+    /**
+     * Search in the $bookings array a booking happening on the given day.
+     *
+     * @param \DateTime $day
+     *   The day to search booking for.
+     * @param array $bookings
+     *   The list of bookings to search in.
+     *
+     * @TODO Allow to load from database in no pool of bookings given.
+     *
+     * @return array
+     *   If there is one or more bookings on this day.
+     */
+    public function getBookingForThisDay(\DateTime $day, array $bookings)
+    {
+        $result = array();
+
+        foreach ($bookings as $booking) {
+            if ($booking->getFromDate() <= $day && $booking->getToDate() >= $day) {
+                $result[$booking->getId()] = $booking;
+            }
+        }
+
+        return $result;
+    }
 }
