@@ -1,3 +1,4 @@
+ajax.wait: Veuillez patienter pendant le chargement...
 day.monday.short: Lu
 day.tuesday.short: Ma
 day.wednesday.short: Me
@@ -5,9 +6,13 @@ day.thirsday.short: Je
 day.friday.short: Ve
 day.saturday.short: Sa
 day.sunday.short: Di
-booking.red.confirmed: Chambre Rubis réservée
-booking.green.confirmed: Chambre Opale réservée
-booking.blue.confirmed: Chambre Saphir réservée
+booking.red.validated: Chambre Rubis réservée
+booking.red.unconfirmed: Chambre Rubis très demandée ! Réservez vite !
+booking.green.validated: Chambre Opale réservée
+booking.green.unconfirmed: Chambre Opale très demandée ! Réservez vite !
+booking.blue.validated: Chambre Saphir réservée
+booking.blue.unconfirmed: Chambre Saphir très demandée ! Réservez vite !
+booking.calendar.legend: Une pastille colorée foncée indique une chambre ayant une forte demande, tandis qu'une pastille claire indique une chambre déjà réservée. Cliquez sur ces pastilles colorées pour plus d'informations.
 menu:
   presentation: Présentation
   rooms: Nos Chambres

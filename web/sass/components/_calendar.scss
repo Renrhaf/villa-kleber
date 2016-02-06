@@ -4,14 +4,51 @@
 .calendar {
   text-align: center;
 
+  .ajax-loader .fa-cog {
+    position: absolute;
+    font-size: 5em;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 80px
+  }
+
   header {
     position: relative;
+
+    .btn-prev,
+    .btn-next {
+      color: $white;
+      font-size: 20px;
+      position: absolute;
+      transition: all 0.2s linear;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      top: -5px;
+    }
+
+    .btn-prev:hover,
+    .btn-next:hover {
+      color: lighten($secondary-color, $hover-lighten);
+      background: $white;
+    }
+
+    .btn-prev {
+      left: 0;
+    }
+
+    .btn-next {
+      right: 0;
+    }
   }
 
   table {
     margin-top: 20px;
-    display: inline-block;
     text-align: center;
+    width: 100%;
 
     thead {
       font-weight: 600;
@@ -19,17 +56,22 @@
 
       th {
         text-align: inherit;
+        padding-bottom: 8px;
         border-right: 1px solid transparentize($white, 0.9);
         border-bottom: 1px solid transparentize($white, 0.9);
 
         &:last-child {
-          border: 0;
+          border-right: 0;
         }
       }
     }
 
     tbody {
       color: $white;
+
+      tr:first-child td {
+        padding-top: 8px;
+      }
 
       td {
         border-right: 1px solid transparentize($white, 0.9);
@@ -44,7 +86,7 @@
 
         &.prev-month,
         &.next-month {
-          color: darken($secondary-color, 20%);
+          color: transparentize($white, 0.5);
           opacity: 0.7;
         }
 
@@ -85,16 +127,33 @@
             &.booking-green {
               background: $green;
               left: 30%;
+
+              &.validated {
+                background: lighten($green, $hover-lighten);
+              }
             }
 
             &.booking-red {
               background: $red;
               left: 50%;
+
+              &.validated {
+                background: lighten($red, $hover-lighten);
+              }
             }
 
             &.booking-blue {
               background: $blue;
               left: 70%;
+
+              &.validated {
+                background: lighten($blue, $hover-lighten);
+              }
+            }
+
+            // Opacity on non validated bookings.
+            &.not-validated {
+              opacity: 0.2;
             }
           }
         }
@@ -102,33 +161,7 @@
     }
   }
 
-
-
-  .btn-prev,
-  .btn-next {
-    border: 2px solid #cbd1d2;
-    border-radius: 50%;
-    color: #cbd1d2;
-    height: 2em;
-    font-size: .75em;
-    line-height: 2em;
-    margin: -1em;
-    position: absolute;
-    top: 50%;
-    width: 2em;
-  }
-
-  .btn-prev:hover,
-  .btn-next:hover {
-    background: #cbd1d2;
-    color: #f9f9f9;
-  }
-
-  .btn-prev {
-    left: 6em;
-  }
-
-  .btn-next {
-    right: 6em;
+  .calendar-legend {
+    margin-top: 20px;
   }
 }

@@ -64,22 +64,6 @@
         // Calendar navigation.
         init_calendar_ajax();
 
-        // Calendar tooltips.
-        $('.calendar .day-bookings .booking').tooltip({
-            trigger: 'click hover focus',
-            placement: 'bottom',
-            container: 'body',
-            title: function() {
-                if ($(this).hasClass('booking-red')) {
-                    return Translator.trans('booking.red.confirmed')
-                } else if ($(this).hasClass('booking-green')) {
-                    return Translator.trans('booking.green.confirmed')
-                } else {
-                    return Translator.trans('booking.blue.confirmed')
-                }
-            }
-        });
-
         // Main site slideshow.
         $("#home-slideshow .royalSlider").royalSlider({
             keyboardNavEnabled: true,
@@ -135,6 +119,7 @@
      */
     function init_calendar_ajax()
     {
+        // Calendar AJAX.
         $('.calendar header a').on('click', function(e) {
             var url = $(this).attr('href');
             var calendar = $(this).parents('.calendar');
@@ -144,16 +129,46 @@
                 url: url,
                 dataType: 'html',
                 success: function (html) {
-                    $(calendar).replaceWith(html);
-                    init_calendar_ajax();
+                    $(calendar).fadeOut(function() {
+                        $(this).replaceWith(html).fadeIn();
+                        init_calendar_ajax();
+                    });
+
                 },
                 beforeSend: function() {
-                    $(calendar).html('LOL');
+                    $(calendar).fadeOut(function() {
+                        $(this).html('<div class="ajax-loader"><i class="fa fa-cog fa-spin"></i> ' + Translator.trans('ajax.wait') + '</div>').fadeIn();
+                    });
                 }
             });
 
             e.preventDefault();
             return false;
+        });
+
+        // Calendar tooltips.
+        $('.calendar .day-bookings .booking').tooltip({
+            trigger: 'click hover focus',
+            placement: 'bottom',
+            container: 'body',
+            title: function() {
+                var translation = 'booking';
+                if ($(this).hasClass('booking-red')) {
+                    translation = translation + '.red';
+                } else if ($(this).hasClass('booking-green')) {
+                    translation = translation + '.green';
+                } else {
+                    translation = translation + '.blue';
+                }
+
+                if ($(this).hasClass('validated')) {
+                    translation = translation + '.validated';
+                } else {
+                    translation = translation + '.unconfirmed';
+                }
+
+                return Translator.trans(translation);
+            }
         });
     }
 })(jQuery);

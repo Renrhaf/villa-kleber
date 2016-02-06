@@ -189,6 +189,13 @@ sup {
   text-align: center;
 }
 
+/* Ajax loader */
+/* line 48, ../sass/partials/_global.scss */
+.ajax-loader {
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-weight: 800;
+}
+
 /**
  * Typography related styles.
  */
@@ -804,35 +811,77 @@ h6 {
   text-align: center;
 }
 /* line 7, ../sass/components/_calendar.scss */
+.calendar .ajax-loader .fa-cog {
+  position: absolute;
+  font-size: 5em;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+}
+/* line 16, ../sass/components/_calendar.scss */
 .calendar header {
   position: relative;
 }
-/* line 11, ../sass/components/_calendar.scss */
+/* line 20, ../sass/components/_calendar.scss */
+.calendar header .btn-prev,
+.calendar header .btn-next {
+  color: #fef9f0;
+  font-size: 20px;
+  position: absolute;
+  transition: all 0.2s linear;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid #fef9f0;
+  top: -5px;
+}
+/* line 34, ../sass/components/_calendar.scss */
+.calendar header .btn-prev:hover,
+.calendar header .btn-next:hover {
+  color: #bf5869;
+  background: #fef9f0;
+}
+/* line 39, ../sass/components/_calendar.scss */
+.calendar header .btn-prev {
+  left: 0;
+}
+/* line 43, ../sass/components/_calendar.scss */
+.calendar header .btn-next {
+  right: 0;
+}
+/* line 48, ../sass/components/_calendar.scss */
 .calendar table {
   margin-top: 20px;
-  display: inline-block;
   text-align: center;
+  width: 100%;
 }
-/* line 16, ../sass/components/_calendar.scss */
+/* line 53, ../sass/components/_calendar.scss */
 .calendar table thead {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 20, ../sass/components/_calendar.scss */
+/* line 57, ../sass/components/_calendar.scss */
 .calendar table thead th {
   text-align: inherit;
+  padding-bottom: 8px;
   border-right: 1px solid rgba(254, 249, 240, 0.1);
   border-bottom: 1px solid rgba(254, 249, 240, 0.1);
 }
-/* line 25, ../sass/components/_calendar.scss */
+/* line 63, ../sass/components/_calendar.scss */
 .calendar table thead th:last-child {
-  border: 0;
+  border-right: 0;
 }
-/* line 31, ../sass/components/_calendar.scss */
+/* line 69, ../sass/components/_calendar.scss */
 .calendar table tbody {
   color: #fef9f0;
 }
-/* line 34, ../sass/components/_calendar.scss */
+/* line 72, ../sass/components/_calendar.scss */
+.calendar table tbody tr:first-child td {
+  padding-top: 8px;
+}
+/* line 76, ../sass/components/_calendar.scss */
 .calendar table tbody td {
   border-right: 1px solid rgba(254, 249, 240, 0.1);
   height: 50px;
@@ -840,29 +889,29 @@ h6 {
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-weight: 300;
 }
-/* line 41, ../sass/components/_calendar.scss */
+/* line 83, ../sass/components/_calendar.scss */
 .calendar table tbody td:last-child {
   border: 0;
 }
-/* line 46, ../sass/components/_calendar.scss */
+/* line 88, ../sass/components/_calendar.scss */
 .calendar table tbody td.prev-month, .calendar table tbody td.next-month {
-  color: #36151a;
+  color: rgba(254, 249, 240, 0.5);
   opacity: 0.7;
 }
-/* line 52, ../sass/components/_calendar.scss */
+/* line 94, ../sass/components/_calendar.scss */
 .calendar table tbody td.booking, .calendar table tbody td.current-day {
   font-weight: 800;
 }
-/* line 56, ../sass/components/_calendar.scss */
+/* line 98, ../sass/components/_calendar.scss */
 .calendar table tbody td.current-day .day-label {
   color: #80313e;
 }
-/* line 60, ../sass/components/_calendar.scss */
+/* line 102, ../sass/components/_calendar.scss */
 .calendar table tbody td.booking {
   cursor: pointer;
   position: relative;
 }
-/* line 65, ../sass/components/_calendar.scss */
+/* line 107, ../sass/components/_calendar.scss */
 .calendar table tbody td span.day-bookings {
   display: block;
   height: 20px;
@@ -871,7 +920,7 @@ h6 {
   left: 0;
   right: 0;
 }
-/* line 73, ../sass/components/_calendar.scss */
+/* line 115, ../sass/components/_calendar.scss */
 .calendar table tbody td span.day-bookings span.booking {
   z-index: 2;
   border-radius: 50%;
@@ -884,48 +933,40 @@ h6 {
   position: absolute;
   width: .5em;
 }
-/* line 85, ../sass/components/_calendar.scss */
+/* line 127, ../sass/components/_calendar.scss */
 .calendar table tbody td span.day-bookings span.booking.booking-green {
   background: #04ac6b;
   left: 30%;
 }
-/* line 90, ../sass/components/_calendar.scss */
+/* line 131, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-green.validated {
+  background: #1cfaa4;
+}
+/* line 136, ../sass/components/_calendar.scss */
 .calendar table tbody td span.day-bookings span.booking.booking-red {
   background: #a40802;
   left: 50%;
 }
-/* line 95, ../sass/components/_calendar.scss */
+/* line 140, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-red.validated {
+  background: #fc1910;
+}
+/* line 145, ../sass/components/_calendar.scss */
 .calendar table tbody td span.day-bookings span.booking.booking-blue {
   background: #025d8c;
   left: 70%;
 }
-/* line 108, ../sass/components/_calendar.scss */
-.calendar .btn-prev,
-.calendar .btn-next {
-  border: 2px solid #cbd1d2;
-  border-radius: 50%;
-  color: #cbd1d2;
-  height: 2em;
-  font-size: .75em;
-  line-height: 2em;
-  margin: -1em;
-  position: absolute;
-  top: 50%;
-  width: 2em;
+/* line 149, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.booking-blue.validated {
+  background: #03a0f1;
 }
-/* line 122, ../sass/components/_calendar.scss */
-.calendar .btn-prev:hover,
-.calendar .btn-next:hover {
-  background: #cbd1d2;
-  color: #f9f9f9;
+/* line 155, ../sass/components/_calendar.scss */
+.calendar table tbody td span.day-bookings span.booking.not-validated {
+  opacity: 0.2;
 }
-/* line 127, ../sass/components/_calendar.scss */
-.calendar .btn-prev {
-  left: 6em;
-}
-/* line 131, ../sass/components/_calendar.scss */
-.calendar .btn-next {
-  right: 6em;
+/* line 164, ../sass/components/_calendar.scss */
+.calendar .calendar-legend {
+  margin-top: 20px;
 }
 
 /**
@@ -1084,6 +1125,7 @@ h6 {
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-weight: 800;
   color: #fef9f0;
+  transition: all 0.2s linear;
 }
 
 /**

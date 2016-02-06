@@ -1,8 +1,10 @@
 <div class="calendar{% if room != null %}room-{{ room }}{% endif %}">
     <header>
-        <h3>{{ 'bookings'|trans }} - {{ start|format_date('MMMM') }} {{ start|date('Y') }}</h3>
-        <a class="btn-prev fa fa-angle-left" href="{{ path('calendar_render_ajax', {'date': startCalendar|date('m/Y')}) }}"></a>
-        <a class="btn-next fa fa-angle-right" href="{{ path('calendar_render_ajax', {'date': endCalendar|date('m/Y')}) }}"></a>
+        <h3>
+            <a class="btn-prev fa fa-angle-left" href="{{ path('calendar_render_ajax', {'date': startCalendar|date('m/Y')}) }}"></a>
+            {{ 'bookings'|trans }} - {{ start|format_date('MMMM') }} {{ start|date('Y') }}
+            <a class="btn-next fa fa-angle-right" href="{{ path('calendar_render_ajax', {'date': endCalendar|date('m/Y')}) }}"></a>
+        </h3>
     </header>
 
     <table>
@@ -63,4 +65,6 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <h5 class="calendar-legend">{{ 'booking.calendar.legend'|trans }}</h5>
 </div>

@@ -1,3 +1,4 @@
+ajax.wait: Please wait during data loading...
 day.monday.short: Mo
 day.tuesday.short: Tu
 day.wednesday.short: We
@@ -5,6 +6,13 @@ day.thirsday.short: Th
 day.friday.short: Fr
 day.saturday.short: Sa
 day.sunday.short: Su
+booking.red.validated: Rubis room reserved
+booking.red.unconfirmed: Rubis room is looked at ! Be fast !
+booking.green.validated: Opale room reserved
+booking.green.unconfirmed: Opale room is looked at ! Be fast !
+booking.blue.validated: Saphir room reserved
+booking.blue.unconfirmed: Saphir room is looked at ! Be fast !
+booking.calendar.legend: Little circles of a dark color indicate that the room interests a lot of people. A brighter color indicates that the room is already booked. Click on the colored circles for more information.
 menu:
   presentation: Presentation
   rooms: Our Rooms
