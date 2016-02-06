@@ -17,3 +17,9 @@ services:
     app.booking.manager:
         class: AppBundle\Services\BookingManager
         arguments: ["@doctrine.orm.entity_manager", "@translator", "@mailer", "@templating"]
+
+    validator.unique_in_period:
+        class: AppBundle\Validator\Constraints\UniqueInPeriodValidator
+        arguments: ["@doctrine.orm.entity_manager", "@translator"]
+        tags:
+            - { name: validator.constraint_validator, alias: unique_in_period }

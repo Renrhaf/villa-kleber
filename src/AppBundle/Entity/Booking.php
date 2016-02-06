@@ -4,12 +4,14 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use AppBundle\Validator\Constraints as AppAssert;
 
 /**
  * Booking
  *
  * @ORM\Table(name="booking")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\BookingRepository")
+ * @AppAssert\UniqueInPeriod
  */
 class Booking
 {
@@ -27,7 +29,7 @@ class Booking
      *
      * @ORM\Column(name="fname", type="string", length=255)
      *
-     * @Assert\NotBlank(message = "booking.fname.not_blank")
+     * @Assert\NotBlank()
      * @Assert\Length(min = 3)
      */
     private $fname;
@@ -37,7 +39,7 @@ class Booking
      *
      * @ORM\Column(name="lname", type="string", length=255)
      *
-     * @Assert\NotBlank(message = "booking.lname.not_blank")
+     * @Assert\NotBlank()
      * @Assert\Length(min = 3)
      */
     private $lname;
@@ -47,8 +49,11 @@ class Booking
      *
      * @ORM\Column(name="email", type="string", length=255)
      *
-     * @Assert\NotBlank(message = "booking.email.not_blank")
-     * @Assert\Email(message = "booking.email.invalid")
+     * @Assert\NotBlank()
+     * @Assert\Email(
+     *     checkHost = true,
+     *     checkMX = true
+     * )
      */
     private $email;
 
@@ -57,7 +62,7 @@ class Booking
      *
      * @ORM\Column(name="phone", type="string", length=255)
      *
-     * @Assert\NotBlank(message = "booking.phone.not_blank")
+     * @Assert\NotBlank()
      */
     private $phone;
 
@@ -66,8 +71,8 @@ class Booking
      *
      * @ORM\Column(name="fromDate", type="date")
      *
-     * @Assert\NotBlank(message = "booking.fromDate.not_blank")
-     * @Assert\Date(message = "booking.fromDate.invalid")
+     * @Assert\NotBlank()
+     * @Assert\Date()
      */
     private $fromDate;
 
@@ -76,8 +81,8 @@ class Booking
      *
      * @ORM\Column(name="toDate", type="date")
      *
-     * @Assert\NotBlank(message = "booking.toDate.not_blank")
-     * @Assert\Date(message = "booking.toDate.invalid")
+     * @Assert\NotBlank()
+     * @Assert\Date()
      */
     private $toDate;
 
@@ -86,10 +91,9 @@ class Booking
      *
      * @ORM\Column(name="room", type="string", length=255)
      *
-     * @Assert\NotBlank(message = "booking.room.not_blank")
+     * @Assert\NotBlank()
      * @Assert\Choice(
-     *  choices = { "red", "green", "blue" },
-     *  message = "booking.room.invalid"
+     *  choices = { "red", "green", "blue" }
      * )
      */
     private $room;

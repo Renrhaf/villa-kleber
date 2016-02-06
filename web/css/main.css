@@ -797,6 +797,114 @@ h6 {
 }
 
 /**
+ * Calendar styles.
+ */
+/* line 4, ../sass/components/_calendar.scss */
+.calendar {
+  text-align: center;
+}
+/* line 7, ../sass/components/_calendar.scss */
+.calendar header {
+  position: relative;
+}
+/* line 11, ../sass/components/_calendar.scss */
+.calendar h2 {
+  text-transform: uppercase;
+}
+/* line 15, ../sass/components/_calendar.scss */
+.calendar table {
+  display: inline-block;
+}
+/* line 19, ../sass/components/_calendar.scss */
+.calendar thead {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 24, ../sass/components/_calendar.scss */
+.calendar tbody {
+  color: #7c8a95;
+}
+/* line 28, ../sass/components/_calendar.scss */
+.calendar tbody td:hover {
+  border: 2px solid #00addf;
+}
+/* line 32, ../sass/components/_calendar.scss */
+.calendar td {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+  width: 4em;
+}
+/* line 43, ../sass/components/_calendar.scss */
+.calendar .prev-month,
+.calendar .next-month {
+  color: #cbd1d2;
+}
+/* line 48, ../sass/components/_calendar.scss */
+.calendar .prev-month:hover,
+.calendar .next-month:hover {
+  border: 2px solid #cbd1d2;
+}
+/* line 52, ../sass/components/_calendar.scss */
+.calendar .current-day {
+  background: #00addf;
+  color: #f9f9f9;
+}
+/* line 57, ../sass/components/_calendar.scss */
+.calendar .event {
+  cursor: pointer;
+  position: relative;
+}
+/* line 62, ../sass/components/_calendar.scss */
+.calendar .event:after {
+  background: #00addf;
+  border-radius: 50%;
+  bottom: .5em;
+  display: block;
+  content: '';
+  height: .5em;
+  left: 50%;
+  margin: -.25em 0 0 -.25em;
+  position: absolute;
+  width: .5em;
+}
+/* line 75, ../sass/components/_calendar.scss */
+.calendar .event.current-day:after {
+  background: #f9f9f9;
+}
+/* line 80, ../sass/components/_calendar.scss */
+.calendar .btn-prev,
+.calendar .btn-next {
+  border: 2px solid #cbd1d2;
+  border-radius: 50%;
+  color: #cbd1d2;
+  height: 2em;
+  font-size: .75em;
+  line-height: 2em;
+  margin: -1em;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+}
+/* line 94, ../sass/components/_calendar.scss */
+.calendar .btn-prev:hover,
+.calendar .btn-next:hover {
+  background: #cbd1d2;
+  color: #f9f9f9;
+}
+/* line 99, ../sass/components/_calendar.scss */
+.calendar .btn-prev {
+  left: 6em;
+}
+/* line 103, ../sass/components/_calendar.scss */
+.calendar .btn-next {
+  right: 6em;
+}
+
+/**
  * Room form styles.
  */
 /* line 5, ../sass/components/_room_form.scss */

@@ -26,6 +26,7 @@ booking:
     green: Jade
     blue: Saphir
   submit: Réserver maintenant
+  already.existing: Une réservation existe déjà pour la chambre et les dates choisies
 copyright:
   reserved: Tous droits réservés.
   authors: Design & développement par Quentin Fahrner & Sathya Bin.
