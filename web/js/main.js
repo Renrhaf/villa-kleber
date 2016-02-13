@@ -1,5 +1,16 @@
 (function ($) {
     $(document).ready(function () {
+        // Menu responsive.
+        $('#menu-responsive').click(function() {
+            $('#menu-responsive').toggleClass('active');
+
+            if ($('#menu-responsive').hasClass('active')) {
+                $('#main-menu').css('display', 'block');
+            } else {
+                $('#main-menu').css('display', '');
+            }
+        });
+
         // Show/hide back to top div.
         $(window).load(function () {
             $(window).scroll(function () {

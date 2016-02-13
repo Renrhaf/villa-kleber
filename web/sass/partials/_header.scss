@@ -10,9 +10,8 @@
   z-index: 99;
   padding-top: 15px;
   padding-bottom: 10px;
-  transition: background 0.3s linear;
+  transition: background 0.5s ease-out;
   background: rgba($primary-color, 0.9);
-  border-bottom: 5px solid $black;
 
   .container {
     position: relative;
@@ -34,7 +33,7 @@
   }
 
   .secondary-color {
-    transition: all 0.2s linear;
+    transition: all 0.5s ease-out;
   }
 
   &:hover {
@@ -50,7 +49,7 @@
       animation-name: back-to-home-animation;
       animation-duration: 2s;
       animation-iteration-count: infinite;
-      transition: all 0.2s linear;
+      transition: all 0.2s ease-out;
     }
 
     &:hover i {
@@ -76,8 +75,8 @@
         color: $third-color;
         font-size: 15px;
         text-transform: uppercase;
-        padding: 5px 4px 2px 5px;
-        transition: color 0.2s linear;
+        padding: 0px 4px 2px 5px;
+        transition: color 0.2s ease-out;
         display: inline-block;
         font-weight: $font-weight-regular;
         text-decoration: none;
@@ -96,39 +95,12 @@
       }
     }
   }
-
-  @media screen and (max-width: 992px) {
-    & {
-      display: none;
-      width: 100%;
-      margin-right: 0;
-
-      ul li {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding-left: 20px;
-        padding-right: 30px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    & ul li {
-      margin: 0;
-
-      a {
-        font-size: 9px;
-      }
-    }
-  }
 }
 
 /* Menu button */
 #menu-responsive {
   width: 30px;
-  height: 18px;
+  height: 30px;
   position: absolute;
   right: 15px;
   display: none;
@@ -149,6 +121,14 @@
     }
   }
 
+  // Menu hovered.
+  &:hover {
+    span {
+      background: lighten($secondary-color, $hover-lighten);
+    }
+  }
+
+  // Menu unfolded.
   &.active {
     span:nth-child(1) {
       -webkit-transform: rotate(45deg);
@@ -169,10 +149,34 @@
       top: -17px;
     }
   }
+}
 
-  @media screen and (max-width: 992px) {
-    & {
-      display: block;
+// Responsive behavior.
+@media screen and (max-width: 730px) {
+  #menu-responsive {
+    display: block;
+  }
+
+  #main-menu  {
+    display: none;
+    width: 100%;
+    margin-right: 0;
+    float: none;
+    clear: both;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 30px;
+
+    ul li {
+      float: none;
+      width: 100%;
+      text-align: left;
+      margin: 0;
+      padding: 0 0 8px 0;
+
+      a {
+        padding: 0;
+      }
     }
   }
 }

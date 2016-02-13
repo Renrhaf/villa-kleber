@@ -10,11 +10,12 @@
             <meta name="description" content="{{ 'metatags.description'|trans }}" />
         {% endblock %}
 
-        <title>{% block title %}Villa Kleber{% endblock %}</title>
+        <title>{% block title %}{{ 'metatags.title'|trans }}{% endblock %}</title>
 
         {% block all_stylesheets %}
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/flag-icon/css/flag-icon.min.css') }}">
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/font-awesome/css/font-awesome.min.css') }}" />
             <link rel="stylesheet" href="{{ asset('libs/royalslider/royalslider.css') }}" />
             <link rel="stylesheet" href="{{ asset('libs/royalslider/skins/default/rs-default.css') }}" />
@@ -45,61 +46,9 @@
 
     <body id="{{ app.request.attributes.get('_route') }}">
         {% block body %}
-            {% block menu %}
-                <header id="page-header">
-                    <div class="container clearfix">
-                        <h1 id="logo">
-                            <a href="{{ path('homepage') }}">
-                                Villa <span class="secondary-color">Kleber</span>
-                            </a>
-                        </h1>
-
-                        <div id="menu-responsive">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <nav id="main-menu">
-                            <ul class="nav clearfix">
-                                <li class="first leaf"><a href="#presentation">{{ 'menu.presentation'|trans }}</a></li>
-                                <li class="leaf"><a href="#rooms">{{ 'menu.rooms'|trans }}</a></li>
-                                <li class="leaf"><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
-                                <li class="last leaf"><a href="#information">{{ 'menu.information'|trans }}</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-            {% endblock %}
-
+            {% block header %}{{ include('partials/header.html.twig') }}{% endblock %}
             {% block content %}{% endblock %}
-
-            {% block footer %}
-                <div id="back-to-top"></div>
-
-                <section id="page-footer" class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>
-                                Villa <span class="second-color">Kleber</span>
-                            </h2>
-
-                            <p>
-                                {{ 'copyright.authors'|trans }}<br />
-                                Copyright {{ 'now'|date('Y') }}. {{ 'copyright.reserved'|trans }}
-                            </p>
-
-                            <div class="social">
-                                <a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
-                                <a class="google" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
-                                <a class="twitter" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                                <a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                                <a class="vine" href="https://vine.co/"><i class="fa fa-vine"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            {% endblock %}
+            {% block footer %}{{ include('partials/footer.html.twig') }}{% endblock %}
         {% endblock %}
 
         {% block all_javascripts %}

@@ -12,3 +12,42 @@
   }
 }
 
+#map {
+  position: relative;
+  margin-top: 20px;
+
+  .gmap-map {
+    width: 100%;
+    height: 350px;
+    color: $primary-color;
+  }
+
+  .corner {
+    position: absolute;
+    background: transparentize($primary-color, 0.1);
+    transform: rotate(45deg);
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+
+  .corner-top-right {
+    top: -25px;
+    right: -15px;
+  }
+
+  .corner-top-left {
+    top: -25px;
+    left: -15px;
+  }
+
+  .corner-bottom-right {
+    bottom: -25px;
+    right: -15px;
+  }
+
+  .corner-bottom-left {
+    bottom: -25px;
+    left: -15px;
+  }
+}

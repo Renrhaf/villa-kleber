@@ -24,7 +24,7 @@ class HomeController extends Controller
             'method' => 'POST',
         ));
 
-        return $this->render('default/index.html.twig', array(
+        return $this->render('home/index.html.twig', array(
             'form' => $form->createView(),
         ));
     }

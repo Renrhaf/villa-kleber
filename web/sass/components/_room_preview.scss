@@ -17,11 +17,9 @@
         font-weight: $font-weight-light;
       }
 
-      i {
-        padding-right: 10px;
+      .fa-diamond {
+        transform: rotate(-10deg);
       }
-
-
     }
   }
 
@@ -40,17 +38,17 @@
   }
 
   .room-preview-link {
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: center;
 
     a {
-      color: inherit;
+      font-size: 1.2em;
     }
   }
 
 
   /* Room color specifics */
   &.room-preview-red {
-    .room-preview-link,
     .room-preview-title {
       color: $red;
       text-shadow: 0px 0px 10px lighten($red, 50%);
@@ -71,7 +69,6 @@
   }
 
   &.room-preview-green {
-    .room-preview-link,
     .room-preview-title {
       color: $green;
       text-shadow: 0px 0px 10px lighten($green, 50%);
@@ -92,7 +89,6 @@
   }
 
   &.room-preview-blue {
-    .room-preview-link,
     .room-preview-title {
       color: $blue;
       text-shadow: 0px 0px 10px lighten($blue, 50%);

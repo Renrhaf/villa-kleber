@@ -1,0 +1,23 @@
+/**
+ * Language switcher styles
+ */
+#language-switcher {
+  .dropdown-toggle {
+    background: transparent !important;
+    color: $white !important;
+  }
+
+  .dropdown-menu {
+    width: auto;
+    min-width: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    top: 2px;
+    left: 26px;
+
+    li {
+      margin: 0;
+    }
+  }
+}

@@ -1,29 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% block logo %}
+    {{ include('partials/back_to_home.html.twig') }}
+{% endblock %}
+
 {% block menu %}
-    <header id="page-header">
-        <div class="container clearfix">
-            <h1 id="logo" class="back-to-home">
-                <a href="{{ path('homepage') }}">
-                    <i class="fa fa-angle-left"></i> {{ 'back'|trans }} <span class="secondary-color">{{ 'to_homepage'|trans }}</span>
-                </a>
-            </h1>
-
-            <div id="menu-responsive">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <nav id="main-menu" class="nav">
-                <ul class="clearfix">
-                    <li class="first active leaf">
-                        <a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <ul class="clearfix">
+        <li class="first active leaf">
+            <a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a>
+        </li>
+    </ul>
 {% endblock %}
 
 {% block content %}
