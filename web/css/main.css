@@ -188,56 +188,57 @@ ul li i {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   margin-bottom: 12px;
+  margin-top: 12px;
 }
 
-/* line 46, ../sass/partials/_global.scss */
+/* line 47, ../sass/partials/_global.scss */
 h1 {
   font-size: 32px;
 }
 
-/* line 50, ../sass/partials/_global.scss */
+/* line 51, ../sass/partials/_global.scss */
 h2 {
   font-size: 24px;
 }
 
-/* line 54, ../sass/partials/_global.scss */
+/* line 55, ../sass/partials/_global.scss */
 h3 {
   font-size: 18.72px;
 }
 
-/* line 58, ../sass/partials/_global.scss */
+/* line 59, ../sass/partials/_global.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 62, ../sass/partials/_global.scss */
+/* line 63, ../sass/partials/_global.scss */
 h5 {
   font-size: 13.28px;
 }
 
-/* line 66, ../sass/partials/_global.scss */
+/* line 67, ../sass/partials/_global.scss */
 h6 {
   font-size: 10.72px;
 }
 
-/* line 70, ../sass/partials/_global.scss */
+/* line 71, ../sass/partials/_global.scss */
 hr {
   border-color: rgba(128, 49, 62, 0.2);
 }
 
-/* line 78, ../sass/partials/_global.scss */
+/* line 79, ../sass/partials/_global.scss */
 .secondary-color {
   color: #80313e;
 }
 
-/* line 82, ../sass/partials/_global.scss */
+/* line 83, ../sass/partials/_global.scss */
 .section-title {
   text-align: center;
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   color: #80313e;
   background: black;
 }
-/* line 88, ../sass/partials/_global.scss */
+/* line 89, ../sass/partials/_global.scss */
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
   word-break: break-all;
   font-size: 3rem;
@@ -249,7 +250,7 @@ hr {
   margin-top: 6rem;
   /* Media queries */
 }
-/* line 98, ../sass/partials/_global.scss */
+/* line 99, ../sass/partials/_global.scss */
 .section-title h1 span, .section-title h2 span, .section-title h3 span, .section-title h4 span, .section-title h5 span, .section-title h6 span {
   position: absolute;
   font-size: 9rem;
@@ -264,7 +265,7 @@ hr {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-/* line 113, ../sass/partials/_global.scss */
+/* line 114, ../sass/partials/_global.scss */
 .section-title h1 span.hr, .section-title h2 span.hr, .section-title h3 span.hr, .section-title h4 span.hr, .section-title h5 span.hr, .section-title h6 span.hr {
   width: 12rem;
   margin: 0;
@@ -278,59 +279,59 @@ hr {
   transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 @media screen and (max-width: 400px) {
-  /* line 88, ../sass/partials/_global.scss */
+  /* line 89, ../sass/partials/_global.scss */
   .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
     font-size: 2rem;
   }
-  /* line 129, ../sass/partials/_global.scss */
+  /* line 130, ../sass/partials/_global.scss */
   .section-title h1 span, .section-title h2 span, .section-title h3 span, .section-title h4 span, .section-title h5 span, .section-title h6 span {
     font-size: 6rem;
   }
-  /* line 130, ../sass/partials/_global.scss */
+  /* line 131, ../sass/partials/_global.scss */
   .section-title h1 span.hr, .section-title h2 span.hr, .section-title h3 span.hr, .section-title h4 span.hr, .section-title h5 span.hr, .section-title h6 span.hr {
     width: 10rem;
   }
 }
 
-/* line 135, ../sass/partials/_global.scss */
+/* line 136, ../sass/partials/_global.scss */
 .text-image {
   margin-bottom: 20px;
   transition: border-color 0.2s linear;
   clear: both;
 }
-/* line 140, ../sass/partials/_global.scss */
+/* line 141, ../sass/partials/_global.scss */
 .text-image.text-image-full {
   width: 100%;
   max-height: 200px;
   margin-bottom: 20px;
   border-bottom: 4px solid #80313e;
 }
-/* line 146, ../sass/partials/_global.scss */
+/* line 147, ../sass/partials/_global.scss */
 .text-image.text-image-full:hover {
   border-bottom-color: #bf5869;
 }
-/* line 151, ../sass/partials/_global.scss */
+/* line 152, ../sass/partials/_global.scss */
 .text-image.text-image-right {
   float: right;
   margin-left: 20px;
   border-left: 4px solid #80313e;
 }
-/* line 156, ../sass/partials/_global.scss */
+/* line 157, ../sass/partials/_global.scss */
 .text-image.text-image-right:hover {
   border-left-color: #bf5869;
 }
-/* line 161, ../sass/partials/_global.scss */
+/* line 162, ../sass/partials/_global.scss */
 .text-image.text-image-left {
   float: left;
   margin-right: 20px;
   border-right: 4px solid #80313e;
 }
-/* line 166, ../sass/partials/_global.scss */
+/* line 167, ../sass/partials/_global.scss */
 .text-image.text-image-left:hover {
   border-right-color: #bf5869;
 }
 
-/* line 172, ../sass/partials/_global.scss */
+/* line 173, ../sass/partials/_global.scss */
 .text-citation {
   padding: 8px 20px;
   margin: 50px;
@@ -340,52 +341,45 @@ hr {
   border-left-width: 20px;
 }
 
-/* line 181, ../sass/partials/_global.scss */
-.big-text {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  text-align: center;
-}
-
-/* line 187, ../sass/partials/_global.scss */
+/* line 182, ../sass/partials/_global.scss */
 .align-justify {
   text-align: justify;
 }
 
-/* line 191, ../sass/partials/_global.scss */
+/* line 186, ../sass/partials/_global.scss */
 .row-with-margin-bottom {
   margin-bottom: 50px;
 }
 
-/* line 195, ../sass/partials/_global.scss */
+/* line 190, ../sass/partials/_global.scss */
 .row-with-margin-top {
   margin-top: 50px;
 }
 
 @media (max-width: 991px) {
-  /* line 199, ../sass/partials/_global.scss */
+  /* line 194, ../sass/partials/_global.scss */
   .col-responsive-margin-top {
     margin-top: 20px;
   }
 }
 
-/* line 205, ../sass/partials/_global.scss */
+/* line 200, ../sass/partials/_global.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 209, ../sass/partials/_global.scss */
+/* line 204, ../sass/partials/_global.scss */
 .ajax-loader {
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-weight: 800;
 }
 
-/* line 214, ../sass/partials/_global.scss */
+/* line 209, ../sass/partials/_global.scss */
 .intro-text {
   margin-bottom: 40px;
 }
 
-/* line 218, ../sass/partials/_global.scss */
+/* line 213, ../sass/partials/_global.scss */
 .btn-default {
   background-color: #80313e;
   border-color: #36151a;
@@ -759,7 +753,7 @@ hr {
 /* line 52, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-red .room-preview-title {
   color: #a40802;
-  text-shadow: 0px 0px 10px #feaaa7;
+  text-shadow: 0px 0px 10px rgba(254, 170, 167, 0.8);
   transition: color 0.2s linear;
 }
 /* line 57, ../sass/components/_room_preview.scss */
@@ -777,7 +771,7 @@ hr {
 /* line 72, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-green .room-preview-title {
   color: #04ac6b;
-  text-shadow: 0px 0px 10px #b2fde0;
+  text-shadow: 0px 0px 10px rgba(178, 253, 224, 0.8);
   transition: color 0.2s linear;
 }
 /* line 77, ../sass/components/_room_preview.scss */
@@ -795,7 +789,7 @@ hr {
 /* line 92, ../sass/components/_room_preview.scss */
 .room-preview.room-preview-blue .room-preview-title {
   color: #025d8c;
-  text-shadow: 0px 0px 10px #90d8fd;
+  text-shadow: 0px 0px 10px rgba(144, 216, 253, 0.8);
   transition: color 0.2s linear;
 }
 /* line 97, ../sass/components/_room_preview.scss */

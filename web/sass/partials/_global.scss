@@ -41,6 +41,7 @@ ul li {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
   margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 h1 {
@@ -176,12 +177,6 @@ hr {
   color: $white;
   border: 1px solid $secondary-color;
   border-left-width: 20px;
-}
-
-.big-text {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  text-align: center;
 }
 
 .align-justify {

@@ -51,7 +51,7 @@
   &.room-preview-red {
     .room-preview-title {
       color: $red;
-      text-shadow: 0px 0px 10px lighten($red, 50%);
+      text-shadow: 0px 0px 10px transparentize(lighten($red, 50%), 0.2);
       transition: color 0.2s linear;
 
       &:hover {
@@ -71,7 +71,7 @@
   &.room-preview-green {
     .room-preview-title {
       color: $green;
-      text-shadow: 0px 0px 10px lighten($green, 50%);
+      text-shadow: 0px 0px 10px transparentize(lighten($green, 50%), 0.2);
       transition: color 0.2s linear;
 
       &:hover {
@@ -91,7 +91,7 @@
   &.room-preview-blue {
     .room-preview-title {
       color: $blue;
-      text-shadow: 0px 0px 10px lighten($blue, 50%);
+      text-shadow: 0px 0px 10px transparentize(lighten($blue, 50%), 0.2);
       transition: color 0.2s linear;
 
       &:hover {
