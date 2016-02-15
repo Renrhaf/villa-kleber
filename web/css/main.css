@@ -415,23 +415,22 @@ hr {
   margin: 0;
   padding: 0;
   font-size: 25px;
-  padding-top: 2px;
 }
-/* line 29, ../sass/partials/_header.scss */
+/* line 28, ../sass/partials/_header.scss */
 #logo a {
   color: #fef9f0;
   font-weight: 800;
   text-decoration: none;
 }
-/* line 35, ../sass/partials/_header.scss */
+/* line 34, ../sass/partials/_header.scss */
 #logo .secondary-color {
   transition: all 0.5s ease-out;
 }
-/* line 40, ../sass/partials/_header.scss */
+/* line 39, ../sass/partials/_header.scss */
 #logo:hover .secondary-color {
   color: #bf5869;
 }
-/* line 47, ../sass/partials/_header.scss */
+/* line 46, ../sass/partials/_header.scss */
 #logo.back-to-home i {
   position: relative;
   animation-name: back-to-home-animation;
@@ -439,28 +438,28 @@ hr {
   animation-iteration-count: infinite;
   transition: all 0.2s ease-out;
 }
-/* line 55, ../sass/partials/_header.scss */
+/* line 54, ../sass/partials/_header.scss */
 #logo.back-to-home:hover i {
   animation-play-state: paused;
 }
 
 /* Menu */
-/* line 62, ../sass/partials/_header.scss */
+/* line 61, ../sass/partials/_header.scss */
 #main-menu {
   float: right;
 }
-/* line 65, ../sass/partials/_header.scss */
+/* line 64, ../sass/partials/_header.scss */
 #main-menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 69, ../sass/partials/_header.scss */
+/* line 68, ../sass/partials/_header.scss */
 #main-menu ul li {
   list-style: none;
   float: left;
   margin: 0 5px;
 }
-/* line 74, ../sass/partials/_header.scss */
+/* line 73, ../sass/partials/_header.scss */
 #main-menu ul li a {
   color: #fef9f0;
   font-size: 15px;
@@ -470,19 +469,64 @@ hr {
   display: inline-block;
   font-weight: 400;
   text-decoration: none;
+  background: transparent !important;
 }
 /* line 88, ../sass/partials/_header.scss */
 #main-menu ul li.active a, #main-menu ul li a:hover, #main-menu ul li a.active, #main-menu ul li a:focus {
   color: #80313e;
-  background: transparent;
+  background: transparent !important;
 }
 /* line 93, ../sass/partials/_header.scss */
 #main-menu ul li:last-of-type {
   margin-right: 0;
 }
+/* line 99, ../sass/partials/_header.scss */
+#main-menu ul .room-menu {
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+/* line 103, ../sass/partials/_header.scss */
+#main-menu ul .room-menu .dropdown-menu {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0;
+  width: auto;
+  min-width: 0;
+  top: 38px;
+  left: -8px;
+  padding-bottom: 8px;
+}
+/* line 112, ../sass/partials/_header.scss */
+#main-menu ul .room-menu .dropdown-menu li, #main-menu ul .room-menu .dropdown-menu a {
+  margin: 0 2px;
+  padding: 2px 4px;
+}
+/* line 118, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-red > a {
+  color: #a40802 !important;
+}
+/* line 121, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-red > a:hover {
+  color: #fc1910 !important;
+}
+/* line 126, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-green > a {
+  color: #04ac6b !important;
+}
+/* line 129, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-green > a:hover {
+  color: #1cfaa4 !important;
+}
+/* line 134, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-blue > a {
+  color: #025d8c !important;
+}
+/* line 137, ../sass/partials/_header.scss */
+#main-menu ul .room-menu.room-menu-blue > a:hover {
+  color: #03a0f1 !important;
+}
 
 /* Menu button */
-/* line 101, ../sass/partials/_header.scss */
+/* line 146, ../sass/partials/_header.scss */
 #menu-responsive {
   width: 30px;
   height: 30px;
@@ -492,7 +536,7 @@ hr {
   cursor: pointer;
   margin-top: 1px;
 }
-/* line 110, ../sass/partials/_header.scss */
+/* line 155, ../sass/partials/_header.scss */
 #menu-responsive span {
   height: 2px;
   margin-top: 10px;
@@ -502,27 +546,27 @@ hr {
   top: 0;
   transition: all 500ms ease-out;
 }
-/* line 119, ../sass/partials/_header.scss */
+/* line 164, ../sass/partials/_header.scss */
 #menu-responsive span:first-child {
   margin-top: 0;
 }
-/* line 126, ../sass/partials/_header.scss */
+/* line 171, ../sass/partials/_header.scss */
 #menu-responsive:hover span {
   background: #bf5869;
 }
-/* line 133, ../sass/partials/_header.scss */
+/* line 178, ../sass/partials/_header.scss */
 #menu-responsive.active span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 7px;
 }
-/* line 140, ../sass/partials/_header.scss */
+/* line 185, ../sass/partials/_header.scss */
 #menu-responsive.active span:nth-child(2) {
   opacity: 0;
   top: 7px;
 }
-/* line 145, ../sass/partials/_header.scss */
+/* line 190, ../sass/partials/_header.scss */
 #menu-responsive.active span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -531,12 +575,12 @@ hr {
 }
 
 @media screen and (max-width: 730px) {
-  /* line 156, ../sass/partials/_header.scss */
+  /* line 201, ../sass/partials/_header.scss */
   #menu-responsive {
     display: block;
   }
 
-  /* line 160, ../sass/partials/_header.scss */
+  /* line 205, ../sass/partials/_header.scss */
   #main-menu {
     display: none;
     width: 100%;
@@ -547,7 +591,7 @@ hr {
     padding-left: 20px;
     padding-right: 30px;
   }
-  /* line 170, ../sass/partials/_header.scss */
+  /* line 215, ../sass/partials/_header.scss */
   #main-menu ul li {
     float: none;
     width: 100%;
@@ -555,7 +599,7 @@ hr {
     margin: 0;
     padding: 0 0 8px 0;
   }
-  /* line 177, ../sass/partials/_header.scss */
+  /* line 222, ../sass/partials/_header.scss */
   #main-menu ul li a {
     padding: 0;
   }
@@ -1215,6 +1259,14 @@ hr {
 }
 
 /**
+ * Alert messages
+ */
+/* line 4, ../sass/components/_messages.scss */
+#page-messages {
+  margin-top: 60px;
+}
+
+/**
  * Specific to home page.
  */
 @media (max-width: 991px) {
@@ -1277,4 +1329,8 @@ hr {
   .calendar-col {
     margin-top: 50px;
   }
+}
+/* line 11, ../sass/pages/_booking_page.scss */
+.booking-confirmation-container {
+  margin-top: 80px;
 }

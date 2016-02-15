@@ -63,19 +63,26 @@ class BookingManager
      *   The day to search booking for.
      * @param array $bookings
      *   The list of bookings to search in.
-     *
-     * @TODO Allow to load from database in no pool of bookings given.
+     * @param boolean $unique
+     *   Only keep one booking per day ?
      *
      * @return array
      *   If there is one or more bookings on this day.
      */
-    public function getBookingForThisDay(\DateTime $day, array $bookings)
+    public function getBookingForThisDay(\DateTime $day, array $bookings, $unique = TRUE)
     {
         $result = array();
 
+        // Set day to one minute after last night departure.
+        $day->setTime(12, 0, 0);
+
         foreach ($bookings as $booking) {
             if ($booking->getFromDate() <= $day && $booking->getToDate() >= $day) {
-                $result[$booking->getId()] = $booking;
+                if ($unique) {
+                    $result[$booking->getRoom()] = $booking;
+                } else {
+                    $result[$booking->getId()] = $booking;
+                }
             }
         }
 

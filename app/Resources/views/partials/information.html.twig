@@ -1,0 +1,67 @@
+<div class="row" id="information">
+    <div class="col-md-12">
+        <div class="section-title">
+            <h2><span>{{ 'title.information_letter'|trans }}</span>{{ 'title.information'|trans }}<span class="hr"></span></h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-element">
+                        <div class="info-element-title">
+                            <div class="info-element-icon"><i class="fa fa-car"></i></div>
+                            {{ 'information.parking'|trans }}
+                        </div>
+
+                        <div class="info-element-desc">
+                            {{ 'information.parking.description'|trans|raw }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-element">
+                        <div class="info-element-title">
+                            <div class="info-element-icon"><i class="fa fa-subway"></i></div>
+                            {{ 'information.transport'|trans }}
+                        </div>
+
+                        <div class="info-element-desc">
+                            {{ 'information.transport.description'|trans|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-element">
+                        <div class="info-element-title">
+                            <div class="info-element-icon"><i class="fa fa-heart-o"></i></div>
+                            {{ 'information.strasbourg'|trans }}
+                        </div>
+
+                        <div class="info-element-desc">
+                            {{ 'information.strasbourg.description'|trans|raw }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-element">
+                        <div class="info-element-title">
+                            <div class="info-element-icon"><i class="fa fa-shopping-bag"></i></div>
+                            {{ 'information.shopping'|trans }}
+                        </div>
+
+                        <div class="info-element-desc">
+                            {{ 'information.shopping.description'|trans|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{ include('partials/gmap.html.twig') }}
+        </div>
+    </div>
+</div>

@@ -27,6 +27,7 @@ title:
   reservation_letter: B
   information: Information
   information_letter: I
+  reservation_confirm: Booking confirmation
 bookings: Bookings
 booking:
   fname.label: First name
@@ -39,7 +40,7 @@ booking:
     label: Room
     choose: Choose your room
     red: Rubis
-    green: Jade
+    green: Opale
     blue: Saphir
   submit: Book now
   already.existing: A booking already exists for chosen room and dates
@@ -65,5 +66,5 @@ room: Room
 room.visit: Visit the room
 room.description:
   blue: "Real apartment, the Sapphir Room can accommodate 2 people.<br/>In an elegant and luxurious style, this room provides you a moment of rest and calm."
-  green: "Spacious and luminous, the Jade room has one large and soft bed. <br/>With lovers, friends or family, enjoy its warm environment."
+  green: "Spacious and luminous, the Opale room has one large and soft bed. <br/>With lovers, friends or family, enjoy its warm environment."
   red: "To enjoy a romantic week end or a city break, the Ruby Room can accommodate 2 guests.<br/>Its lounge atomosphere and authentic character will seduce you et make your journey ... unforgettable."

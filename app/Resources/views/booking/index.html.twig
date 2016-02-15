@@ -1,35 +1,21 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'title.reservation'|trans }}, {{ parent() }}{% endblock %}
+
 {% block logo %}
     {{ include('partials/back_to_home.html.twig') }}
 {% endblock %}
 
 {% block menu %}
-    <ul class="clearfix">
-        <li class="first active leaf">
-            <a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a>
-        </li>
+    <ul class="nav clearfix">
+        <li class="active"><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
+
+        {{ include('partials/language_switcher.html.twig') }}
     </ul>
 {% endblock %}
 
 {% block content %}
     <div class="container">
-        <div class="row" id="booking">
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h2><span>{{ 'title.reservation_letter'|trans }}</span>{{ 'title.reservation'|trans }}<span class="hr"></span></h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 booking-form-col">
-                {{ include('booking/form.html.twig', { 'form': form }) }}
-            </div>
-
-            <div class="col-md-6 calendar-col">
-                {{ render(controller('AppBundle:Calendar:render')) }}
-            </div>
-        </div>
+        {{ include('partials/booking.html.twig') }}
     </div>
 {% endblock %}

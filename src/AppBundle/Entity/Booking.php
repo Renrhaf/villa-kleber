@@ -234,7 +234,7 @@ class Booking
     public function setFromDate(\DateTime $fromDate)
     {
         $date = clone $fromDate;
-        $date->setTime(0, 0, 0);
+        $date->setTime(12, 0, 0);
 
         $this->fromDate = $date;
 
@@ -261,7 +261,7 @@ class Booking
     public function setToDate(\DateTime $toDate)
     {
         $date = clone $toDate;
-        $date->setTime(23, 59, 59);
+        $date->setTime(11, 59, 59);
 
         $this->toDate = $toDate;
 

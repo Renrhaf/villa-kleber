@@ -34,9 +34,10 @@ class BookingController extends Controller
             $bookingManager = $this->get('app.booking.manager');
             $bookingManager->save($booking);
 
-            // Redirect to the selected room page.
-            // @TODO add a confirmation page
-            return $this->redirectToRoute('room_' . $booking->getRoom());
+            // Display the confirmation template.
+            return $this->render('booking/confirm.html.twig', array(
+              'booking' => $booking
+            ));
         }
 
         return $this->render('booking/index.html.twig', array(

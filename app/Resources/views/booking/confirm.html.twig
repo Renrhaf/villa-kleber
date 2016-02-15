@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.reservation_confirm'|trans }}, {{ parent() }}{% endblock %}
+
+{% block logo %}
+    {{ include('partials/back_to_home.html.twig') }}
+{% endblock %}
+
+{% block menu %}
+    <ul class="nav clearfix">
+        {{ include('partials/language_switcher.html.twig') }}
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container booking-confirmation-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Votre réservation a bien été enregistrée.</h1>
+                <p>
+                    Vous serez automatiquement informé de la validation de votre réservation d'ici quelques jours.<br/>
+                    Si les dates demandées ne peuvent être réservées, nous vous recontacterons pour vous proposer des alternatives et trouver une solution avec vous.
+                </p>
+
+                <hr/>
+
+                <h1>Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber...</h1>
+            </div>
+        </div>
+
+        {{ include('partials/gmap.html.twig') }}
+    </div>
+{% endblock %}

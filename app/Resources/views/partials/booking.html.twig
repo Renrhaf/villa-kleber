@@ -1,0 +1,57 @@
+<div class="row" id="book">
+    <div class="col-md-12">
+        <div class="section-title">
+            <h2><span>{{ 'title.reservation_letter'|trans }}</span>{{ 'title.reservation'|trans }}<span class="hr"></span></h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Tarif</h3>
+                    <p>
+                        Le tarif d'une nuit en chambre double s'élève à <b>110 euros</b>.<br/>
+                        Un dépôt de garantie de 100 euros vous sera demandé à l'arrivée pour couvrir d'éventuels dommages.<br/>
+                        Il vous sera entièrement remboursé le jour du départ, si aucun dégât n’a été constaté dans l'hébergement pendant votre séjour.<br/>
+                        <br/>
+                        L'arrivée est possible de 14h jusqu'à 20h.<br/>
+                        Les chambres sont spacieuses (24m<sup>2</sup>) et très bien équipées, pour votre plus grand confort.<br/>
+                        Malheureusement, nous n'avons pas de place pour un lit d'appoint pour un enfant supplémentaire.<br/>
+                        Veuillez également noter que les animaux de compagnie ne sont pas admis.<br/>
+                        <br/>
+                        Utilisez le formulaire ci-dessous pour nous transmettre votre réservation aux meilleurs tarifs.<br/>
+                        Retrouvez Villa Kleber sur <a title="Retrouvez Villa Kleber sur Booking.com" target="_blank" href="http://www.booking.com/hotel/fr/b-amp-b-kleber.html">Booking</a>
+                        ainsi que sur <a title="Retrouvez Villa Kleber sur Airbnb.com" target="_blank" href="https://www.airbnb.fr/rooms/9417029">Airbnb</a> à des tarifs un peu moins avantageux.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1 col-responsive-margin-top">
+                    <h3>Infos utiles</h3>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Literie MyBed™</li>
+                        <li><i class="fa fa-check"></i> Salle de bain privative</li>
+                        <li><i class="fa fa-check"></i> Serviettes fournies</li>
+                        <li><i class="fa fa-check"></i> Télévision écran plat</li>
+                        <li><i class="fa fa-check"></i> Wi-Fi gratuit</li>
+                        <li><i class="fa fa-check"></i> Vue sur la ville</li>
+                        <li><i class="fa fa-check"></i> Proximité magasins</li>
+                        <li><i class="fa fa-check"></i> Machine à café</li>
+                        <li><i class="fa fa-check"></i> Réfrigérateur</li>
+                        <li><i class="fa fa-check"></i> Bouilloire électrique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row row-with-margin-top">
+                <div class="col-md-5 booking-form-col">
+                    {{ include('booking/form.html.twig', { 'form': form }) }}
+                </div>
+
+                <div class="col-md-5 col-md-offset-2 calendar-col">
+                    {{ render(controller('AppBundle:Calendar:render')) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

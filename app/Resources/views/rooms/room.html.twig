@@ -3,13 +3,3 @@
 {% block logo %}
     {{ include('partials/back_to_home.html.twig') }}
 {% endblock %}
-
-{% block menu %}
-    <h2>{{ 'room'|trans }} {% block room_name %}{% endblock %}</h2>
-    <ul class="nav clearfix">
-        <li class="first active leaf"><a href="#presentation" class="active scroll-to-link">{{ 'menu.presentation'|trans }}</a></li>
-        <li class="leaf"><a href="#rooms" class="active scroll-to-link">{{ 'menu.rooms'|trans }}</a></li>
-        <li class="leaf"><a href="#booking" class="active scroll-to-link">{{ 'menu.reservation'|trans }}</a></li>
-        <li class="last leaf"><a href="#information" class="active scroll-to-link">{{ 'menu.information'|trans }}</a></li>
-    </ul>
-{% endblock %}

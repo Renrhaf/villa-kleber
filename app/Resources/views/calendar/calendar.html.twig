@@ -23,7 +23,7 @@
         <tbody>
             <tr>
             {% for day in period %}
-                {% set dayBookings = bookingManager.getBookingForThisDay(day, bookings) %}
+                {% set dayBookings = bookingManager.getBookingForThisDay(day, bookings, true) %}
                 {% set classes = 'day day-col-' ~ loop.index %}
 
                 {% if day < start %}

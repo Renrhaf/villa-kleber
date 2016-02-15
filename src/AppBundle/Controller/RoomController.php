@@ -33,7 +33,7 @@ class RoomController extends Controller
     }
 
     /**
-     * Jade room page.
+     * Opale room page.
      */
     public function greenRoomAction()
     {

@@ -24,7 +24,6 @@
   margin: 0;
   padding: 0;
   font-size: 25px;
-  padding-top: 2px;
 
   a {
     color: $third-color;
@@ -80,6 +79,7 @@
         display: inline-block;
         font-weight: $font-weight-regular;
         text-decoration: none;
+        background: transparent !important;
       }
 
       &.active a,
@@ -87,11 +87,56 @@
       & a.active,
       & a:focus {
         color: $secondary-color;
-        background: transparent;
+        background: transparent !important;
       }
 
       &:last-of-type {
         margin-right: 0;
+      }
+    }
+
+    // Specific room menus.
+    .room-menu {
+      margin-right: 8px;
+      text-transform: uppercase;
+
+      .dropdown-menu {
+        background: transparentize($primary-color, 0.1);
+        border-radius: 0;
+        width: auto;
+        min-width: 0;
+        top: 38px;
+        left: -8px;
+        padding-bottom: 8px;
+
+        li, a {
+          margin: 0 2px;
+          padding: 2px 4px;
+        }
+      }
+
+      &.room-menu-red > a {
+        color: $red !important;
+
+        &:hover {
+          color: lighten($red, $hover-lighten) !important;
+        }
+      }
+
+      &.room-menu-green > a {
+        color: $green !important;
+
+        &:hover {
+          color: lighten($green, $hover-lighten) !important;
+        }
+      }
+
+      &.room-menu-blue > a {
+        color: $blue !important;
+
+        &:hover {
+          color: lighten($blue, $hover-lighten) !important;
+        }
       }
     }
   }

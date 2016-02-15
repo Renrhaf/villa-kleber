@@ -46,14 +46,73 @@
 
     <body id="{{ app.request.attributes.get('_route') }}">
         {% block body %}
-            {% block header %}{{ include('partials/header.html.twig') }}{% endblock %}
+            {% block header %}
+                <header id="page-header">
+                    <div class="container clearfix">
+                        {% block logo %}
+                            <h1 id="logo">
+                                <a href="{{ path('homepage') }}">
+                                    Villa <span class="secondary-color">Kleber</span>
+                                </a>
+                            </h1>
+                        {% endblock %}
+
+                        <div id="menu-responsive">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <nav id="main-menu">
+                            {% block menu %}
+                                <ul class="nav clearfix">
+                                    <li><a href="#presentation">{{ 'menu.presentation'|trans }}</a></li>
+                                    <li><a href="#rooms">{{ 'menu.rooms'|trans }}</a></li>
+                                    <li><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
+                                    <li><a href="#information">{{ 'menu.information'|trans }}</a></li>
+
+                                    {{ include('partials/language_switcher.html.twig') }}
+                                </ul>
+                            {% endblock %}
+                        </nav>
+                    </div>
+                </header>
+            {% endblock %}
+
+            {{ include('partials/messages.html.twig') }}
+
             {% block content %}{% endblock %}
-            {% block footer %}{{ include('partials/footer.html.twig') }}{% endblock %}
+
+            {% block footer %}
+                <section id="page-footer" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>
+                                Villa <span class="second-color">Kleber</span>
+                            </h2>
+
+                            <p>
+                                {{ 'copyright.authors'|trans }}<br />
+                                Copyright {{ 'now'|date('Y') }}. {{ 'copyright.reserved'|trans }}
+                            </p>
+
+                            <div class="social">
+                                <a class="google" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
+                                <a class="twitter" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                <a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="back-to-top"></div>
+            {% endblock %}
         {% endblock %}
 
         {% block all_javascripts %}
             <script src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
             <script src="{{ url('bazinga_jstranslation_js') }}"></script>
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
             <script type="text/javascript" src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>

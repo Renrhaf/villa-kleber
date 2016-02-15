@@ -3,7 +3,7 @@ _bazinga_jstranslation:
 
 homepage:
     path:     /{_locale}
-    defaults: { _controller: AppBundle:Home:index }
+    defaults: { _controller: AppBundle:Home:index, _locale: fr }
     requirements:
         _locale: en|fr
 
@@ -14,7 +14,7 @@ room_red:
         _locale: en|fr
 
 room_green:
-    path:     /{_locale}/chambre/jade
+    path:     /{_locale}/chambre/opale
     defaults: { _controller: AppBundle:Room:greenRoom }
     requirements:
         _locale: en|fr

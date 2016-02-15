@@ -123,6 +123,9 @@
                 nativeFS: false
             }
         });
+
+        // Google map
+        google.maps.event.addDomListener(window, 'load', init_map);
     });
 
     /**
@@ -180,6 +183,31 @@
 
                 return Translator.trans(translation);
             }
+        });
+    }
+
+    /**
+     * Initialize the google map.
+     */
+    function init_map() {
+        var center = new google.maps.LatLng(48.5859718, 7.743764800000008);
+        var myOptions = {
+            zoom: 15,
+            center: center,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map($('#map .gmap-map')[0], myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(48.5859718, 7.743764800000008)
+        });
+        infowindow = new google.maps.InfoWindow({content: '<strong>Villa Kleber</strong><br> 6 Quai Kleber, 67000 Strasbourg<br>'});
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+        google.maps.event.addDomListener(window, 'resize', function() {
+            map.setCenter(center);
         });
     }
 })(jQuery);

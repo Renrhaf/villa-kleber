@@ -27,6 +27,7 @@ title:
   reservation_letter: R
   information: Informations
   information_letter: I
+  reservation_confirm: Confirmation de réservation
 bookings: Réservations
 booking:
   fname.label: Prénom
@@ -39,7 +40,7 @@ booking:
     label: Chambre
     choose: Choisissez votre chambre
     red: Rubis
-    green: Jade
+    green: Opale
     blue: Saphir
   submit: Réserver maintenant
   already.existing: Une réservation existe déjà pour la chambre et les dates choisies
@@ -65,5 +66,5 @@ room: Chambre
 room.visit: Visiter la chambre
 room.description:
   blue: "Véritable appartement, la chambre Saphir peut accueillir jusqu'à 2 personnes.<br/>Dans un style élégant et luxueux, ses tons vous invitent au repos et au calme."
-  green: "Spacieuse et lumineuse, la chambre Jade dispose de 2 couchages.<br/>Entre amoureux, amis ou encore famille profitez de son cadre chaleureux."
+  green: "Spacieuse et lumineuse, la chambre Opale dispose de 2 couchages.<br/>Entre amoureux, amis ou encore famille profitez de son cadre chaleureux."
   red: "Pour un week end romantique ou une escapade citadine, la chambre Rubis peut accueillir jusqu'à 2 personnes.<br/>Son atmosphère lounge et son univers brut sauront vous séduire et faire de votre séjour, une expérience de qualité."

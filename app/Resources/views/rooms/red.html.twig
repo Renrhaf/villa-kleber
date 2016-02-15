@@ -1,12 +1,31 @@
 {% extends 'rooms/room.html.twig' %}
 
-{% block room_name %}
-    <span class="room-red">{{ 'booking.room.red'|trans }}</span>
+{% block title %}{{ 'room'|trans }} {{ 'booking.room.red'|trans }}, {{ parent() }}{% endblock %}
+
+{% block menu %}
+    <ul class="nav clearfix">
+        <li class="room-menu room-menu-red dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                {{ 'room'|trans }} {{ 'booking.room.red'|trans }}
+                <b class="caret"></b>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li class="room-menu room-menu-green"><a href="{{ path('room_green') }}">{{ 'room'|trans }} {{ 'booking.room.green'|trans }}</a></li>
+                <li class="room-menu room-menu-blue"><a href="{{ path('room_blue') }}">{{ 'room'|trans }} {{ 'booking.room.blue'|trans }}</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
+        <li><a href="#information">{{ 'menu.information'|trans }}</a></li>
+
+        {{ include('partials/language_switcher.html.twig') }}
+    </ul>
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row" id="room-slideshow" class="slideshow">
+        <div class="row slideshow" id="room-slideshow">
             <div class="col-md-12">
                 <div class="royalSlider rsDefault">
                     <img class="rsImg" data-rsTmb="{{ asset('img/photos/photo1.jpg') }}" src="{{ asset('img/photos/photo1.jpg') }}" />
@@ -37,5 +56,7 @@
             </div>
         </div>
 
+        {{ include('partials/booking.html.twig', {'form': form}) }}
+        {{ include('partials/information.html.twig') }}
     </div>
 {% endblock %}
