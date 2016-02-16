@@ -66,7 +66,7 @@ class Booking
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fromDate", type="date")
+     * @ORM\Column(name="fromDate", type="datetime")
      *
      * @Assert\NotBlank()
      * @Assert\Date()
@@ -76,7 +76,7 @@ class Booking
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="toDate", type="date")
+     * @ORM\Column(name="toDate", type="datetime")
      *
      * @Assert\NotBlank()
      * @Assert\Date()
@@ -248,7 +248,14 @@ class Booking
      */
     public function getFromDate()
     {
-        return $this->fromDate;
+        $date = null;
+
+        if ($this->fromDate instanceof \DateTime) {
+            $date = $this->fromDate;
+            $date->setTime(12, 0, 0);
+        }
+
+        return $date;
     }
 
     /**
@@ -275,7 +282,14 @@ class Booking
      */
     public function getToDate()
     {
-        return $this->toDate;
+        $date = null;
+
+        if ($this->toDate instanceof \DateTime) {
+            $date = $this->toDate;
+            $date->setTime(11, 59, 59);
+        }
+
+        return $date;
     }
 
     /**
