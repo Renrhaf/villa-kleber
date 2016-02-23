@@ -9,12 +9,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormInterface;
-use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Translation\TranslatorInterface;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 
 /**
  * Form type for Booking entity.
@@ -113,42 +109,5 @@ class BookingType extends AbstractType
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\Booking'
         ));
-    }
-
-    /**
-     * Reorder form fields.
-     */
-    public function finishView(FormView $view, FormInterface $form, array $options)
-    {
-        /** @var FormView[] $fields */
-        $fields = [];
-        foreach ($this->getFieldsOrder() as $field) {
-            if ($view->offsetExists($field)) {
-                $fields[$field] = $view->offsetGet($field);
-                $view->offsetUnset($field);
-            }
-        }
-
-        $view->children = $fields + $view->children;
-
-        parent::finishView($view, $form, $options);
-    }
-
-    /**
-     * Set fields order.
-     *
-     * @return array
-     */
-    function getFieldsOrder()
-    {
-        return [
-            'room',
-            'fromDate',
-            'toDate',
-            'fname',
-            'lname',
-            'email',
-            'phone'
-        ];
     }
 }

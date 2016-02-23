@@ -1,0 +1,37 @@
+/**
+ * Contact form styles.
+ */
+
+.contact-data {
+  margin-bottom: 10px;
+
+  & > div {
+    float: left;
+    width: 50%;
+
+    &.contact-name > .inner {
+      margin-right: 10px;
+      position: relative;
+    }
+
+    &.contact-email > .inner {
+      margin-left: 10px;
+      position: relative;
+    }
+  }
+}
+
+.contact-submit {
+  margin: 20px 0 0 0;
+
+  button {
+    width: 100%;
+    font-size: 1.5em;
+    background: $secondary-color;
+    border-color: darken($secondary-color, $hover-lighten);
+    font-family: $font-title;
+    font-weight: 800;
+    color: $white;
+    transition: all 0.2s linear;
+  }
+}

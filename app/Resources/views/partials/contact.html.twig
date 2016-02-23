@@ -1,0 +1,19 @@
+<div class="row" id="contact">
+    <div class="col-md-12">
+        <div class="section-title">
+            <h2><span>{{ 'title.contact_letter'|trans }}</span>{{ 'title.contact'|trans }}<span class="hr"></span></h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="contact-form">
+                    {{ include('contact/form.html.twig', { 'form': contact }) }}
+                </div>
+
+                <div class="col-md-6" id="map">
+                    <div class="gmap-map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

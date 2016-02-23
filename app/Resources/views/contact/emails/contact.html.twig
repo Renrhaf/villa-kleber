@@ -1,0 +1,35 @@
+{% extends 'base_email.html.twig' %}
+
+{% block content %}
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h1>Bonjour, administrateur de Villa Kleber.</h1>
+                            <p class="lead">Un nouveau message a été envoyé par un visiteur du site.</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h3>Envoyé par: {{ contact.name }} <small>{{ contact.email }}</small></h3>
+                            <p>{{ contact.message|nl2br }}</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

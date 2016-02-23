@@ -16,18 +16,22 @@ booking.calendar.legend: Une pastille colorée foncée indique une chambre ayant
 menu:
   presentation: Présentation
   rooms: Nos Chambres
-  reservation: Réservation & tarifs
+  reservation: Réservation
   information: Informations
+  contact: Contact
 title:
   presentation: Présentation
   presentation_letter: P
   rooms: Nos Chambres
   rooms_letter: N
-  reservation: Réservation & tarifs
+  reservation: Réservation
   reservation_letter: R
   information: Informations
   information_letter: I
+  contact: Contactez nous
+  contact_letter: C
   reservation_confirm: Confirmation de réservation
+  contact_confirm: Confirmation d'envoi de message
 bookings: Réservations
 booking:
   fname.label: Prénom
@@ -44,6 +48,12 @@ booking:
     blue: Saphir
   submit: Réserver maintenant
   already.existing: Une réservation existe déjà pour la chambre et les dates choisies
+contact:
+  name.label: Nom
+  email.label: Email
+  message.label: Message
+  message.placeholder: Votre message...
+  submit: Envoyer votre message
 copyright:
   reserved: Tous droits réservés.
   authors: Design & développement par Quentin Fahrner & Sathya Bin.

@@ -1,0 +1,33 @@
+{% form_theme form 'Form/room_form.html.twig' %}
+
+{{ form_start(form) }}
+<div class="contact-data clearfix">
+    <div class="contact-name">
+        <div class="inner">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+            {{ form_errors(form.name) }}
+        </div>
+    </div>
+
+    <div class="contact-email">
+        <div class="inner">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+        </div>
+    </div>
+</div>
+
+<div class="contact-message">
+    {{ form_label(form.message) }}
+    {{ form_widget(form.message) }}
+    {{ form_errors(form.message) }}
+</div>
+
+<div class="contact-submit">
+    {{ form_widget(form.submit) }}
+</div>
+
+{{ form_rest(form) }}
+{{ form_end(form) }}

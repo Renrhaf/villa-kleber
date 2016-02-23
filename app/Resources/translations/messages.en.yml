@@ -16,18 +16,21 @@ booking.calendar.legend: Little circles of a dark color indicate that the room i
 menu:
   presentation: Presentation
   rooms: Our Rooms
-  reservation: Book & Fees
+  reservation: Booking
   information: Information
+  contact: Contact
 title:
   presentation: Presentation
   presentation_letter: P
   rooms: Our Rooms
   rooms_letter: O
-  reservation: Book & Fees
+  reservation: Booking
   reservation_letter: B
   information: Information
   information_letter: I
   reservation_confirm: Booking confirmation
+  contact_letter: C
+  contact: Contact us
 bookings: Bookings
 booking:
   fname.label: First name

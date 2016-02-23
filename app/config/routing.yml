@@ -36,3 +36,9 @@ calendar_render_ajax:
     defaults: { _controller: AppBundle:Calendar:render }
     requirements:
         _locale: en|fr
+
+contact:
+    path:     /{_locale}/contact-us
+    defaults: { _controller: AppBundle:Contact:index }
+    requirements:
+        _locale: en|fr

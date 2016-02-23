@@ -1217,6 +1217,45 @@ hr {
 }
 
 /**
+ * Contact form styles.
+ */
+/* line 5, ../sass/components/_contact_form.scss */
+.contact-data {
+  margin-bottom: 10px;
+}
+/* line 8, ../sass/components/_contact_form.scss */
+.contact-data > div {
+  float: left;
+  width: 50%;
+}
+/* line 12, ../sass/components/_contact_form.scss */
+.contact-data > div.contact-name > .inner {
+  margin-right: 10px;
+  position: relative;
+}
+/* line 17, ../sass/components/_contact_form.scss */
+.contact-data > div.contact-email > .inner {
+  margin-left: 10px;
+  position: relative;
+}
+
+/* line 24, ../sass/components/_contact_form.scss */
+.contact-submit {
+  margin: 20px 0 0 0;
+}
+/* line 27, ../sass/components/_contact_form.scss */
+.contact-submit button {
+  width: 100%;
+  font-size: 1.5em;
+  background: #80313e;
+  border-color: #36151a;
+  font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-weight: 800;
+  color: #fef9f0;
+  transition: all 0.2s linear;
+}
+
+/**
  * Information elements.
  */
 /* line 4, ../sass/components/_information.scss */
@@ -1291,35 +1330,6 @@ hr {
   height: 350px;
   color: black;
 }
-/* line 25, ../sass/pages/_homepage.scss */
-#map .corner {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.9);
-  transform: rotate(45deg);
-  width: 50px;
-  height: 50px;
-  z-index: 1;
-}
-/* line 34, ../sass/pages/_homepage.scss */
-#map .corner-top-right {
-  top: -25px;
-  right: -15px;
-}
-/* line 39, ../sass/pages/_homepage.scss */
-#map .corner-top-left {
-  top: -25px;
-  left: -15px;
-}
-/* line 44, ../sass/pages/_homepage.scss */
-#map .corner-bottom-right {
-  bottom: -25px;
-  right: -15px;
-}
-/* line 49, ../sass/pages/_homepage.scss */
-#map .corner-bottom-left {
-  bottom: -25px;
-  left: -15px;
-}
 
 /**
  * Specific to booking page.
@@ -1333,4 +1343,22 @@ hr {
 /* line 11, ../sass/pages/_booking_page.scss */
 .booking-confirmation-container {
   margin-top: 80px;
+}
+/* line 14, ../sass/pages/_booking_page.scss */
+.booking-confirmation-container hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/**
+ * Specific to contact page.
+ */
+/* line 5, ../sass/pages/_contact_page.scss */
+.contact-confirmation-container {
+  margin-top: 80px;
+}
+/* line 8, ../sass/pages/_contact_page.scss */
+.contact-confirmation-container hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

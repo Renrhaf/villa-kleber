@@ -14,9 +14,19 @@ services:
         tags:
             - { name: form.type }
 
+    app.form.type.contact:
+        class: AppBundle\Form\Type\ContactType
+        arguments: ["@translator"]
+        tags:
+            - { name: form.type }
+
     app.booking.manager:
         class: AppBundle\Services\BookingManager
         arguments: ["@doctrine.orm.entity_manager", "@translator", "@mailer", "@templating"]
+
+    app.contact.manager:
+        class: AppBundle\Services\ContactManager
+        arguments: ["@translator", "@mailer", "@templating"]
 
     validator.unique_in_period:
         class: AppBundle\Validator\Constraints\UniqueInPeriodValidator

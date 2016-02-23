@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.contact_confirm'|trans }}, {{ parent() }}{% endblock %}
+
+{% block logo %}
+    {{ include('partials/back_to_home.html.twig') }}
+{% endblock %}
+
+{% block menu %}
+    <ul class="nav clearfix">
+        {{ include('partials/language_switcher.html.twig') }}
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container contact-confirmation-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Votre message a bien été envoyé.</h1>
+                <p>
+                    Nous vous répondrons dans 3 jours au plus tard.<br/>
+                    Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber...
+                </p>
+
+                <hr/>
+
+                <h1>Rappel de votre message</h1>
+                <h4>Envoyé au nom de {{ contact.name }} ({{ contact.email }})</h4>
+                <p>
+                    <i class="fa fa-quote-left"></i>
+                    {{ contact.message|nl2br }}
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

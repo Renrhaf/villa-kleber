@@ -41,12 +41,12 @@ class BookingManager
 
         // Send the email.
         $message = \Swift_Message::newInstance()
-            ->setSubject('Hello Email')
-            ->setFrom('no-reply@villa-kleber.fr')
-            ->setTo('admin@villa-kleber.fr')
+            ->setSubject('Nouvelle demande de réservation - Villa Kleber')
+            ->setFrom('no-reply@villa-kleber-strasbourg.fr')
+            ->setTo('admin@villa-kleber-strasbourg.fr')
             ->setBody(
                 $this->templating->render(
-                    'booking/emails/save_notification.html.twig',
+                    'booking/emails/notification.html.twig',
                     array('booking' => $booking)
                 ),
                 'text/html'
