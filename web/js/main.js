@@ -45,7 +45,7 @@
 
         // Room datepickers.
         $(".room-datepicker").datepicker({
-            language: '{{ language }}',
+            language: symfony.language,
             autoclose: true,
             startDate: 'now'
         });
@@ -110,12 +110,13 @@
         $("#room-slideshow .royalSlider").royalSlider({
             keyboardNavEnabled: true,
             imageScaleMode: 'fill',
-            autoScaleSlider: false,
+            autoScaleSlider: true,
             loopRewind: true,
             randomizeSlides: true,
             transitionType: 'fade',
             autoPlay: {
-                enabled: true
+                enabled: true,
+                pauseOnHover: true
             },
             controlNavigation: 'thumbnails',
             fullscreen: {

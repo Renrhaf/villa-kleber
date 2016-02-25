@@ -108,3 +108,19 @@
     }
   }
 }
+
+// Tablet & mobile.
+@include villa-tablet {
+  .room-preview .room-preview-link a {
+    display: block;
+    width: 100%;
+  }
+
+  .room-preview-col:not(:first-child) {
+    .room-preview {
+      margin-top: 50px;
+      border-top: 1px solid transparentize($secondary-color, 0.7);
+      padding-top: 30px;
+    }
+  }
+}

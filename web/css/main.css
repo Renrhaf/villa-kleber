@@ -346,40 +346,30 @@ hr {
   text-align: justify;
 }
 
-/* line 186, ../sass/partials/_global.scss */
-.row-with-margin-bottom {
-  margin-bottom: 50px;
-}
-
-/* line 190, ../sass/partials/_global.scss */
-.row-with-margin-top {
-  margin-top: 50px;
-}
-
 @media (max-width: 991px) {
-  /* line 194, ../sass/partials/_global.scss */
+  /* line 186, ../sass/partials/_global.scss */
   .col-responsive-margin-top {
     margin-top: 20px;
   }
 }
 
-/* line 200, ../sass/partials/_global.scss */
+/* line 192, ../sass/partials/_global.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 204, ../sass/partials/_global.scss */
+/* line 196, ../sass/partials/_global.scss */
 .ajax-loader {
   font-family: "Advent Pro", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-weight: 800;
 }
 
-/* line 209, ../sass/partials/_global.scss */
+/* line 201, ../sass/partials/_global.scss */
 .intro-text {
   margin-bottom: 40px;
 }
 
-/* line 213, ../sass/partials/_global.scss */
+/* line 205, ../sass/partials/_global.scss */
 .btn-default {
   background-color: #80313e;
   border-color: #36151a;
@@ -849,6 +839,20 @@ hr {
   border-bottom-color: #03a0f1;
 }
 
+@media (max-width: 991px) {
+  /* line 114, ../sass/components/_room_preview.scss */
+  .room-preview .room-preview-link a {
+    display: block;
+    width: 100%;
+  }
+
+  /* line 120, ../sass/components/_room_preview.scss */
+  .room-preview-col:not(:first-child) .room-preview {
+    margin-top: 50px;
+    border-top: 1px solid rgba(128, 49, 62, 0.3);
+    padding-top: 30px;
+  }
+}
 /**
  * Slideshow styles.
  */
@@ -875,7 +879,7 @@ hr {
 @media screen and (min-width: 992px) {
   /* line 30, ../sass/components/_slideshow.scss */
   body {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   /* line 34, ../sass/components/_slideshow.scss */
@@ -1313,22 +1317,23 @@ hr {
   .calendar-col {
     margin-top: 50px;
   }
-
-  /* line 10, ../sass/pages/_homepage.scss */
-  .room-preview-col {
-    margin-top: 50px;
-  }
 }
-/* line 15, ../sass/pages/_homepage.scss */
+/* line 11, ../sass/pages/_homepage.scss */
 #map {
   position: relative;
   margin-top: 20px;
 }
-/* line 19, ../sass/pages/_homepage.scss */
+/* line 15, ../sass/pages/_homepage.scss */
 #map .gmap-map {
   width: 100%;
   height: 350px;
   color: black;
+}
+@media (max-width: 767px) {
+  /* line 11, ../sass/pages/_homepage.scss */
+  #map {
+    margin-top: 60px;
+  }
 }
 
 /**
@@ -1350,6 +1355,16 @@ hr {
   margin-bottom: 50px;
 }
 
+@media (max-width: 991px) {
+  /* line 22, ../sass/pages/_booking_page.scss */
+  #book ul, #book p {
+    margin-left: 40px;
+  }
+  /* line 26, ../sass/pages/_booking_page.scss */
+  #book h3 {
+    margin-top: 30px;
+  }
+}
 /**
  * Specific to contact page.
  */

@@ -42,3 +42,7 @@ contact:
     defaults: { _controller: AppBundle:Contact:index }
     requirements:
         _locale: en|fr
+
+admin_dashboard:
+    path:     /admin/dashboard
+    defaults: { _controller: AppBundle:Admin:index }

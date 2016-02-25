@@ -183,14 +183,6 @@ hr {
   text-align: justify;
 }
 
-.row-with-margin-bottom {
-  margin-bottom: 50px;
-}
-
-.row-with-margin-top {
-  margin-top: 50px;
-}
-
 .col-responsive-margin-top {
   @include villa-tablet {
     margin-top: 20px;

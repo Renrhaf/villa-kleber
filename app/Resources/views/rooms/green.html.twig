@@ -18,6 +18,7 @@
 
         <li><a href="#book">{{ 'menu.reservation'|trans }}</a></li>
         <li><a href="#information">{{ 'menu.information'|trans }}</a></li>
+        <li><a href="#contact">{{ 'menu.contact'|trans }}</a></li>
 
         {{ include('partials/language_switcher.html.twig') }}
     </ul>
@@ -58,5 +59,6 @@
 
         {{ include('partials/booking.html.twig', {'form': form}) }}
         {{ include('partials/information.html.twig') }}
+        {{ include('partials/contact.html.twig', {'form': contact}) }}
     </div>
 {% endblock %}

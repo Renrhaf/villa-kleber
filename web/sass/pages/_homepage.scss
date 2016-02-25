@@ -6,10 +6,6 @@
   .calendar-col {
     margin-top: 50px;
   }
-
-  .room-preview-col {
-    margin-top: 50px;
-  }
 }
 
 #map {
@@ -20,5 +16,9 @@
     width: 100%;
     height: 350px;
     color: $primary-color;
+  }
+
+  @include villa-mobile {
+    margin-top: 60px;
   }
 }

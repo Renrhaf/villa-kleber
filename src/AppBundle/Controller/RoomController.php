@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Booking;
 use AppBundle\Form\Type\BookingType;
+use AppBundle\Form\Type\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -27,8 +28,15 @@ class RoomController extends Controller
             'method' => 'POST',
         ));
 
+        // Prepare the contact form.
+        $contact = $this->createForm(ContactType::class, null, array(
+          'action' => $this->generateUrl('contact'),
+          'method' => 'POST',
+        ));
+
         return $this->render('rooms/red.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contact->createView()
         ));
     }
 
@@ -46,8 +54,15 @@ class RoomController extends Controller
             'method' => 'POST',
         ));
 
+        // Prepare the contact form.
+        $contact = $this->createForm(ContactType::class, null, array(
+          'action' => $this->generateUrl('contact'),
+          'method' => 'POST',
+        ));
+
         return $this->render('rooms/green.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contact->createView()
         ));
     }
 
@@ -65,8 +80,15 @@ class RoomController extends Controller
             'method' => 'POST',
         ));
 
+        // Prepare the contact form.
+        $contact = $this->createForm(ContactType::class, null, array(
+          'action' => $this->generateUrl('contact'),
+          'method' => 'POST',
+        ));
+
         return $this->render('rooms/blue.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contact->createView()
         ));
     }
 }

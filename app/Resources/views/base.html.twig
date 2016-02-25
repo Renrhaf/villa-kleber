@@ -23,8 +23,8 @@
             {% block stylesheets %}{% endblock %}
         {% endblock %}
 
-        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans:400|News+Cycle:400,700|Arapey:400,400italic|Advent+Pro:400,100,200,300,600,500,700|Playfair+Display:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
-        {% block favicon %}<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />{% endblock %}
+        <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700|Advent+Pro:100,200,300,400,600,500,700' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -119,6 +119,11 @@
             <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/royalslider/jquery.royalslider.min.js') }}"></script>
+            <script type="text/javascript">
+                var symfony = {
+                    language: "{{ language }}"
+                };
+            </script>
             <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
             {% block javascripts %}{% endblock %}
         {% endblock %}
