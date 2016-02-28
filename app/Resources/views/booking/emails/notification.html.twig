@@ -1,0 +1,40 @@
+{% extends 'base_email.html.twig' %}
+
+{% block content %}
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h1>Bonjour, administrateur de Villa Kleber.</h1>
+                            <p class="lead">Une nouvelle réservation a été réalisée par un visiteur du site.</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h3>Détails</h3>
+
+                            <p>Chambre {{ booking.roomTranslatable|trans }}</p>
+                            <p>{{ booking.countNights() }} nuit(s) : du {{ booking.fromDate|date('d/m/Y') }} au {{ booking.toDate|date('d/m/Y') }}</p>
+                            <p>{{ booking.fname }} {{ booking.lname }}</p>
+                            <p>{{ booking.email }}</p>
+                            <p>{{ booking.phone }}</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

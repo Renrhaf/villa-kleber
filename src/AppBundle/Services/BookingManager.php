@@ -57,7 +57,49 @@ class BookingManager
     }
 
     /**
-     * Search in the $bookings array a booking happening on the given day.
+     * Confirm the booking, send a mail to customer.
+     *
+     * @param Booking $booking
+     *
+     * @throws \Exception
+     *   If an already confirmed booking exists.
+     */
+    public function confirm(Booking $booking)
+    {
+        // Check for existing confirmed bookings.
+        $conflicts = $this->getConflicting($booking, true);
+        if (!empty($conflicts)) {
+            $conflict = array_shift($conflicts);
+            throw new \Exception('Conflicting with one already confirmed booking : ' . $conflict->getId());
+        }
+
+        // Confirm the booking.
+        $booking->setValidated(true);
+        $booking->setReviewed(true);
+
+        // Save to Database.
+        $this->em->persist($booking);
+        $this->em->flush($booking);
+
+        // Send the email.
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Confirmation de réservation - Villa Kleber')
+            ->setFrom('no-reply@villa-kleber-strasbourg.fr')
+            ->setTo($booking->getEmail())
+            ->setBody(
+                $this->templating->render(
+                    'booking/emails/confirmation.html.twig',
+                    array('booking' => $booking)
+                ),
+                'text/html'
+            )
+        ;
+
+        $this->mailer->send($message);
+    }
+
+    /**
+     * Search a booking happening on the given day.
      *
      * @param \DateTime $day
      *   The day to search booking for.
@@ -87,5 +129,19 @@ class BookingManager
         }
 
         return $result;
+    }
+
+    /**
+     * Return any colliding booking with the given one.
+     *
+     * @param boolean $confirmed
+     *   Only check for confirmed bookings ?
+     *
+     * @return array
+     *   A list of bookings.
+     */
+    public function getConflicting(Booking $booking, $confirmed = true)
+    {
+        return $this->em->getRepository('AppBundle:Booking')->findExisting($booking, $confirmed);
     }
 }

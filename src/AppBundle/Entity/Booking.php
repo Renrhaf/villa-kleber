@@ -110,12 +110,20 @@ class Booking
     private $validated;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="reviewed", type="boolean")
+     */
+    private $reviewed;
+
+    /**
      * Booking constructor.
      */
     public function __construct()
     {
         $this->created = new \DateTime('now', new \DateTimeZone('Europe/Paris'));
         $this->validated = false;
+        $this->reviewed = false;
     }
 
     /**
@@ -317,6 +325,16 @@ class Booking
     }
 
     /**
+     * Get the translatable room string.
+     *
+     * @return string
+     */
+    public function getRoomTranslatable()
+    {
+        return 'booking.room.' . $this->room;
+    }
+
+    /**
      * Set created
      *
      * @param \DateTime $created
@@ -362,5 +380,49 @@ class Booking
     public function getValidated()
     {
         return $this->validated;
+    }
+
+    /**
+     * Set reviewed
+     * When an admin reviews the booking.
+     *
+     * @param boolean $reviewed
+     *
+     * @return Booking
+     */
+    public function setReviewed($reviewed)
+    {
+        $this->reviewed = $reviewed;
+
+        return $this;
+    }
+
+    /**
+     * Get reviewed
+     * When an admin reviews the booking.
+     *
+     * @return bool
+     */
+    public function getReviewed()
+    {
+        return $this->reviewed;
+    }
+
+    /**
+     * Return the number of nights
+     * for this booking.
+     *
+     * @return int
+     */
+    public function countNights()
+    {
+        $nights = 0;
+
+        $period = new \DatePeriod($this->fromDate, \DateInterval::createFromDateString('1 day'), $this->toDate);
+        foreach ($period as $day) {
+            $nights++;
+        }
+
+        return $nights;
     }
 }

@@ -1,5 +1,185 @@
 {% extends 'base.html.twig' %}
 
-{% block content %}
-    <h1>Admin</h1>
+{% block body_attributes %}class="admin-page"{% endblock %}
+
+{% block logo %}
+    {{ include('partials/back_to_home.html.twig') }}
 {% endblock %}
+
+{% block menu %}
+    <ul class="nav clearfix">
+        <li><a href="#waiting">Attente de confirmation</a></li>
+        <li><a href="#bookings">Toutes les réservations</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="waiting" class="section-title">
+                    <h2><span>A</span>Attente de confirmation <span class="hr"></span></h2>
+                </div>
+
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Chambre
+                        </th>
+                        <th>
+                            Date de
+                        </th>
+                        <th>
+                            Date à
+                        </th>
+                        <th>
+                            Nuit(s)
+                        </th>
+                        <th>
+                            Contact
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Téléphone
+                        </th>
+                        <th>
+                            Conflits
+                        </th>
+                        <th>
+                            Confirmation
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for booking in waiting %}
+                            <tr id="booking-waiting-{{ booking.id }}">
+                                <td>
+                                   {{ booking.id }}
+                                </td>
+                                <td>
+                                    {{ booking.roomTranslatable|trans }}
+                                </td>
+                                <td>
+                                    {{ booking.fromDate|date('d/m/Y') }}
+                                </td>
+                                <td>
+                                    {{ booking.toDate|date('d/m/Y') }}
+                                </td>
+                                <td>
+                                    {{ booking.countNights() }}
+                                </td>
+                                <td>
+                                    {{ booking.fname }} {{ booking.lname }}
+                                </td>
+                                <td>
+                                    {{ booking.email }}
+                                </td>
+                                <td>
+                                    {{ booking.phone }}
+                                </td>
+                                <td>
+                                    {% set conflicts = manager.getConflicting(booking, false) %}
+                                    {% set canBeValidated = true %}
+                                    {% for conflict in conflicts %}
+                                        {% if conflict.validated %}{% set canBeValidated = false %}{% endif %}
+                                        <a href="#booking-{{ conflict.id }}">#{{ conflict.id }}</a>
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    {% if canBeValidated %}<a class="btn btn-success"><i class="fa fa-check"></i></a>{% endif %}
+                                    <a class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div id="bookings" class="section-title">
+                    <h2><span>T</span>Toutes les réservations <span class="hr"></span></h2>
+                </div>
+
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Chambre
+                        </th>
+                        <th>
+                            Date de
+                        </th>
+                        <th>
+                            Date à
+                        </th>
+                        <th>
+                            Nuit(s)
+                        </th>
+                        <th>
+                            Contact
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Téléphone
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for booking in bookings %}
+                        <tr id="booking-{{ booking.id }}">
+                            <td>
+                                {{ booking.id }}
+                            </td>
+                            <td>
+                                {{ booking.roomTranslatable|trans }}
+                            </td>
+                            <td>
+                                {{ booking.fromDate|date('d/m/Y') }}
+                            </td>
+                            <td>
+                                {{ booking.toDate|date('d/m/Y') }}
+                            </td>
+                            <td>
+                                {{ booking.countNights() }}
+                            </td>
+                            <td>
+                                {{ booking.fname }} {{ booking.lname }}
+                            </td>
+                            <td>
+                                {{ booking.email }}
+                            </td>
+                            <td>
+                                {{ booking.phone }}
+                            </td>
+                            <td>
+                                {% if booking.validated %}
+                                    <i class="text-success fa fa-check"></i>
+                                {% else %}
+                                    <i class="text-danger fa fa-remove"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

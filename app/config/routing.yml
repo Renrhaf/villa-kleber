@@ -31,6 +31,12 @@ booking:
     requirements:
         _locale: en|fr
 
+booking_confirm:
+    path:     /admin/reservation/{id}/confirm
+    defaults: { _controller: AppBundle:Admin:confirm }
+    requirements:
+        id: \d+
+
 calendar_render_ajax:
     path:     /{_locale}/calendar/render/ajax
     defaults: { _controller: AppBundle:Calendar:render }

@@ -1,6 +1,6 @@
 {% set language = app.request.locale|split('_')[0] %}
 <!DOCTYPE html>
-<html {% block html_attributes %}lang="{{ language }}"{% endblock %}>
+<html lang="{{ language }}" {% block html_attributes %}{% endblock %}>
     <head>
         {% block meta_tags %}
             <meta charset="UTF-8" />
@@ -47,7 +47,7 @@
         <![endif]-->
     </head>
 
-    <body id="{{ app.request.attributes.get('_route') }}">
+    <body id="{{ app.request.attributes.get('_route') }}" {% block body_attributes %}{% endblock %}>
         {% block body %}
             {% block header %}
                 <header id="page-header">
@@ -115,7 +115,7 @@
 
         {% block all_javascripts %}
             <script src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
-            <script src="{{ url('bazinga_jstranslation_js') }}"></script>
+            <script src="{{ url('bazinga_jstranslation_js') }}?locales=fr,en"></script>
             <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
             <script type="text/javascript" src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>

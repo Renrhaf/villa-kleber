@@ -26,6 +26,26 @@ class BookingRepository extends EntityRepository
      */
     public function findExisting(Booking $booking, $validated = true)
     {
+        return $this->findExistingExplicit($booking->getRoom(), $booking->getFromDate(), $booking->getToDate(), $validated, array($booking->getId()));
+    }
+
+    /**
+     * Find bookings for given room and dates.
+     *
+     * @param string $room
+     *   The room.
+     * @param \DateTime $from
+     * @param \DateTime $to
+     * @param boolean $validated
+     *   Only check for validated bookings if true.
+     * @param array $exclude
+     *   Ids to exclude.
+     *
+     * @return array
+     *   All bookings for given room and dates.
+     */
+    public function findExistingExplicit($room, \DateTime $from, \DateTime $to, $validated, $exclude)
+    {
         $qb = $this->createQueryBuilder('booking')
             ->andWhere('booking.room = :room')
             ->andWhere('
@@ -34,9 +54,11 @@ class BookingRepository extends EntityRepository
                 OR (booking.fromDate <= :start AND booking.toDate >= :end)
                 OR (booking.fromDate >= :start AND booking.toDate <= :end)
             ')
-            ->setParameter('room', $booking->getRoom())
-            ->setParameter('start', $booking->getFromDate())
-            ->setParameter('end', $booking->getToDate());
+            ->andWhere('booking.id NOT IN (:ids)')
+            ->setParameter('room', $room)
+            ->setParameter('start', $from)
+            ->setParameter('end', $to)
+            ->setParameter('ids', $exclude);
 
         if ($validated) {
             $qb
@@ -46,6 +68,7 @@ class BookingRepository extends EntityRepository
 
         return $qb->getQuery()->getResult();
     }
+
 
     /**
      * Find bookings to display the calendar.

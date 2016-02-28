@@ -1,0 +1,42 @@
+{% extends 'base_email.html.twig' %}
+
+{% block content %}
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h1>Bonjour, {{ booking.fname }} {{ booking.lname }}.</h1>
+                            <p class="lead">Votre réservation a été confirmée !</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="row">
+        <tr>
+            <td class="wrapper last">
+                <table class="twelve columns">
+                    <tr>
+                        <td>
+                            <h3>Rappel de votre réservation</h3>
+
+                            <p>Chambre {{ booking.roomTranslatable|trans }}</p>
+                            <p>{{ booking.countNights() }} nuit(s) : du {{ booking.fromDate|date('d/m/Y') }} au {{ booking.toDate|date('d/m/Y') }}</p>
+
+                            <h3>Informations de contact</h3>
+
+                            <p>Email: {{ booking.email }}</p>
+                            <p>Téléphone: {{ booking.phone }}</p>
+                        </td>
+                        <td class="expander"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

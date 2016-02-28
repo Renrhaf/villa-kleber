@@ -1377,3 +1377,11 @@ hr {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+/**
+ * Administration pages.
+ */
+/* line 4, ../sass/pages/_admin_pages.scss */
+.admin-page {
+  margin-top: 80px;
+}
