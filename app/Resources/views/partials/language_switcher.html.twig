@@ -6,7 +6,7 @@
     {% endif %}
 
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="flag-icon flag-icon-{{ flag_lang }}"></span>
+        <span class="flag-icon flag-icon-{{ flag_lang }}" title="{{ 'translate.site'|trans }}"></span>
         <b class="caret"></b>
     </a>
 
@@ -22,7 +22,7 @@
                 {% if lang != language %}
                     <li>
                         <a class="locale-{{ lang }}" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': lang})|merge(app.request.query.all)) }}">
-                            <span class="flag-icon flag-icon-{{ flag_lang }}"></span>
+                            <span class="flag-icon flag-icon-{{ flag_lang }}" title="{{ 'translate.site'|trans }}"></span>
                         </a>
                     </li>
                 {% endif %}

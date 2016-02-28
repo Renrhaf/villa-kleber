@@ -8,9 +8,12 @@
             <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
             <meta name="keywords" content="{{ 'metatags.keywords'|trans }}" />
             <meta name="description" content="{{ 'metatags.description'|trans }}" />
+            <meta name="rights" content="{{ 'site.name'|trans }}" />
+            <meta name="generator" content="Symfony3" />
+            <meta name="og:locale" content="{{ language }}" />
         {% endblock %}
 
-        <title>{% block title %}{{ 'metatags.title'|trans }}{% endblock %}</title>
+        <title>{% block title %}{{ 'site.title'|trans }}{% endblock %}</title>
 
         {% block all_stylesheets %}
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">

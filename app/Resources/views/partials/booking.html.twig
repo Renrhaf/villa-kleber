@@ -7,37 +7,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Informations</h3>
+                    <h3>{{ 'room.information'|trans }}</h3>
                     <ul>
-                        <li><i class="fa fa-home"></i> Superficie: 24m<sup>2</sup></li>
-                        <li><i class="fa fa-bed"></i> Lit double (MyBed™)</li>
-                        <li><i class="fa fa-paw"></i> Animaux non admis</li>
-                        <li><i class="fa fa-clock-o"></i> Check in: de 14h à 20h / Check out: 12h</li>
+                        <li><i class="fa fa-home"></i> {{ 'room.surface'|trans }}: 24m<sup>2</sup></li>
+                        <li><i class="fa fa-bed"></i> {{ 'room.double_bed'|trans }} (MyBed™)</li>
+                        <li><i class="fa fa-paw"></i> {{ 'room.pet_not_allowed'|trans }}</li>
+                        <li><i class="fa fa-clock-o"></i> {{ 'room.checkin'|trans }} / {{ 'room.checkout'|trans }}</li>
                     </ul>
                 </div>
 
                 <div class="col-md-6">
-                    <h3>Equipement</h3>
+                    <h3>{{ 'room.equipment'|trans }}</h3>
                     <ul>
-                        <li><i class="fa fa-check"></i> Salle de bain avec douche</li>
-                        <li><i class="fa fa-check"></i> Télévision écran plat</li>
-                        <li><i class="fa fa-check"></i> Connexion Wi-Fi gratuite</li>
-                        <li><i class="fa fa-check"></i> Machine à café</li>
-                        <li><i class="fa fa-check"></i> Réfrigérateur</li>
-                        <li><i class="fa fa-check"></i> Draps de bain et couchage fournis</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.bathroom'|trans }}</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.tv'|trans }}</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.wifi'|trans }}</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.coffee'|trans }}</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.fridge'|trans }}</li>
+                        <li><i class="fa fa-check"></i> {{ 'room.towels'|trans }}</li>
                     </ul>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Tarif</h3>
+                    <h3>{{ 'room.fees.head'|trans }}</h3>
                     <p>
-                        Le tarif d'une nuit en chambre double s'élève à 110 euros.<br/>
-                        Un dépôt de garantie de 100 euros vous sera demandé à l'arrivée pour couvrir d'éventuels dommages.<br/>
-                        Il vous sera entièrement remboursé le jour du départ, si aucun dégât n’a été constaté dans l'hébergement pendant votre séjour.<br/>
+                        {{ 'room.fees.text1'|trans }}
                         <br/>
-                        Retrouvez notre offre pour la Villa Kleber sur <a title="Retrouvez Villa Kleber sur Booking.com" target="_blank" href="http://www.booking.com/hotel/fr/b-amp-b-kleber.html">Booking</a> et <a title="Retrouvez Villa Kleber sur Airbnb.com" target="_blank" href="https://www.airbnb.fr/rooms/9417029">Airbnb</a>.
+                        {{ 'room.fees.text2'|trans }} <a title="{{ 'room.fees.booking.title'|trans }}" target="_blank" href="http://www.booking.com/hotel/fr/b-amp-b-kleber.html">Booking</a> {{ 'and'|trans }} <a title="{{ 'room.fees.airbnb.title'|trans }}" target="_blank" href="https://www.airbnb.fr/rooms/9417029">Airbnb</a>.
                     </p>
                 </div>
             </div>

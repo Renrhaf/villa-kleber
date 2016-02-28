@@ -13,48 +13,57 @@ booking.green.unconfirmed: Opale room is looked at ! Be fast !
 booking.blue.validated: Saphir room reserved
 booking.blue.unconfirmed: Saphir room is looked at ! Be fast !
 booking.calendar.legend: Little circles of a dark color indicate that the room interests a lot of people. A brighter color indicates that the room is already booked. Click on the colored circles for more information.
-menu:
-  presentation: Presentation
-  rooms: Our Rooms
-  reservation: Booking
-  information: Information
-  contact: Contact
-title:
-  presentation: Presentation
-  presentation_letter: P
-  rooms: Our Rooms
-  rooms_letter: O
-  reservation: Booking
-  reservation_letter: B
-  information: Information
-  information_letter: I
-  reservation_confirm: Booking confirmation
-  contact_letter: C
-  contact: Contact us
-bookings: Bookings
-booking:
-  fname.label: First name
-  lname.label: Last name
-  email.label: Email
-  phone.label: Phone
-  fromDate.label: Date of arrival
-  toDate.label: Date of leave
-  room:
-    label: Room
-    choose: Choose your room
-    red: Rubis
-    green: Opale
-    blue: Saphir
-  submit: Book now
-  already.existing: A booking already exists for chosen room and dates
-copyright:
-  reserved: All rights reserved.
-  authors: Design & development by Quentin Fahrner & Sathya Bin.
-metatags:
-  keywords: "TODO: Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
-  description: "The villa Kleber welcomes you in one of its 3 luxury rooms located in the center of Strasbourg, close to transport, amenities and downtown."
-  title: "Villa Kleber | your luxury location in Strasbourg"
-back: Back
+menu.presentation: Presentation
+menu.rooms: Our Rooms
+menu.reservation: Booking
+menu.information: Information
+menu.contact: Contact
+title.presentation: Presentation
+title.presentation_letter: P
+title.rooms: Our Rooms
+title.rooms_letter: O
+title.reservation: Booking
+title.reservation_letter: B
+title.information: Information
+title.information_letter: I
+title.reservation_confirm: Booking confirmation
+title.contact_letter: C
+title.contact: Contact us
+title.contact_confirm: Message confirmation
+booking.fname.label: First name
+booking.lname.label: Last name
+booking.email.label: Email
+booking.phone.label: Phone
+booking.fromDate.label: Date of arrival
+booking.toDate.label: Date of leave
+booking.room.label: Room
+booking.room.choose: Choose your room
+booking.room.red: Rubis
+booking.room.green: Opale
+booking.room.blue: Saphir
+booking.submit: Book now
+booking.already.existing: A booking already exists for chosen room and dates
+booking.confirm.head: Your booking was successfuly saved
+booking.confirm.text: "Nous confirmerons votre réservation dans 3 jours au plus tard.<br/>Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber..."
+booking.confirm.reminder.head: Reminder of your booking
+contact.name.label: Name
+contact.email.label: Email
+contact.message.label: Message
+contact.message.placeholder: Your message...
+contact.submit: Send your message
+contact.confirm.head: Your message was successfuly sent
+contact.confirm.text: "Nous vous répondrons dans 3 jours au plus tard.<br/>Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber..."
+contact.confirm.reminder.head: Reminder of your message
+contact.confirm.reminder.sent: Sent by
+presentation.head: Welcome to the Villa Kleber.
+presentation.text: "TODO"
+copyright.reserved: All rights reserved.
+copyright.authors: Design & development by Quentin Fahrner & Sathya Bin.
+metatags.keywords: "TODO: Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
+metatags.description: "The villa Kleber welcomes you in one of its 3 luxury rooms located in the center of Strasbourg, close to transport, amenities and downtown."
+site.title: "Villa Kleber | your luxury room in Strasbourg"
+site.name: "Villa Kleber"
+translate.site: "Translate website"
 information.shopping: Shopping Center
 information.strasbourg: Strasbourg
 information.transport: Transports
@@ -63,11 +72,34 @@ information.transport.description: "Tram Station Ancienne Synagogue les Halles :
 information.strasbourg.description: "On foot or on a bike, discover its neiborghoo : The Cathedrale, Grand Rue or La Petite France."
 information.shopping.description: "Centre commercial des Halles<br/>Centre commercial Rive Etoile : Line A or D , tram station Etoile Bourse"
 information.parking.description: "Parking Kléber/Homme de Fer<br/>Parking des Halles<br/>P1: Marais Vert : Open from Monday to Saturday from 7am to 9pm<br/>P2: Sébastopol : Open daily , 24h/24, bank holidays included<br/>P3: Wilson : Open from Monday to Saturday from 7am to 9pm"
-to_homepage: to homepage
 reservation.description: Book one of our luxurious rooms in just a few clicks.
-room: Room
+room.information: Information
+room.equipment: Equipment
+room.bathroom: Salle de bain avec douche => A traduire
+room.towels: Draps de bain et couchage fournis
+room.tv: TV with flat screen
+room.wifi: Free Wi-Fi connection
+room.coffee: Coffee machine
+room.fridge: Fridge
+room.surface: Surface
+room.double_bed: Double bed
+room.pet_not_allowed: Pets not allowed
+room.checkin: "Check in: de 2 PM to 8 PM"
+room.checkout: "Check out: 12 AM"
 room.visit: Visit the room
-room.description:
-  blue: "Real apartment, the Sapphir Room can accommodate 2 people.<br/>In an elegant and luxurious style, this room provides you a moment of rest and calm."
-  green: "Spacious and luminous, the Opale room has one large and soft bed. <br/>With lovers, friends or family, enjoy its warm environment."
-  red: "To enjoy a romantic week end or a city break, the Ruby Room can accommodate 2 guests.<br/>Its lounge atomosphere and authentic character will seduce you et make your journey ... unforgettable."
+room.fees.head: Fees
+room.fees.text1: TODO
+room.fees.text2: Retrieve the Villa Kleber on
+room.fees.booking.title: Retrieve the Villa Kleber on Booking.com
+room.fees.airbnb.title: Retrieve the Villa Kleber on Airbnb.com
+room.description.blue: "Real apartment, the Sapphir Room can accommodate 2 people.<br/>In an elegant and luxurious style, this room provides you a moment of rest and calm."
+room.description.green: "Spacious and luminous, the Opale room has one large and soft bed. <br/>With lovers, friends or family, enjoy its warm environment."
+room.description.red: "To enjoy a romantic week end or a city break, the Ruby Room can accommodate 2 guests.<br/>Its lounge atomosphere and authentic character will seduce you et make your journey ... unforgettable."
+
+to_homepage: to homepage
+room: Room
+back: Back
+from: from
+to: to
+and: and
+bookings: Bookings

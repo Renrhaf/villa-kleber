@@ -18,19 +18,17 @@
     <div class="container booking-confirmation-container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Votre réservation a bien été enregistrée.</h1>
+                <h1>{{ 'booking.confirm.head'|trans }}</h1>
                 <p>
-                    Nous confirmerons votre réservation dans 3 jours au plus tard.<br/>
-                    Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber...
+                    {{ 'booking.confirm.text'|trans }}
                 </p>
 
                 <hr/>
 
-                <h1>Rappel de votre réservation</h1>
-                <h4></h4>
+                <h1>{{ 'booking.confirm.reminder.head'|trans }}</h1>
                 <p><i class="fa fa-user"></i> &nbsp; {{ booking.fname }} {{ booking.lname }}</p>
-                <p><i class="fa fa-bed"></i> &nbsp; Chambre {{ room|trans }}</p>
-                <p><i class="fa fa-calendar"></i> &nbsp; Du {{ booking.fromDate|date('d/m/Y') }} au {{ booking.toDate|date('d/m/Y') }}</p>
+                <p><i class="fa fa-bed"></i> &nbsp; {{ 'room'|trans }} {{ room|trans }}</p>
+                <p><i class="fa fa-calendar"></i> &nbsp; {{ 'from'|trans }} {{ booking.fromDate|date('d/m/Y') }} {{ 'to'|trans }} {{ booking.toDate|date('d/m/Y') }}</p>
                 <p><i class="fa fa-envelope-o"></i> &nbsp; {{ booking.email }}</p>
                 <p><i class="fa fa-phone"></i> &nbsp; {{ booking.phone }}</p>
             </div>

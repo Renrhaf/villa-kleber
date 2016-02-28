@@ -13,55 +13,57 @@ booking.green.unconfirmed: Chambre Opale très demandée ! Réservez vite !
 booking.blue.validated: Chambre Saphir réservée
 booking.blue.unconfirmed: Chambre Saphir très demandée ! Réservez vite !
 booking.calendar.legend: Une pastille colorée foncée indique une chambre ayant une forte demande, tandis qu'une pastille claire indique une chambre déjà réservée. Cliquez sur ces pastilles colorées pour plus d'informations.
-menu:
-  presentation: Présentation
-  rooms: Nos Chambres
-  reservation: Réservation
-  information: Informations
-  contact: Contact
-title:
-  presentation: Présentation
-  presentation_letter: P
-  rooms: Nos Chambres
-  rooms_letter: N
-  reservation: Réservation
-  reservation_letter: R
-  information: Informations
-  information_letter: I
-  contact: Contactez nous
-  contact_letter: C
-  reservation_confirm: Confirmation de réservation
-  contact_confirm: Confirmation d'envoi de message
-bookings: Réservations
-booking:
-  fname.label: Prénom
-  lname.label: Nom
-  email.label: Email
-  phone.label: Téléphone
-  fromDate.label: Date d'arrivée
-  toDate.label: Date de départ
-  room:
-    label: Chambre
-    choose: Choisissez votre chambre
-    red: Rubis
-    green: Opale
-    blue: Saphir
-  submit: Réserver maintenant
-  already.existing: Une réservation existe déjà pour la chambre et les dates choisies
-contact:
-  name.label: Nom
-  email.label: Email
-  message.label: Message
-  message.placeholder: Votre message...
-  submit: Envoyer votre message
-copyright:
-  reserved: Tous droits réservés.
-  authors: Design & développement par Quentin Fahrner & Sathya Bin.
-metatags:
-  keywords: "Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
-  description: "La villa Kleber vous accueille dans une de ses 3 chambres de luxe situées au centre de Strasbourg, proche transports, commodités et centre ville."
-  title: "Villa Kleber | Votre location de chambre de luxe sur Strasbourg"
-back: Retour
+menu.presentation: Présentation
+menu.rooms: Nos Chambres
+menu.reservation: Réservation
+menu.information: Informations
+menu.contact: Contact
+title.presentation: Présentation
+title.presentation_letter: P
+title.rooms: Nos Chambres
+title.rooms_letter: N
+title.reservation: Réservation
+title.reservation_letter: R
+title.information: Informations
+title.information_letter: I
+title.contact: Contactez nous
+title.contact_letter: C
+title.reservation_confirm: Confirmation de réservation
+title.contact_confirm: Confirmation d'envoi de message
+booking.fname.label: Prénom
+booking.lname.label: Nom
+booking.email.label: Email
+booking.phone.label: Téléphone
+booking.fromDate.label: Date d'arrivée
+booking.toDate.label: Date de départ
+booking.room.label: Chambre
+booking.room.choose: Choisissez votre chambre
+booking.room.red: Rubis
+booking.room.green: Opale
+booking.room.blue: Saphir
+booking.submit: Réserver maintenant
+booking.already.existing: Une réservation existe déjà pour la chambre et les dates choisies
+booking.confirm.head: Votre réservation a bien été enregistrée
+booking.confirm.text: "Nous confirmerons votre réservation dans 3 jours au plus tard.<br/>Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber..."
+booking.confirm.reminder.head: Rappel de votre réservation
+contact.name.label: Nom
+contact.email.label: Email
+contact.message.label: Message
+contact.message.placeholder: "Votre message..."
+contact.submit: Envoyer votre message
+contact.confirm.head: Votre message a bien été envoyé
+contact.confirm.text: "Nous vous répondrons dans 3 jours au plus tard.<br/>Nous vous remercions et espérons vous rencontrer très bientôt à la Villa Kleber..."
+contact.confirm.reminder.head: Rappel de votre message
+contact.confirm.reminder.sent: Envoyé au nom de
+presentation.head: "Bienvenue à la Villa Kleber"
+presentation.text: "Située au coeur de Strasbourg, la Villa Kléber vous offre un séjour de rêve entre tradition et confort.<br/>Parmi les trois chambres de caractères Rubis, Opale et Saphir, vous trouverez celle qui vous correspond.<br/>Se sentir à la fois chez soi et en même temps ailleurs...telle est la promesse de la Villa Kléber.<br/>Lors de votre séjour dans la capitale européenne, vous rejoindrez le cœur touristique de Strasbourg en seulement 10 minutes à pied.<br/>La Cathédrale de Strasbourg, le Palais Rohan, Grand ‘Rue, la Petite France, la ville est intimiste et possède un patrimoine historique riche.<br/>Strasbourg est très appréciée des voyageurs et compte parmi les villes où il fait le plus bon vivre.<br/><br/>Posez vos bagages ... vous êtes chez vous."
+copyright.reserved: "Tous droits réservés."
+copyright.authors: "Design & développement par Quentin Fahrner & Sathya Bin."
+metatags.keywords: "Maison d'hôtes, Location, Luxe, Strasbourg, Chambres, Séjours, Vacances, Confort, Qualité"
+metatags.description: "La villa Kleber vous accueille dans une de ses 3 chambres de luxe situées au centre de Strasbourg, proche transports, commodités et centre ville."
+site.title: "Villa Kleber | Votre location de chambre de luxe sur Strasbourg"
+site.name: "Villa Kleber"
+translate.site: "Traduire le site"
 information.shopping: Les centres commerciaux
 information.strasbourg: Visiter Strasbourg
 information.transport: Les transports
@@ -70,11 +72,33 @@ information.transport.description: "Arrêt : Ancienne Synagogue les Halles : lig
 information.strasbourg.description: "A vélo ou à pied, promenez vous dans ces différents quartiers : autour de la cathédrale, à Grand Rue ou encore à la Petite France."
 information.shopping.description: "Centre commercial des Halles<br/>Centre commercial Rive Etoile : Ligne A ou D arrêt Etoile Bourse"
 information.parking.description: "Parking Kléber/Homme de Fer<br/>Parking des Halles<br/>P1: Marais Vert : Ouvert du lundi au samedi de 7h à 21h<br/>P2: Sébastopol : Ouvert 7 j /7, 24h/24, jours fériés inclus<br/>P3: Wilson : Ouvert du lundi au samedi de 7h à 21h"
-to_homepage: à l'accueil
 reservation.description: Réservez l'une de nos luxueuses chambres en quelques clics.
-room: Chambre
+room.information: Informations
+room.equipment: Equipement
+room.bathroom: Salle de bain avec douche
+room.towels: Draps de bain et couchage fournis
+room.tv: Télévision écran plat
+room.wifi: Connexion Wi-Fi gratuite
+room.coffee: Machine à café
+room.fridge: Réfrigérateur
+room.surface: Superficie
+room.double_bed: Lit double
+room.pet_not_allowed: Animaux non admis
+room.checkin: "Check in: de 14h à 20h"
+room.checkout: "Check out: 12h"
 room.visit: Visiter la chambre
-room.description:
-  blue: "Véritable appartement, la chambre Saphir peut accueillir jusqu'à 2 personnes.<br/>Dans un style élégant et luxueux, ses tons vous invitent au repos et au calme."
-  green: "Spacieuse et lumineuse, la chambre Opale dispose de 2 couchages.<br/>Entre amoureux, amis ou encore famille profitez de son cadre chaleureux."
-  red: "Pour un week end romantique ou une escapade citadine, la chambre Rubis peut accueillir jusqu'à 2 personnes.<br/>Son atmosphère lounge et son univers brut sauront vous séduire et faire de votre séjour, une expérience de qualité."
+room.fees.head: Tarif
+room.fees.text1: "Le tarif d'une nuit en chambre double s'élève à 110 euros.<br/>Un dépôt de garantie de 100 euros vous sera demandé à l'arrivée pour couvrir d'éventuels dommages.<br/>Il vous sera entièrement remboursé le jour du départ, si aucun dégât n’a été constaté dans l'hébergement pendant votre séjour.<br/>room.fees.text2: Retrouvez notre offre pour la Villa Kleber sur"
+room.fees.booking.title: Retrouvez Villa Kleber sur Booking.com
+room.fees.airbnb.title: Retrouvez Villa Kleber sur Airbnb.com
+room.description.blue: "Véritable appartement, la chambre Saphir peut accueillir jusqu'à 2 personnes.<br/>Dans un style élégant et luxueux, ses tons vous invitent au repos et au calme."
+room.description.green: "Spacieuse et lumineuse, la chambre Opale dispose de 2 couchages.<br/>Entre amoureux, amis ou encore famille profitez de son cadre chaleureux."
+room.description.red: "Pour un week end romantique ou une escapade citadine, la chambre Rubis peut accueillir jusqu'à 2 personnes.<br/>Son atmosphère lounge et son univers brut sauront vous séduire et faire de votre séjour, une expérience de qualité."
+
+to_homepage: à l'accueil
+room: Chambre
+back: Retour
+from: du
+to: au
+and: et
+bookings: Réservations
